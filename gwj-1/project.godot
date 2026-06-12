@@ -14,6 +14,10 @@ config/name="GWJ1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneManager="*uid://b335redco66uo"
+
 [display]
 
 window/size/viewport_width=320

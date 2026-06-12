@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://crbo2xdq5oajr"]
+
+[node name="Root" type="Node" unique_id=772636217]
+
+[node name="GameLayer" type="Node" parent="." unique_id=1466460294]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1320443400]
+
+[node name="UIContainer" type="Control" parent="UILayer" unique_id=1671491094]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OverlayLayer" type="CanvasLayer" parent="." unique_id=505754910]
+
+[node name="OverlayContainer" type="Control" parent="OverlayLayer" unique_id=163638289]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
