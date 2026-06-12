@@ -37,7 +37,7 @@ func load_ui(scene_path: String):
 		return
 	
 	#clear_scenes()
-	clear_ui()
+	#clear_ui()
 	
 	var new_ui_layer = load(scene_path).instantiate()
 	#new_ui_layer.size = get_viewport().size

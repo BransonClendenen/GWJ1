@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://16pk3x58cpcu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qifmv"]
+bg_color = Color(0.32838506, 0.00072542665, 0.47888827, 1)
+
+[node name="td_ui_container" type="Panel" unique_id=270843120]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qifmv")

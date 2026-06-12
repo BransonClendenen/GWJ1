@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://7p2fkwudkjnr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj1og"]
+bg_color = Color(0.64700454, 0.35412988, 1.92523e-07, 1)
+
+[node name="td_map" type="Panel" unique_id=1426887664]
+anchors_preset = -1
+anchor_right = 0.667
+anchor_bottom = 1.0
+offset_right = -0.44000244
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lj1og")

@@ -20,7 +20,7 @@ func set_state(new_state: State):
 	if new_state == current_state:
 		return
 	
-	emit_signal("state_changing", current_state, new_state)
+	#emit_signal("state_changing", current_state, new_state)
 	previous_state = current_state
 	current_state = new_state
 	
@@ -40,7 +40,10 @@ func find_new_state(state):
 				SceneManager.load_ui("res://Scenes/Game/main_menu.tscn")
 		State.GAME:
 			if previous_state == State.MAIN_MENU:
-				SceneManager.load_scene("res://Scenes/Game/td_map.tscn")
+				await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))
+				#SceneManager.load_scene("res://Scenes/Game/td.tscn")
+				SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
+				SceneManager.load_ui("res://Scenes/UI/ui_panel.tscn")
 		State.GAME_OVER:
 			pass
 
