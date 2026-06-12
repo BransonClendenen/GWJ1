@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="GWJ1"
+run/main_scene="uid://crbo2xdq5oajr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
@@ -22,6 +23,8 @@ SceneManager="*uid://b335redco66uo"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/mode=3
+window/size/borderless=true
 window/stretch/mode="canvas_items"
 
 [physics]
