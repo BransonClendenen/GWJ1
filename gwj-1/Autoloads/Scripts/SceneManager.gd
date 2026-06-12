@@ -40,13 +40,13 @@ func load_ui(scene_path: String):
 	clear_ui()
 	
 	var new_ui_layer = load(scene_path).instantiate()
-	new_ui_layer.size = get_viewport().size
+	#new_ui_layer.size = get_viewport().size
 	ui_layer.add_child(new_ui_layer)
 	return new_ui_layer
 
 func load_overlay(scene_path: String):
 	var new_overlay_layer = load(scene_path).instantiate()
-	new_overlay_layer.size = get_viewport().size
+	#new_overlay_layer.size = get_viewport().size
 	overlay_layer.add_child(new_overlay_layer)
 	overlay_scene = new_overlay_layer
 	overlay_stack.append(new_overlay_layer)

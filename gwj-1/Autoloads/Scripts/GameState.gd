@@ -31,7 +31,18 @@ func change_state(new_state:State):
 
 func find_new_state(state):
 	match state:
-		pass
+		State.MAIN_MENU:
+			if previous_state == State.NONE:
+				#first load
+				SceneManager.load_ui("res://Scenes/Game/main_menu.tscn")
+			else:
+				#second and after load
+				SceneManager.load_ui("res://Scenes/Game/main_menu.tscn")
+		State.GAME:
+			if previous_state == State.MAIN_MENU:
+				SceneManager.load_scene("res://Scenes/Game/td_map.tscn")
+		State.GAME_OVER:
+			pass
 
 #if need pause scene but no delete 
 #(also hides scene so we can remove that if needed)

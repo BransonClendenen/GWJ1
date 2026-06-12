@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c1bfc5lf2th3y"]
+
+[sub_resource type="Curve2D" id="Curve2D_4jop8"]
+
+[node name="TDMap" type="Node2D" unique_id=393999577]
+
+[node name="EnemyPath" type="Path2D" parent="." unique_id=1406806907]
+curve = SubResource("Curve2D_4jop8")
+
+[node name="TowerContainer" type="Node2D" parent="." unique_id=372850547]
+
+[node name="EnemyContainer" type="Node2D" parent="." unique_id=2015309951]
+
+[node name="ProjectileContainer" type="Node2D" parent="." unique_id=72980738]
+
+[node name="Button" type="Button" parent="." unique_id=307418386]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "I EXIST"
