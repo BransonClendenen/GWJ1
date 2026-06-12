@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://crbo2xdq5oajr"]
 
+[ext_resource type="Script" uid="uid://cxxgqtpkqih8u" path="res://Scripts/Game/root.gd" id="1_3iqbx"]
+
 [node name="Root" type="Node" unique_id=772636217]
+script = ExtResource("1_3iqbx")
 
 [node name="GameLayer" type="Node" parent="." unique_id=1466460294]
 
