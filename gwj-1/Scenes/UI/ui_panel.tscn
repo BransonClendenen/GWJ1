@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://btyvpixu71qrh"]
 
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="1_y0uv4"]
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="2_ulob1"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvcvx"]
 bg_color = Color(5.053729e-07, 0.58280236, 0.20636934, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0uv4"]
+bg_color = Color(0.44305512, 0.5668747, 1, 1)
 
 [node name="ui_panel" type="Panel" unique_id=1730777196]
 anchors_preset = -1
@@ -12,4 +18,130 @@ offset_left = -0.44000244
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_y0uv4")
 theme_override_styles/panel = SubResource("StyleBoxFlat_yvcvx")
+
+[node name="minigame_buttons" type="HBoxContainer" parent="." unique_id=1305719077]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 20.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="maze_button" type="Button" parent="minigame_buttons" unique_id=1352225245]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+text = "Maze"
+
+[node name="pipes_button" type="Button" parent="minigame_buttons" unique_id=1330106061]
+layout_mode = 2
+text = "Pipes"
+
+[node name="tiles_button" type="Button" parent="minigame_buttons" unique_id=1865299254]
+layout_mode = 2
+text = "Tiles"
+
+[node name="minigame_panel" type="PanelContainer" parent="." unique_id=336900463]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 105.0
+offset_bottom = 114.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y0uv4")
+
+[node name="coins_panel" type="HBoxContainer" parent="." unique_id=193928370]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 114.0
+offset_right = 105.0
+offset_bottom = 124.0
+
+[node name="coins_icon" type="Label" parent="coins_panel" unique_id=425310953]
+layout_mode = 2
+text = "*"
+
+[node name="coins_label" type="Label" parent="coins_panel" unique_id=2018988394]
+layout_mode = 2
+text = "Coins"
+
+[node name="shop_panel" type="HBoxContainer" parent="." unique_id=1180740556]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 124.0
+offset_right = 105.0
+offset_bottom = 160.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="gunner_card" type="VBoxContainer" parent="shop_panel" unique_id=432235051]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="tower_sprite" type="TextureRect" parent="shop_panel/gunner_card" unique_id=274331696]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_ulob1")
+expand_mode = 1
+
+[node name="tower_name" type="Label" parent="shop_panel/gunner_card" unique_id=131982288]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+text = "Gunner"
+
+[node name="tower_cost" type="Label" parent="shop_panel/gunner_card" unique_id=423208805]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+text = "676767"
+
+[node name="bomber_card" type="VBoxContainer" parent="shop_panel" unique_id=1500947066]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="tower_sprite" type="TextureRect" parent="shop_panel/bomber_card" unique_id=977100507]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_ulob1")
+expand_mode = 1
+
+[node name="tower_name" type="Label" parent="shop_panel/bomber_card" unique_id=1861152058]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+text = "Bomber"
+
+[node name="tower_cost" type="Label" parent="shop_panel/bomber_card" unique_id=1587994101]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+text = "676767"
+
+[node name="sniper_card" type="VBoxContainer" parent="shop_panel" unique_id=1937364055]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="tower_sprite" type="TextureRect" parent="shop_panel/sniper_card" unique_id=279850029]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_ulob1")
+expand_mode = 1
+
+[node name="tower_name" type="Label" parent="shop_panel/sniper_card" unique_id=2105769267]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+text = "Sniper"
+
+[node name="tower_cost" type="Label" parent="shop_panel/sniper_card" unique_id=1794876930]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+text = "676767"
+
+[node name="HoverDesc" type="RichTextLabel" parent="." unique_id=1391808109]
+custom_minimum_size = Vector2(103, 18)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 158.0
+offset_right = 105.0
+offset_bottom = 176.0
+text = "TempLabel"

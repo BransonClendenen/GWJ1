@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://b5tmxyv6qjxjk"]
+
+[ext_resource type="FontFile" uid="uid://dxeu2f50jm0dq" path="res://Sprites/Fonts/Kenney Mini Square.ttf" id="1_5d5bl"]
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("1_5d5bl")
+default_font_size = 8

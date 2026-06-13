@@ -14,7 +14,7 @@ var main_menu#: #MainMenu
 var game#: Game
 var game_over_menu#: #GameOverMenu
 
-signal state_changed(new_state)
+#signal state_changed(new_state)
 
 func set_state(new_state: State):
 	if new_state == current_state:
