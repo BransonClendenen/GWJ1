@@ -34,10 +34,10 @@ func find_new_state(state):
 		State.MAIN_MENU:
 			if previous_state == State.NONE:
 				#first load
-				SceneManager.load_ui("res://Scenes/Game/main_menu.tscn")
+				SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
 			else:
 				#second and after load
-				SceneManager.load_ui("res://Scenes/Game/main_menu.tscn")
+				SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
 		State.GAME:
 			if previous_state == State.MAIN_MENU:
 				await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))

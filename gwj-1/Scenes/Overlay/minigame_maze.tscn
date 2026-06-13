@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://csnc6xyrcyjyv"]
+
+[ext_resource type="Script" uid="uid://cud2qfaorhxnl" path="res://Scripts/Overlay/minigame_maze.gd" id="1_0r4nf"]
+[ext_resource type="Script" uid="uid://b8wcqn008y6v2" path="res://Scripts/Game/maze_grid.gd" id="2_rv0sx"]
+[ext_resource type="Script" uid="uid://brhdpcofrfdon" path="res://Scripts/Game/player.gd" id="3_ypfxe"]
+
+[node name="minigame_maze" type="Control" unique_id=660371157]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0r4nf")
+
+[node name="grid" type="Node2D" parent="." unique_id=2028743675]
+script = ExtResource("2_rv0sx")
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1590877467]
+script = ExtResource("3_ypfxe")
+
+[node name="maze_ui" type="Control" parent="." unique_id=1642787951]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

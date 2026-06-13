@@ -19,6 +19,8 @@ config/icon="res://Sprites/icon.svg"
 
 SceneManager="*uid://b335redco66uo"
 GameState="*uid://c6edm6omgqbu8"
+MazePresets="*uid://daxw4jal3nf6g"
+MinigameManager="*uid://dkymejtrfangy"
 
 [display]
 
