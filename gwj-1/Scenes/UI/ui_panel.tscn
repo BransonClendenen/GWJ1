@@ -9,6 +9,8 @@ bg_color = Color(5.053729e-07, 0.58280236, 0.20636934, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0uv4"]
 bg_color = Color(0.44305512, 0.5668747, 1, 1)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ulob1"]
+
 [node name="ui_panel" type="Panel" unique_id=1730777196]
 anchors_preset = -1
 anchor_left = 0.667
@@ -52,6 +54,41 @@ offset_right = 105.0
 offset_bottom = 114.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_y0uv4")
+
+[node name="result_panel" type="Panel" parent="minigame_panel" unique_id=9897160]
+material = SubResource("CanvasItemMaterial_ulob1")
+layout_mode = 2
+
+[node name="result_label" type="Label" parent="minigame_panel/result_panel" unique_id=2045154071]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Result"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="result_button" type="Button" parent="minigame_panel/result_panel" unique_id=829111313]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+text = "Continue"
 
 [node name="coins_panel" type="HBoxContainer" parent="." unique_id=193928370]
 layout_mode = 0

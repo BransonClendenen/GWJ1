@@ -2,7 +2,20 @@
 
 [ext_resource type="FontFile" uid="uid://dxeu2f50jm0dq" path="res://Sprites/Fonts/Kenney Mini Square.ttf" id="1_5d5bl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d5bl"]
+content_margin_left = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gumi"]
+content_margin_left = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk57l"]
+content_margin_left = 1.0
+
 [resource]
 default_base_scale = 1.0
 default_font = ExtResource("1_5d5bl")
 default_font_size = 8
+Button/constants/h_separation = 0
+Button/styles/hover = SubResource("StyleBoxFlat_5d5bl")
+Button/styles/normal = SubResource("StyleBoxFlat_7gumi")
+Button/styles/pressed = SubResource("StyleBoxFlat_xk57l")
