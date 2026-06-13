@@ -1,25 +1,42 @@
-extends CharacterBody2D
+extends Node2D
 
+signal exited
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var grid: Array = []
+var tile_size: int = 16
+var grid_pos: Vector2i = Vector2i(1,1)
+var exit_pos: Vector2i = Vector2i(5,5)
+var can_move: bool = true
 
+func _ready() -> void:
+	position = Vector2(grid_pos.x * tile_size, grid_pos.y * tile_size)
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+func _unhandled_input(event: InputEvent) -> void:
+	if not can_move:
+		return
+	
+	var dir = Vector2i.ZERO
+	
+	if event.is_action_pressed("maze_up"):    dir = Vector2i(0, -1)
+	elif event.is_action_pressed("maze_down"):  dir = Vector2i(0, 1)
+	elif event.is_action_pressed("maze_left"):  dir = Vector2i(-1, 0)
+	elif event.is_action_pressed("maze_right"): dir = Vector2i(1, 0)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		return
+	
+	var target = grid_pos + dir
+	
+	if is_walkable(target):
+		grid_pos = target
+		position = Vector2(grid_pos.x * tile_size, grid_pos.y * tile_size)
+	
+	if grid_pos == exit_pos:
+		can_move = false
+		emit_signal("exited")
 
-	move_and_slide()
+func is_walkable(cell:Vector2i) -> bool:
+	if cell.y < 0 or cell.y >= grid.size():
+		return false
+	if cell.x < 0 or cell.x >= grid[cell.y].size():
+		return false
+	return grid[cell.y][cell.x] == 0

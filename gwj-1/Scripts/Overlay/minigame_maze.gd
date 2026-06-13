@@ -3,7 +3,7 @@ extends Control
 signal completed(success:bool)
 
 @onready var grid: Node2D = $grid
-@onready var player: CharacterBody2D = $player
+@onready var player: Node2D = $grid/player
 #@onready var maze_ui: Control = $maze_ui
 
 var preset: Dictionary
@@ -24,8 +24,8 @@ func _ready() -> void:
 	
 	player.position = grid_to_pixel(preset.spawn)
 	player.tile_size = TILE_SIZE
-	player.grid_scale = GRID_SCALE
 	player.grid = preset.grid
+	player.exit_pos = preset.exit
 	player.exited.connect(_on_player_exited)
 
 func grid_to_pixel(cell: Vector2i) -> Vector2:
@@ -33,6 +33,5 @@ func grid_to_pixel(cell: Vector2i) -> Vector2:
 
 func _on_player_exited() -> void:
 	player.set_process_unhandled_input(false)
-	#win overlay
-	#finish this in ui_panel
+	emit_signal("completed",true)
 	
