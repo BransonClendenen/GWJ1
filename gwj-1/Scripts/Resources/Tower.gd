@@ -10,6 +10,7 @@ class_name Tower
 @export var bullet_speed: float
 @export var splash_radius: float
 @export var stamina_drain: float
+@export var armor_pierce: float
 
 var fire_timer: float = 0.0
 var current_target: Node2D = null
@@ -51,7 +52,7 @@ func shoot():
 	var bullet = bullet_scene.instantiate()
 	projectile_container.add_child(bullet)
 	bullet.global_position = shoot_point.global_position
-	bullet.setup(damage,bullet_speed,splash_radius,stamina_drain,current_target)
+	bullet.setup(damage,bullet_speed,splash_radius,stamina_drain,armor_pierce,current_target)
 
 func setup_range():
 	var shape = CircleShape2D.new()

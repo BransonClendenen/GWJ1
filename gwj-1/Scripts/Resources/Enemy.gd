@@ -4,12 +4,15 @@ class_name Enemy
 @export var enemy_name: String
 @export var max_hp: float
 @export var max_stamina: float
+@export var max_armor: float
 @export var speed: float
 @export var coin_reward: int
 @export var damage_to_base: int
 
 var current_hp: float
 var current_stamina: float
+var current_armor: float
+var armor_reduction: float
 var is_dead: bool = false
 
 var path_points: PackedVector2Array = []
@@ -18,12 +21,19 @@ var path_index: int = 0
 @onready var sprite: Sprite2D = $sprite
 @onready var bgbar: ColorRect = $hpbar/bgbar
 @onready var fillbar: ColorRect = $hpbar/fillbar
+@onready var staminabar: ColorRect = $hpbar/staminabar
+@onready var armorbar: ColorRect = $hpbar/armorbar
 
 signal died(reward:int)
 signal reached_base(damage:int)
 
 func _ready():
 	current_hp = max_hp
+	current_stamina = max_stamina
+	current_armor = max_armor
+	update_hp_bar()
+	update_stamina_bar()
+	update_armor_bar()
 
 func _process(delta: float) -> void:
 	if is_dead:
@@ -46,21 +56,73 @@ func set_path(points: PackedVector2Array):
 	path_points = points
 	path_index = 0
 
-func take_damage(amount:float):
+func take_damage(amount:float,pierce:float = 0.0):
 	if is_dead:
 		return
-	current_hp -= amount
-	VfxManager.flash(self)
+	
+	var final_damage = amount
+	
+	if current_armor > 0.0:
+		var effective_reduction = armor_reduction * (1.0-pierce)
+		final_damage = amount * (1.0 - effective_reduction)
+		current_armor = clamp(current_armor - amount, 0.0, max_armor)
+		update_armor_bar()
+		on_armor_changed(current_armor)
+		if current_armor <= 0.0:
+			on_armor_broken()
+	
+	current_hp -= final_damage
 	update_hp_bar()
+	VfxManager.flash(self)
 	on_hit()
 	if current_hp <= 0:
 		die()
+
+func drain_stamina(amount:float):
+	if max_stamina == 0.0:
+		return
+	current_stamina = clamp(current_stamina-amount,0.0,max_stamina)
+	update_stamina_bar()
+	on_stamina_changed(current_stamina)
+
+func restore_stamina(amount:float):
+	if max_stamina == 0.0:
+		return
+	current_stamina = clamp(current_stamina+amount,0.0,max_stamina)
+	update_stamina_bar()
+	on_stamina_changed(current_stamina)
 
 func on_hit():
 	pass #update later for dodge
 
 func update_hp_bar() -> void:
 	fillbar.size.x = bgbar.size.x * (current_hp / max_hp)
+
+func update_stamina_bar():
+	if max_stamina == 0.0:
+		staminabar.visible = false
+		return
+	staminabar.size.x = bgbar.size.x * (current_stamina / max_stamina)
+
+func update_armor_bar():
+	if max_armor == 0.0:
+		armorbar.visible = false
+		return
+	armorbar.size.x = bgbar.size.x * (current_armor / max_armor)
+
+func on_stamina_changed(new_stamina:float):
+	pass #override in dodger
+	#enable/disable dodging
+	#also add passive stamina regen
+
+func on_armor_changed(new_armor:float):
+	pass
+	#override in classes if needed, maybe cool to add
+	#more broken down shield/tank states 
+	#based on hp
+
+func on_armor_broken():
+	pass #initate 2nd phase in enemy object
 
 func die():
 	is_dead = true

@@ -5,16 +5,18 @@ var damage: float = 0.0
 var speed: float = 120.0
 var splash_radius: float = 0.0
 var stamina_drain: float = 0.0
+var armor_pierce: float = 0.0
 var target: Node2D = null
 var enemies_container: Node2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-func setup(p_damage:float,p_speed:float,p_splash:float,p_stamina:float,p_target:Node2D):
+func setup(p_damage:float,p_speed:float,p_splash:float,p_stamina:float,p_armor:float,p_target:Node2D):
 	damage = p_damage
 	speed = p_speed
 	splash_radius = p_splash
 	stamina_drain = p_stamina
+	armor_pierce = p_armor
 	target = p_target
 
 func _process(delta: float) -> void:
@@ -34,7 +36,7 @@ func on_impact():
 		apply_splash()
 	else:
 		if is_instance_valid(target) and target is Enemy:
-			target.take_damage(damage)
+			target.take_damage(damage,armor_pierce)
 	
 	VfxManager.burst(get_parent(), global_position, Color.ORANGE, 6, 0.2)
 	on_impact_effect()
@@ -45,7 +47,10 @@ func apply_splash():
 	for enemy in enemies:
 		if enemy is Enemy:
 			if global_position.distance_to(enemy.global_position) <= splash_radius:
-				enemy.take_damage(damage)
+				enemy.take_damage(damage,armor_pierce)
+				if stamina_drain > 0.0:
+					enemy.drain_stamina(stamina_drain)
+					#one billion nests
 
 func on_impact_effect():
 	pass #update later for vfx or anything else interesting

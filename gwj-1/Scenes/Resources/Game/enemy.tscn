@@ -19,6 +19,14 @@ offset_bottom = 40.0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="staminabar" type="ColorRect" parent="hpbar" unique_id=69881353]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="armorbar" type="ColorRect" parent="hpbar" unique_id=115505977]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="hitbox" type="Area2D" parent="." unique_id=761473573]
 
 [node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=1122054077]
