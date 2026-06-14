@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c71tc3vawd1k7"]
+
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="1_sqbd3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bsmdu"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hblve"]
+height = 28.0
+
+[node name="RedBullet" type="CharacterBody2D" unique_id=423534707]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2023757986]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bsmdu")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1103580606]
+scale = Vector2(0.13671876, 0.12792969)
+texture = ExtResource("1_sqbd3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1718696909]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1848024013]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_hblve")
