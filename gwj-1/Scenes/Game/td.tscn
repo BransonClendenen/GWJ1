@@ -12,8 +12,3 @@ curve = SubResource("Curve2D_4jop8")
 [node name="EnemyContainer" type="Node2D" parent="." unique_id=2015309951]
 
 [node name="ProjectileContainer" type="Node2D" parent="." unique_id=72980738]
-
-[node name="Button" type="Button" parent="." unique_id=307418386]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "I EXIST"

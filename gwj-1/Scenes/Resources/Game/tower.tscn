@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://du7bplmupj5k6"]
+
+[ext_resource type="Script" uid="uid://djhd71wflx4o4" path="res://Scripts/Resources/Tower.gd" id="1_6fa7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_458rg"]
+
+[node name="Tower" type="Node2D" unique_id=916097099]
+script = ExtResource("1_6fa7h")
+tower_name = null
+damage = null
+range = null
+fire_rate = null
+cost = null
+bullet_speed = null
+splash_radius = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1695809964]
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=557431154]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1737308177]
+shape = SubResource("RectangleShape2D_458rg")
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=13858364]

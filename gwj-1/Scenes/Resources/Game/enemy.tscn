@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://42n8k3hyccxc"]
+
+[ext_resource type="Script" uid="uid://bi787vqr64oj6" path="res://Scripts/Resources/Enemy.gd" id="1_2sby1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4vcj"]
+
+[node name="enemy" type="Node2D" unique_id=534050274]
+script = ExtResource("1_2sby1")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=626726583]
+
+[node name="hpbar" type="Node2D" parent="." unique_id=868696193]
+
+[node name="bgbar" type="ColorRect" parent="hpbar" unique_id=199322911]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fillbar" type="ColorRect" parent="hpbar" unique_id=299516945]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hitbox" type="Area2D" parent="." unique_id=761473573]
+
+[node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=1122054077]
+shape = SubResource("RectangleShape2D_o4vcj")
