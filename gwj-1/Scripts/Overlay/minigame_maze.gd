@@ -4,7 +4,7 @@ signal completed(success:bool)
 
 @onready var grid: Node2D = $grid
 @onready var player: Node2D = $grid/player
-#@onready var maze_ui: Control = $maze_ui
+@onready var exit: Node2D = $grid/exit
 
 var preset: Dictionary
 const TILE_SIZE = 16
@@ -27,6 +27,8 @@ func _ready() -> void:
 	player.grid = preset.grid
 	player.exit_pos = preset.exit
 	player.exited.connect(_on_player_exited)
+	
+	exit.position = Vector2(preset.exit.x * TILE_SIZE, preset.exit.y * TILE_SIZE)
 
 func grid_to_pixel(cell: Vector2i) -> Vector2:
 		return Vector2(cell.x*TILE_SIZE,cell.y*TILE_SIZE)

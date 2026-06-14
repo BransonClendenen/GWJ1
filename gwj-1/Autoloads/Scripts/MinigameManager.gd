@@ -28,7 +28,7 @@ func start_minigame(type:String):
 	active_minigame = scene
 	active_minigame.completed.connect(_on_minigame_completed.bind(type))
 
-func _on_minigame_completed(type:String,success:bool):
+func _on_minigame_completed(success:bool,type:String,):
 	emit_signal("minigame_completed",type,success)
 	if active_minigame:
 		active_minigame.queue_free()

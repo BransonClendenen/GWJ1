@@ -10,6 +10,7 @@ func build(grid: Array, tile_size: int) -> void:
 		s.queue_free()
 	sprites.clear()
 	
+	var insert_index = 0
 	for row in range(grid.size()):
 		for col in range(grid[row].size()):
 			var sprite := Sprite2D.new()
@@ -21,4 +22,6 @@ func build(grid: Array, tile_size: int) -> void:
 				sprite.visible = false
 			
 			add_child(sprite)
+			move_child(sprite, insert_index)
+			insert_index += 1
 			sprites.append(sprite)
