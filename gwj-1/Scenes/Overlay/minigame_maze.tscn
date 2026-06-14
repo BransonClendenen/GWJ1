@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://csnc6xyrcyjyv"]
 
 [ext_resource type="Script" uid="uid://cud2qfaorhxnl" path="res://Scripts/Overlay/minigame_maze.gd" id="1_0r4nf"]
-[ext_resource type="Script" uid="uid://b8wcqn008y6v2" path="res://Scripts/Game/maze_grid.gd" id="2_rv0sx"]
+[ext_resource type="Script" uid="uid://b8wcqn008y6v2" path="res://Scripts/Game/Minigames/maze_grid.gd" id="2_rv0sx"]
 [ext_resource type="Texture2D" uid="uid://ciru3ckjjiuvk" path="res://Sprites/TempStuff/maze_wall.png" id="3_27brp"]
-[ext_resource type="Script" uid="uid://brhdpcofrfdon" path="res://Scripts/Game/player.gd" id="3_ypfxe"]
+[ext_resource type="Script" uid="uid://brhdpcofrfdon" path="res://Scripts/Game/Minigames/player.gd" id="3_ypfxe"]
 [ext_resource type="Texture2D" uid="uid://ch6ur7rjtadmi" path="res://Sprites/TempStuff/maze_floor.png" id="4_btx0m"]
 [ext_resource type="Texture2D" uid="uid://bsvhpehiutn50" path="res://Sprites/TempStuff/maze_player.png" id="6_4luxr"]
 [ext_resource type="Texture2D" uid="uid://bwkebp5kdkxg0" path="res://Sprites/TempStuff/maze_exit.png" id="7_6i423"]
