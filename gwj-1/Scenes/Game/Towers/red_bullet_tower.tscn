@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bcxbfkjnfm1kt"]
+
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="1_0hkuj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2bom"]
+size = Vector2(69, 69)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b06id"]
+radius = 69.00725
+
+[node name="RedBulletTower" type="StaticBody2D" unique_id=1997912808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1039640504]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_d2bom")
+
+[node name="TowerSprite" type="Sprite2D" parent="." unique_id=542683197]
+position = Vector2(-9.536743e-07, -9.536743e-07)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.514)
+texture = ExtResource("1_0hkuj")
+
+[node name="Tower" type="Area2D" parent="." unique_id=1061987478]
+position = Vector2(36, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tower" unique_id=191323337]
+position = Vector2(-36, 0)
+shape = SubResource("CircleShape2D_b06id")
+
+[node name="Area" type="Marker2D" parent="." unique_id=705754883]
+
+[node name="Node" type="Node" parent="." unique_id=1871642176]
