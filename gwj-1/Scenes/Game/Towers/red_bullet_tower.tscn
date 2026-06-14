@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bcxbfkjnfm1kt"]
 
-[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="1_0hkuj"]
+[ext_resource type="Script" uid="uid://buu0vnnn51gjy" path="res://Scripts/Game/Towers/red_bullet_tower.gd" id="1_6ov1w"]
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="2_y48h5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2bom"]
 size = Vector2(69, 69)
@@ -9,6 +10,7 @@ size = Vector2(69, 69)
 radius = 69.00725
 
 [node name="RedBulletTower" type="StaticBody2D" unique_id=1997912808]
+script = ExtResource("1_6ov1w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1039640504]
 position = Vector2(-0.5, 0.5)
@@ -18,7 +20,7 @@ shape = SubResource("RectangleShape2D_d2bom")
 position = Vector2(-9.536743e-07, -9.536743e-07)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.514)
-texture = ExtResource("1_0hkuj")
+texture = ExtResource("2_y48h5")
 
 [node name="Tower" type="Area2D" parent="." unique_id=1061987478]
 position = Vector2(36, 0)
@@ -30,3 +32,6 @@ shape = SubResource("CircleShape2D_b06id")
 [node name="Area" type="Marker2D" parent="." unique_id=705754883]
 
 [node name="Node" type="Node" parent="." unique_id=1871642176]
+
+[connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
+[connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]
