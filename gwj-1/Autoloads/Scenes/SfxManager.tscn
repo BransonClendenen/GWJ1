@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cvwhwmaq5dcoc"]
+
+[ext_resource type="Script" uid="uid://xmaf72cspaoi" path="res://Autoloads/Scripts/SfxManager.gd" id="1_1121t"]
+
+[node name="SfxManager" type="Node" unique_id=1817654970]
+script = ExtResource("1_1121t")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=724538706]
+
+[node name="SfxPool" type="Node" parent="." unique_id=1717225959]
