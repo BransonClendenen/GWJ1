@@ -22,8 +22,7 @@ GameState="*uid://c6edm6omgqbu8"
 MazePresets="*uid://daxw4jal3nf6g"
 MinigameManager="*uid://dkymejtrfangy"
 VfxManager="*uid://bff6e4jj5k5go"
-SfxManager="*uid://xmaf72cspaoi"
-SfxManagerScene="*uid://cvwhwmaq5dcoc"
+SfxManager="*uid://cvwhwmaq5dcoc"
 
 [display]
 
