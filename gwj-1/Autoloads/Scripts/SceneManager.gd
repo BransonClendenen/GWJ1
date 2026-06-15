@@ -24,7 +24,7 @@ func load_scene(scene_path: String):
 		return
 	
 	#clear_scenes()
-	clear_ui()
+	#clear_ui()
 	
 	var new_game_layer = load(scene_path).instantiate()
 	game_layer.add_child(new_game_layer)

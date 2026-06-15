@@ -8,6 +8,8 @@ extends Node2D
 @onready var base_manager = $BaseManager
 @onready var enemy_path = $EnemyPath
 
+signal send_managers(coin_manager:Node,tower_manager:Node)
+
 func _ready() -> void:
 	setup_level()
 	connect_signals()
@@ -24,6 +26,8 @@ func setup_level() -> void:
 	wave_manager.base_manager = base_manager
 	
 	tower_manager.coin_manager = coin_manager
+	
+	emit_signal(coin_manager,tower_manager)
 
 func connect_signals():
 	base_manager.base_destroyed.connect(_on_base_destroyed)

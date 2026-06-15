@@ -13,6 +13,8 @@ var previous_state: State
 var main_menu#: #MainMenu
 var game#: Game
 var game_over_menu#: #GameOverMenu
+var td_scene:Node2D
+var ui_panel:Control
 
 #signal state_changed(new_state)
 
@@ -41,11 +43,16 @@ func find_new_state(state):
 		State.GAME:
 			if previous_state == State.MAIN_MENU:
 				await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))
-				#SceneManager.load_scene("res://Scenes/Game/td.tscn")
 				SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
-				SceneManager.load_ui("res://Scenes/UI/ui_panel.tscn")
+				td_scene = SceneManager.load_scene("res://Scenes/Game/td.tscn")
+				ui_panel = SceneManager.load_ui("res://Scenes/UI/ui_panel.tscn")
+				td_scene.send_managers.connect(on_send_managers)
 		State.GAME_OVER:
 			pass
+
+func on_send_managers(coin_manager:Node,tower_manager:Node):
+	ui_panel.coin_manager = coin_manager
+	ui_panel.tower_manager = tower_manager
 
 #if need pause scene but no delete 
 #(also hides scene so we can remove that if needed)

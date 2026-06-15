@@ -12,6 +12,36 @@ bg_color = Color(0.44305512, 0.5668747, 1, 1)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ulob1"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4is5b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tyxbe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ll4px"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7bha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2pxvq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ppn4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wnfcj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xbyuj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lcw2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dexo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxrjt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_felqg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7bfds"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kry7q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_skliq"]
+
 [node name="ui_panel" type="Panel" unique_id=1730777196]
 anchors_preset = -1
 anchor_left = 0.667
@@ -117,65 +147,131 @@ offset_bottom = 160.0
 theme_override_constants/separation = 6
 alignment = 1
 
-[node name="gunner_card" type="VBoxContainer" parent="shop_panel" unique_id=432235051]
+[node name="gunner_card" type="Control" parent="shop_panel" unique_id=1064516557]
+custom_minimum_size = Vector2(30, 24)
 layout_mode = 2
-theme_override_constants/separation = 0
 
 [node name="tower_sprite" type="TextureRect" parent="shop_panel/gunner_card" unique_id=274331696]
 custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 16.0
 texture = ExtResource("2_ulob1")
 expand_mode = 1
 
 [node name="tower_name" type="Label" parent="shop_panel/gunner_card" unique_id=131982288]
 custom_minimum_size = Vector2(0, 6)
-layout_mode = 2
+layout_mode = 0
+offset_top = 16.0
+offset_right = 30.0
+offset_bottom = 26.0
 text = "Gunner"
 
 [node name="tower_cost" type="Label" parent="shop_panel/gunner_card" unique_id=423208805]
 custom_minimum_size = Vector2(0, 6)
-layout_mode = 2
-text = "676767"
+layout_mode = 0
+offset_top = 26.0
+offset_right = 30.0
+offset_bottom = 36.0
+text = "60"
 
-[node name="bomber_card" type="VBoxContainer" parent="shop_panel" unique_id=1500947066]
+[node name="button" type="Button" parent="shop_panel/gunner_card" unique_id=1803430974]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4is5b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tyxbe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ll4px")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k7bha")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2pxvq")
+flat = true
+
+[node name="bomber_card" type="Control" parent="shop_panel" unique_id=1099726482]
+custom_minimum_size = Vector2(30, 24)
 layout_mode = 2
-theme_override_constants/separation = 0
 
 [node name="tower_sprite" type="TextureRect" parent="shop_panel/bomber_card" unique_id=977100507]
 custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 16.0
 texture = ExtResource("2_ulob1")
 expand_mode = 1
 
 [node name="tower_name" type="Label" parent="shop_panel/bomber_card" unique_id=1861152058]
 custom_minimum_size = Vector2(0, 6)
-layout_mode = 2
+layout_mode = 0
+offset_top = 16.0
+offset_right = 31.0
+offset_bottom = 26.0
 text = "Bomber"
 
 [node name="tower_cost" type="Label" parent="shop_panel/bomber_card" unique_id=1587994101]
 custom_minimum_size = Vector2(0, 6)
-layout_mode = 2
+layout_mode = 0
+offset_top = 26.0
+offset_right = 31.0
+offset_bottom = 36.0
 text = "676767"
 
-[node name="sniper_card" type="VBoxContainer" parent="shop_panel" unique_id=1937364055]
+[node name="button" type="Button" parent="shop_panel/bomber_card" unique_id=525415737]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2ppn4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wnfcj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xbyuj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2lcw2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8dexo")
+flat = true
+
+[node name="sniper_card" type="Control" parent="shop_panel" unique_id=851777497]
+custom_minimum_size = Vector2(30, 24)
 layout_mode = 2
-theme_override_constants/separation = 0
 
 [node name="tower_sprite" type="TextureRect" parent="shop_panel/sniper_card" unique_id=279850029]
 custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 16.0
 texture = ExtResource("2_ulob1")
 expand_mode = 1
 
 [node name="tower_name" type="Label" parent="shop_panel/sniper_card" unique_id=2105769267]
 custom_minimum_size = Vector2(0, 6)
-layout_mode = 2
+layout_mode = 0
+offset_top = 16.0
+offset_right = 30.0
+offset_bottom = 26.0
 text = "Sniper"
 
 [node name="tower_cost" type="Label" parent="shop_panel/sniper_card" unique_id=1794876930]
 custom_minimum_size = Vector2(0, 6)
-layout_mode = 2
+layout_mode = 0
+offset_top = 26.0
+offset_right = 30.0
+offset_bottom = 36.0
 text = "676767"
+
+[node name="button" type="Button" parent="shop_panel/sniper_card" unique_id=968555211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxrjt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_felqg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7bfds")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kry7q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_skliq")
+flat = true
 
 [node name="HoverDesc" type="RichTextLabel" parent="." unique_id=1391808109]
 custom_minimum_size = Vector2(103, 18)

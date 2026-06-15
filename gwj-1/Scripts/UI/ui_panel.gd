@@ -9,6 +9,19 @@ extends Panel
 @onready var pipes_button: Button = $minigame_buttons/pipes_button
 @onready var tiles_button: Button = $minigame_buttons/tiles_button
 
+@onready var coins_label: Label = $coins_panel/coins_label
+
+@onready var gunner_button: Button = $shop_panel/gunner_card/button
+@onready var bomber_button: Button = $shop_panel/bomber_card/button
+@onready var sniper_button: Button = $shop_panel/sniper_card/button
+
+
+@export var gunner_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
+#@export var bomber_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
+#@export var sniper_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
+
+var tower_manager:Node
+var coin_manager:Node
 
 func _ready() -> void:
 	MinigameManager.init(minigame_panel)
@@ -18,6 +31,12 @@ func _ready() -> void:
 	maze_button.pressed.connect(_on_maze_button_pressed)
 	pipes_button.pressed.connect(_on_pipes_button_pressed)
 	tiles_button.pressed.connect(_on_tiles_button_pressed)
+	
+	coin_manager.coin_changed.connect(_on_coin_changed)
+	
+	gunner_button.pressed.connect(_on_gunner_button_pressed)
+	bomber_button.pressed.connect(_on_bomber_button_pressed)
+	sniper_button.pressed.connect(_on_sniper_button_pressed)
 
 func _on_maze_button_pressed() -> void:
 	MinigameManager.start_minigame("maze")
@@ -43,3 +62,17 @@ func _on_minigame_completed(type:String,success:bool):
 
 func _on_result_button_pressed():
 	result_panel.visible = false
+
+func _on_coin_changed(new_amount):
+	coins_label.text = str(new_amount)
+
+func _on_gunner_button_pressed():
+	tower_manager.select_tower(gunner_scene, 60)
+
+func _on_bomber_button_pressed():
+	pass
+	#tower_manager.select_tower(bomber_scene, 60)
+
+func _on_sniper_button_pressed():
+	pass
+	#tower_manager.select_tower(sniper_scene, 60)
