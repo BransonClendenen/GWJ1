@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://et6cc6d1xxj4"]
+
+[ext_resource type="Script" uid="uid://dchkutbp54mkr" path="res://Scripts/Game/Towers/bomber.gd" id="1_ep1wo"]
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="2_sueqj"]
+
+[node name="Bomber" type="Node2D" unique_id=499067164]
+script = ExtResource("1_ep1wo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=124404052]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.390625, 0.3984375)
+texture = ExtResource("2_sueqj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=118120022]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1954276766]
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=758421673]
+position = Vector2(0, -29)
