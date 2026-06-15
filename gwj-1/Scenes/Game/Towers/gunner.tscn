@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dknb4xw11bkou"]
+
+[ext_resource type="Script" uid="uid://djhd71wflx4o4" path="res://Scripts/Resources/Tower.gd" id="1_irm32"]
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="2_5goka"]
+[ext_resource type="PackedScene" uid="uid://cdh58ny781qur" path="res://Scenes/Resources/Game/bullet.tscn" id="2_t4wnf"]
+
+[node name="Gunner" type="Node2D" unique_id=1270180778]
+script = ExtResource("1_irm32")
+tower_name = "Gunner"
+damage = 3.0
+range = 120.0
+fire_rate = 6.0
+cost = 100
+bullet_scene = ExtResource("2_t4wnf")
+bullet_speed = 300.0
+stamina_drain = 5.0
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=2101527963]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1131459235]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=633556257]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.390625, 0.3984375)
+texture = ExtResource("2_5goka")
+
+[node name="ShootPoint" type="Marker2D" parent="." unique_id=1640260161]
+position = Vector2(0, -29)
