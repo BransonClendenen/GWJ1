@@ -5,7 +5,9 @@ signal coin_changed(new_amount: int)
 var coins: int = 0
 
 func setup(starting_coins: int):
+	
 	coins = starting_coins
+	print("coins 1: ", coins)
 	emit_signal("coin_changed",coins)
 
 func add_coins(amount: int):

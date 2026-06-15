@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dbwwpick8q35u"]
+
+[ext_resource type="Script" uid="uid://c1d5nq32epmlc" path="res://Scripts/Game/Bullets/gunner_bullet.gd" id="1_hpuxx"]
+[ext_resource type="Texture2D" uid="uid://bwkebp5kdkxg0" path="res://Sprites/TempStuff/maze_exit.png" id="2_lrx5j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x4ha1"]
+
+[node name="GunnerBullet" type="Node2D" unique_id=1565057780]
+script = ExtResource("1_hpuxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=106297398]
+texture = ExtResource("2_lrx5j")
+
+[node name="hit_area" type="Area2D" parent="." unique_id=156428711]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_area" unique_id=801992534]
+shape = SubResource("CircleShape2D_x4ha1")

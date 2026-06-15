@@ -12,6 +12,7 @@ scale = Vector2(0.390625, 0.3984375)
 texture = ExtResource("2_5goka")
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=2101527963]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1131459235]
 

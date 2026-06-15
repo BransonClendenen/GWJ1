@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tk5d4"]
 
 [node name="Dodger" type="Node2D" unique_id=1397339758]
+light_mask = 3
+visibility_layer = 3
 script = ExtResource("1_vrr8c")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=541083982]
@@ -34,6 +36,7 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="hitbox" type="Area2D" parent="." unique_id=52383736]
+collision_mask = 0
 
 [node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=1584882924]
 shape = SubResource("RectangleShape2D_tk5d4")

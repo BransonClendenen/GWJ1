@@ -4,11 +4,15 @@ var selected_tower_scene: PackedScene = null
 var selected_tower_cost: int = 0
 var placement_slots: Array = []
 
+@onready var projectile_container: Node2D = $"../ProjectileContainer"
 @onready var slots_container = $"../PlacementSlots"
 var coin_manager:Node
 
 func _ready() -> void:
 	placement_slots = slots_container.get_children()
+	for slot in placement_slots:
+		slot.tower_container = slots_container
+		slot.bullet_container = projectile_container
 
 func select_tower(tower_scene: PackedScene, cost: int):
 	selected_tower_scene = tower_scene

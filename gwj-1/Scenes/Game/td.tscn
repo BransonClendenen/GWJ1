@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://dsm0km0rdcyvq" path="res://Scripts/Game/TDFunctionality/wave_manager.gd" id="2_a3nvy"]
 [ext_resource type="Resource" uid="uid://bd6vyq8s1ukgl" path="res://Scripts/Data/LevelData/level_1.tres" id="2_fx436"]
 [ext_resource type="Script" uid="uid://cwbub40k501yn" path="res://Scripts/Game/TDFunctionality/tower_manager.gd" id="3_3gsr6"]
-[ext_resource type="Script" uid="uid://cfbpe8pljhaqv" path="res://Scripts/Resources/PlacementSlot.gd" id="3_53i8q"]
 [ext_resource type="Curve2D" uid="uid://dwsbnunyhc17a" path="res://Scenes/Resources/Paths/path_level_1.tres" id="3_pnj6t"]
 [ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/TDFunctionality/base_manager.gd" id="3_u5l3d"]
+[ext_resource type="PackedScene" uid="uid://622h6whal51q" path="res://Scenes/Resources/Game/placement_slot.tscn" id="4_pnj6t"]
 
 [node name="TDMap" type="Node2D" unique_id=393999577]
 script = ExtResource("1_6tnh0")
@@ -26,10 +26,8 @@ curve = ExtResource("3_pnj6t")
 
 [node name="PlacementSlots" type="Node2D" parent="." unique_id=1035759135]
 
-[node name="PlacementSlot" type="Area2D" parent="PlacementSlots" unique_id=1915500790]
+[node name="placement_slot" parent="PlacementSlots" unique_id=250459157 instance=ExtResource("4_pnj6t")]
 position = Vector2(64, 64)
-script = ExtResource("3_53i8q")
-metadata/_custom_type_script = "uid://cfbpe8pljhaqv"
 
 [node name="WaveManager" type="Node" parent="." unique_id=514543846]
 script = ExtResource("2_a3nvy")
