@@ -8,6 +8,6 @@ func _ready():
 	max_stamina = 10
 	max_armor = 0
 	speed = 10
-	coin_reward = 50
+	coin_reward = 2
 	damage_to_base = 2
 	super._ready()
