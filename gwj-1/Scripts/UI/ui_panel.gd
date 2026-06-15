@@ -32,6 +32,9 @@ func _ready() -> void:
 	pipes_button.pressed.connect(_on_pipes_button_pressed)
 	tiles_button.pressed.connect(_on_tiles_button_pressed)
 	
+	coin_manager = GameState.collect_coin_manager()
+	tower_manager = GameState.collect_tower_manager()
+	
 	coin_manager.coin_changed.connect(_on_coin_changed)
 	
 	gunner_button.pressed.connect(_on_gunner_button_pressed)

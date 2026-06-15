@@ -42,17 +42,18 @@ func find_new_state(state):
 				SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
 		State.GAME:
 			if previous_state == State.MAIN_MENU:
-				await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))
-				SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
+				#await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))
+				#SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
 				td_scene = SceneManager.load_scene("res://Scenes/Game/td.tscn")
 				ui_panel = SceneManager.load_ui("res://Scenes/UI/ui_panel.tscn")
-				td_scene.send_managers.connect(on_send_managers)
 		State.GAME_OVER:
 			pass
 
-func on_send_managers(coin_manager:Node,tower_manager:Node):
-	ui_panel.coin_manager = coin_manager
-	ui_panel.tower_manager = tower_manager
+func collect_coin_manager():
+	return td_scene.get_coin_manager()
+
+func collect_tower_manager():
+	return td_scene.get_tower_manager()
 
 #if need pause scene but no delete 
 #(also hides scene so we can remove that if needed)

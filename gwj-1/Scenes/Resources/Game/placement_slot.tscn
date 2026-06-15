@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://622h6whal51q"]
 
 [ext_resource type="Script" uid="uid://cfbpe8pljhaqv" path="res://Scripts/Resources/PlacementSlot.gd" id="1_u36vq"]
+[ext_resource type="Texture2D" uid="uid://ciru3ckjjiuvk" path="res://Sprites/TempStuff/maze_wall.png" id="2_3ff7j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_484qy"]
 size = Vector2(16, 16)
@@ -12,3 +13,4 @@ script = ExtResource("1_u36vq")
 shape = SubResource("RectangleShape2D_484qy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=485699560]
+texture = ExtResource("2_3ff7j")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://cq76xeic72fud"]
+
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_mqwy1"]
+
+[resource]
+script = ExtResource("1_mqwy1")
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"
