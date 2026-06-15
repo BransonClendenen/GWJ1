@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c1bfc5lf2th3y"]
 
-[ext_resource type="Script" uid="uid://dkcceqow3ad6u" path="res://Scripts/Game/td.gd" id="1_6tnh0"]
-[ext_resource type="Script" uid="uid://bnkj8cimmgr52" path="res://Scripts/Game/coin_manager.gd" id="2_8cs4j"]
-[ext_resource type="Script" uid="uid://dsm0km0rdcyvq" path="res://Scripts/Game/wave_manager.gd" id="2_a3nvy"]
-[ext_resource type="Script" uid="uid://cwbub40k501yn" path="res://Scripts/Game/tower_manager.gd" id="3_3gsr6"]
-[ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/base_manager.gd" id="3_u5l3d"]
+[ext_resource type="Script" uid="uid://dkcceqow3ad6u" path="res://Scripts/Game/TDFunctionality/td.gd" id="1_6tnh0"]
+[ext_resource type="Script" uid="uid://bnkj8cimmgr52" path="res://Scripts/Game/TDFunctionality/coin_manager.gd" id="2_8cs4j"]
+[ext_resource type="Script" uid="uid://dsm0km0rdcyvq" path="res://Scripts/Game/TDFunctionality/wave_manager.gd" id="2_a3nvy"]
+[ext_resource type="Script" uid="uid://cwbub40k501yn" path="res://Scripts/Game/TDFunctionality/tower_manager.gd" id="3_3gsr6"]
+[ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/TDFunctionality/base_manager.gd" id="3_u5l3d"]
 
 [sub_resource type="Curve2D" id="Curve2D_4jop8"]
 
