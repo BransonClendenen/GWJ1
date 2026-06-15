@@ -11,21 +11,37 @@ script = ExtResource("1_2sby1")
 
 [node name="hpbar" type="Node2D" parent="." unique_id=868696193]
 
-[node name="bgbar" type="ColorRect" parent="hpbar" unique_id=199322911]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="bgbar" type="ColorRect" parent="hpbar" unique_id=263191192]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="fillbar" type="ColorRect" parent="hpbar" unique_id=299516945]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="fillbar" type="ColorRect" parent="hpbar" unique_id=1488486902]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(0.2924954, 0.8342276, 0.36060718, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="staminabar" type="ColorRect" parent="hpbar" unique_id=69881353]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="armorbar" type="ColorRect" parent="hpbar" unique_id=771054995]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(0.9787845, 0.9034187, 1.540184e-06, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="armorbar" type="ColorRect" parent="hpbar" unique_id=115505977]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="staminabar" type="ColorRect" parent="hpbar" unique_id=890683457]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(6.160736e-06, 0, 0.9915611, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="hitbox" type="Area2D" parent="." unique_id=761473573]
 
