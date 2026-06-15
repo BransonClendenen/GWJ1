@@ -14,7 +14,8 @@ func _ready() -> void:
 	wave_manager.start_next_wave()
 
 func setup_level() -> void:
-	enemy_path.curve = level_data.path_curve
+	if level_data.path_curve:
+		enemy_path.curve = level_data.path_curve
 	coin_manager.setup(level_data.starting_coins)
 	base_manager.setup(level_data.base_hp)
 	wave_manager.setup(level_data.waves)

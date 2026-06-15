@@ -6,13 +6,8 @@
 [ext_resource type="Resource" uid="uid://bd6vyq8s1ukgl" path="res://Scripts/Data/LevelData/level_1.tres" id="2_fx436"]
 [ext_resource type="Script" uid="uid://cwbub40k501yn" path="res://Scripts/Game/TDFunctionality/tower_manager.gd" id="3_3gsr6"]
 [ext_resource type="Script" uid="uid://cfbpe8pljhaqv" path="res://Scripts/Resources/PlacementSlot.gd" id="3_53i8q"]
+[ext_resource type="Curve2D" uid="uid://dwsbnunyhc17a" path="res://Scenes/Resources/Paths/path_level_1.tres" id="3_pnj6t"]
 [ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/TDFunctionality/base_manager.gd" id="3_u5l3d"]
-
-[sub_resource type="Curve2D" id="Curve2D_4jop8"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 16, 16, 0, 0, 0, 0, 32, 40, 0, 0, 0, 0, 32, 80, 0, 0, 0, 0, 64, 88, 0, 0, 0, 0, 96, 80, 0, 0, 0, 0, 104, 56, 0, 0, 0, 0, 112, 32, 0, 0, 0, 0, 128, 16, 0, 0, 0, 0, 160, 16, 0, 0, 0, 0, 192, 16, 0, 0, 0, 0, 200, 48, 0, 0, 0, 0, 208, 72)
-}
-point_count = 12
 
 [node name="TDMap" type="Node2D" unique_id=393999577]
 script = ExtResource("1_6tnh0")
@@ -21,7 +16,7 @@ level_data = ExtResource("2_fx436")
 [node name="EnemyPath" type="Path2D" parent="." unique_id=1406806907]
 position = Vector2(0.66666603, 0)
 scale = Vector2(0.9583333, 1)
-curve = SubResource("Curve2D_4jop8")
+curve = ExtResource("3_pnj6t")
 
 [node name="TowerContainer" type="Node2D" parent="." unique_id=372850547]
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://6scgrvkucdcq"]
 
 [ext_resource type="Script" uid="uid://bt2b55xsvv615" path="res://Scripts/Game/Enemies/dodger.gd" id="1_vrr8c"]
+[ext_resource type="Texture2D" uid="uid://bsvhpehiutn50" path="res://Sprites/TempStuff/maze_player.png" id="2_tk5d4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tk5d4"]
 
@@ -8,6 +9,7 @@
 script = ExtResource("1_vrr8c")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=541083982]
+texture = ExtResource("2_tk5d4")
 
 [node name="hpbar" type="Node2D" parent="." unique_id=675044665]
 

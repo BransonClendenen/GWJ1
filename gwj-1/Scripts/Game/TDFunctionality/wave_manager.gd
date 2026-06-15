@@ -18,6 +18,7 @@ var base_manager:Node
 func setup(p_waves: Array[WaveData]):
 	waves = p_waves
 	baked_points = enemy_path.curve.get_baked_points()
+	print("baked: ", baked_points)
 
 func start_next_wave():
 	if current_wave_index >= waves.size():
@@ -48,6 +49,7 @@ func spawn_sequence(spawn_list: Array[PackedScene], interval: float):
 	is_spawning = false
 
 func spawn_enemy(enemy_scene: PackedScene):
+	print("spawning: ", enemy_scene)
 	var enemy = enemy_scene.instantiate()
 	enemy_container.add_child(enemy)
 	enemy.set_path(baked_points)
