@@ -41,7 +41,7 @@ func update_target():
 
 func _on_area_entered(body:Node2D):
 	if body.get_parent() is Enemy:
-		enemies_in_range.append(body)
+		enemies_in_range.append(body.get_parent())
 
 func _on_area_exited(body:Node2D):
 	enemies_in_range.erase(body.get_parent())
@@ -53,7 +53,6 @@ func shoot():
 	projectile_container.add_child(bullet)
 	bullet.global_position = shoot_point.global_position
 	bullet.setup(damage,bullet_speed,splash_radius,stamina_drain,armor_pierce,current_target)
-	print("boolet")
 
 func setup_range():
 	var shape = CircleShape2D.new()

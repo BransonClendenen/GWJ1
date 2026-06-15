@@ -28,7 +28,8 @@ func _process(delta: float) -> void:
 	global_position += direction * speed * delta
 	rotation = direction.angle()
 	
-	if global_position.distance_to(target.global_position) < 4.0:
+	if global_position.distance_to(target.global_position) < 1.0:
+		print("impact")
 		on_impact()
 
 func on_impact():

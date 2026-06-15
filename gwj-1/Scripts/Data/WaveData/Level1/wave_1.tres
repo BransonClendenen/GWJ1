@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_ajcls"]
 [ext_resource type="Resource" uid="uid://dab7dlw1ynmo7" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x1.tres" id="2_anafv"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_j1gbk"]
+[ext_resource type="Resource" uid="uid://up5q7nbh2w06" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x10.tres" id="3_anafv"]
 
 [resource]
 script = ExtResource("2_j1gbk")
-enemies = Array[ExtResource("1_ajcls")]([ExtResource("2_anafv")])
+enemies = Array[ExtResource("1_ajcls")]([ExtResource("2_anafv"), ExtResource("3_anafv")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"
