@@ -5,6 +5,7 @@ var is_occupied: bool = false
 var tower: Tower = null
 var tower_container:Node2D
 var bullet_container:Node2D
+var enemy_container:Node2D
 
 func place_tower(tower_scene:PackedScene) -> Tower:
 	if is_occupied:
@@ -12,6 +13,7 @@ func place_tower(tower_scene:PackedScene) -> Tower:
 	var t = tower_scene.instantiate()
 	tower_container.add_child(t)
 	t.global_position = global_position
+	t.enemies_container
 	t.projectile_container = bullet_container
 	tower = t
 	is_occupied = true

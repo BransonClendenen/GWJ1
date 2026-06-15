@@ -16,6 +16,7 @@ var fire_timer: float = 0.0
 var current_target: Node2D = null
 var enemies_in_range: Array = []
 var projectile_container: Node2D
+var enemies_container: Node2D
 
 @onready var range_area: Area2D = $RangeArea
 @onready var range_shape: CollisionShape2D = $RangeArea/CollisionShape2D
