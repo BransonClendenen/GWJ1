@@ -36,6 +36,7 @@ func _ready() -> void:
 	tower_manager = GameState.collect_tower_manager()
 	
 	coin_manager.coin_changed.connect(_on_coin_changed)
+	coins_label.text = str(coin_manager.coins)
 	
 	gunner_button.pressed.connect(_on_gunner_button_pressed)
 	bomber_button.pressed.connect(_on_bomber_button_pressed)

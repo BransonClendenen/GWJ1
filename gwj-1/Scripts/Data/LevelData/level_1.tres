@@ -3,12 +3,39 @@
 [ext_resource type="Curve2D" uid="uid://dwsbnunyhc17a" path="res://Scenes/Resources/Paths/path_level_1.tres" id="1_0xo5f"]
 [ext_resource type="Script" uid="uid://v38uqpv7ur63" path="res://Scripts/Resources/LevelData.gd" id="1_ryrim"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_5vvg3"]
-[ext_resource type="Resource" uid="uid://dwmcf2qrhbekh" path="res://Scripts/Data/WaveData/Level1/wave_1.tres" id="3_5vvg3"]
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="4_hbdda"]
+[ext_resource type="PackedScene" uid="uid://6scgrvkucdcq" path="res://Scenes/Game/Enemies/dodger.tscn" id="5_g7xxf"]
+
+[sub_resource type="Resource" id="Resource_2jvmi"]
+script = ExtResource("4_hbdda")
+enemy_scene = ExtResource("5_g7xxf")
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"
+
+[sub_resource type="Resource" id="Resource_k5vvk"]
+script = ExtResource("2_5vvg3")
+enemies = Array[ExtResource("4_hbdda")]([SubResource("Resource_2jvmi")])
+metadata/_custom_type_script = "uid://o1322v7xx51l"
+
+[sub_resource type="Resource" id="Resource_n8sv4"]
+script = ExtResource("4_hbdda")
+enemy_scene = ExtResource("5_g7xxf")
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"
+
+[sub_resource type="Resource" id="Resource_qiiyw"]
+script = ExtResource("4_hbdda")
+enemy_scene = ExtResource("5_g7xxf")
+count = 10
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"
+
+[sub_resource type="Resource" id="Resource_txr7t"]
+script = ExtResource("2_5vvg3")
+enemies = Array[ExtResource("4_hbdda")]([SubResource("Resource_n8sv4"), SubResource("Resource_qiiyw")])
+metadata/_custom_type_script = "uid://o1322v7xx51l"
 
 [resource]
 script = ExtResource("1_ryrim")
 level_name = "Level 1"
 path_curve = ExtResource("1_0xo5f")
-waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3")])
+waves = Array[ExtResource("2_5vvg3")]([SubResource("Resource_k5vvk"), SubResource("Resource_txr7t")])
 starting_coins = 150
 metadata/_custom_type_script = "uid://v38uqpv7ur63"

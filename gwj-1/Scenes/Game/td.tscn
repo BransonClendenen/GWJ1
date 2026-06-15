@@ -8,6 +8,10 @@
 [ext_resource type="Curve2D" uid="uid://dwsbnunyhc17a" path="res://Scenes/Resources/Paths/path_level_1.tres" id="3_pnj6t"]
 [ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/TDFunctionality/base_manager.gd" id="3_u5l3d"]
 [ext_resource type="PackedScene" uid="uid://622h6whal51q" path="res://Scenes/Resources/Game/placement_slot.tscn" id="4_pnj6t"]
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="9_imfa6"]
+[ext_resource type="Script" uid="uid://c2cyr3vlg26mk" path="res://Scripts/UI/hud.gd" id="10_ch2dg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ch2dg"]
 
 [node name="TDMap" type="Node2D" unique_id=393999577]
 script = ExtResource("1_6tnh0")
@@ -40,3 +44,34 @@ script = ExtResource("2_8cs4j")
 
 [node name="BaseManager" type="Node" parent="." unique_id=2073872489]
 script = ExtResource("3_u5l3d")
+
+[node name="Hud" type="Panel" parent="." unique_id=88085745]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 213.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_imfa6")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ch2dg")
+script = ExtResource("10_ch2dg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud" unique_id=300678293]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="base_health" type="Label" parent="Hud/VBoxContainer" unique_id=2000948537]
+layout_mode = 2
+text = "Base Health"
+horizontal_alignment = 2
+
+[node name="wave_count" type="Label" parent="Hud/VBoxContainer" unique_id=85042712]
+layout_mode = 2
+text = "Wave"
+horizontal_alignment = 2

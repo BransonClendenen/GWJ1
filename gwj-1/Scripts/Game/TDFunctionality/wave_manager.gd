@@ -67,4 +67,5 @@ func on_enemy_removed():
 	enemies_alive -= 1
 	if enemies_alive <= 0 and not is_spawning:
 		emit_signal("wave_complete", current_wave_index + 1)
+		print("wave done")
 		current_wave_index += 1
