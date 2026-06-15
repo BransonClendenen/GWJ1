@@ -11,7 +11,6 @@ var current_state: State
 var previous_state: State
 
 var main_menu#: #MainMenu
-var game#: Game
 var game_over_menu#: #GameOverMenu
 var td_scene:Node2D
 var ui_panel:Control
@@ -36,18 +35,21 @@ func find_new_state(state):
 		State.MAIN_MENU:
 			if previous_state == State.NONE:
 				#first load
-				SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
+				main_menu = SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
 			else:
 				#second and after load
-				SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
+				main_menu = SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
 		State.GAME:
 			if previous_state == State.MAIN_MENU:
 				#await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))
 				#SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
 				td_scene = SceneManager.load_scene("res://Scenes/Game/td.tscn")
 				ui_panel = SceneManager.load_ui("res://Scenes/UI/ui_panel.tscn")
+				main_menu.queue_free()
 		State.GAME_OVER:
-			pass
+			game_over_menu = SceneManager.load_ui("res://Scenes/UI/game_over_menu.tscn")
+			td_scene.queue_free()
+			ui_panel.queue_free()
 
 func collect_coin_manager():
 	return td_scene.get_coin_manager()
