@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://6scgrvkucdcq"]
+
+[ext_resource type="Script" uid="uid://bt2b55xsvv615" path="res://Scripts/Game/Enemies/dodger.gd" id="1_vrr8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tk5d4"]
+
+[node name="Dodger" type="Node2D" unique_id=1397339758]
+script = ExtResource("1_vrr8c")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=541083982]
+
+[node name="hpbar" type="Node2D" parent="." unique_id=675044665]
+
+[node name="bgbar" type="ColorRect" parent="hpbar" unique_id=1763077905]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="fillbar" type="ColorRect" parent="hpbar" unique_id=1865679003]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="staminabar" type="ColorRect" parent="hpbar" unique_id=1685465007]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="armorbar" type="ColorRect" parent="hpbar" unique_id=1313893946]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="hitbox" type="Area2D" parent="." unique_id=52383736]
+
+[node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=1584882924]
+shape = SubResource("RectangleShape2D_tk5d4")
