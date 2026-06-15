@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bxt45md22mp12"]
+
+[ext_resource type="Script" uid="uid://dksngmblbsk2v" path="res://Scripts/Game/Enemies/splitter.gd" id="1_6mplu"]
+[ext_resource type="Texture2D" uid="uid://bwkebp5kdkxg0" path="res://Sprites/TempStuff/maze_exit.png" id="1_ldpjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mplu"]
+
+[node name="Splitter" type="Node2D" unique_id=19323957]
+script = ExtResource("1_6mplu")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=174760308]
+texture = ExtResource("1_ldpjs")
+
+[node name="hpbar" type="Node2D" parent="." unique_id=2056539109]
+
+[node name="bgbar" type="ColorRect" parent="hpbar" unique_id=1135589163]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="fillbar" type="ColorRect" parent="hpbar" unique_id=1885005275]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(0.2924954, 0.8342276, 0.36060718, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="armorbar" type="ColorRect" parent="hpbar" unique_id=79989394]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(0.9787845, 0.9034187, 1.540184e-06, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="staminabar" type="ColorRect" parent="hpbar" unique_id=986721847]
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+offset_bottom = -15.0
+color = Color(6.160736e-06, 0, 0.9915611, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1995562017]
+collision_mask = 0
+
+[node name="hitbox_shape" type="CollisionShape2D" parent="hitbox" unique_id=373900636]
+shape = SubResource("RectangleShape2D_6mplu")
