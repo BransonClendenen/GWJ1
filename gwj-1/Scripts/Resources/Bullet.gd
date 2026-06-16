@@ -11,13 +11,14 @@ var enemies_container: Node2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-func setup(p_damage:float,p_speed:float,p_splash:float,p_stamina:float,p_armor:float,p_target:Node2D):
+func setup(p_damage:float,p_speed:float,p_splash:float,p_stamina:float,p_armor:float,p_target:Node2D,e_cont:Node2D):
 	damage = p_damage
 	speed = p_speed
 	splash_radius = p_splash
 	stamina_drain = p_stamina
 	armor_pierce = p_armor
 	target = p_target
+	enemies_container = e_cont
 
 func _process(delta: float) -> void:
 	if not is_instance_valid(target):

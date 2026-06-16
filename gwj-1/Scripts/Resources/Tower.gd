@@ -53,7 +53,7 @@ func shoot():
 	var bullet = bullet_scene.instantiate()
 	projectile_container.add_child(bullet)
 	bullet.global_position = shoot_point.global_position
-	bullet.setup(damage,bullet_speed,splash_radius,stamina_drain,armor_pierce,current_target)
+	bullet.setup(damage,bullet_speed,splash_radius,stamina_drain,armor_pierce,current_target,enemies_container)
 
 func setup_range():
 	var shape = CircleShape2D.new()

@@ -13,7 +13,7 @@ func place_tower(tower_scene:PackedScene) -> Tower:
 	var t = tower_scene.instantiate()
 	tower_container.add_child(t)
 	t.global_position = global_position
-	t.enemies_container
+	t.enemies_container = enemy_container
 	t.projectile_container = bullet_container
 	tower = t
 	is_occupied = true

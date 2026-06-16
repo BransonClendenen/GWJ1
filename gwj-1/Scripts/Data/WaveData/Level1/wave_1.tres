@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://dwmcf2qrhbekh"]
 
 [ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_ajcls"]
+[ext_resource type="Resource" uid="uid://cq76xeic72fud" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x1.tres" id="2_anafv"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_j1gbk"]
 
 [sub_resource type="Resource" id="Resource_ajcls"]
@@ -9,5 +10,5 @@ metadata/_custom_type_script = "uid://dyrdryyhwua8l"
 
 [resource]
 script = ExtResource("2_j1gbk")
-enemies = Array[ExtResource("1_ajcls")]([SubResource("Resource_ajcls")])
+enemies = Array[ExtResource("1_ajcls")]([SubResource("Resource_ajcls"), ExtResource("2_anafv")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"
