@@ -215,7 +215,7 @@ layout_mode = 0
 offset_top = 26.0
 offset_right = 31.0
 offset_bottom = 36.0
-text = "676767"
+text = "70"
 
 [node name="button" type="Button" parent="shop_panel/bomber_card" unique_id=525415737]
 layout_mode = 1
@@ -257,7 +257,7 @@ layout_mode = 0
 offset_top = 26.0
 offset_right = 30.0
 offset_bottom = 36.0
-text = "676767"
+text = "80"
 
 [node name="button" type="Button" parent="shop_panel/sniper_card" unique_id=968555211]
 layout_mode = 1

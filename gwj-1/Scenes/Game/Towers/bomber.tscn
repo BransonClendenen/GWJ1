@@ -11,9 +11,10 @@ position = Vector2(0, -3.8146973e-06)
 scale = Vector2(0.390625, 0.3984375)
 texture = ExtResource("2_sueqj")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=118120022]
+[node name="RangeArea" type="Area2D" parent="." unique_id=118120022]
+collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1954276766]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1954276766]
 
 [node name="ShootPoint" type="Marker2D" parent="." unique_id=758421673]
 position = Vector2(0, -29)

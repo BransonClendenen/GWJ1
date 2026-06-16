@@ -37,7 +37,7 @@ func on_impact():
 		apply_splash()
 	else:
 		if is_instance_valid(target) and target is Enemy:
-			target.take_damage(damage,armor_pierce)
+			target.take_damage(damage,armor_pierce,stamina_drain)
 	
 	VfxManager.burst(get_parent(), global_position, Color.ORANGE, 6, 0.2)
 	on_impact_effect()
@@ -48,7 +48,7 @@ func apply_splash():
 	for enemy in enemies:
 		if enemy is Enemy:
 			if global_position.distance_to(enemy.global_position) <= splash_radius:
-				enemy.take_damage(damage,armor_pierce)
+				enemy.take_damage(damage,armor_pierce,stamina_drain)
 				if stamina_drain > 0.0:
 					enemy.drain_stamina(stamina_drain)
 					#one billion nests

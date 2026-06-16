@@ -17,8 +17,8 @@ extends Panel
 
 
 @export var gunner_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
-#@export var bomber_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
-#@export var sniper_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
+@export var bomber_scene: PackedScene = preload("res://Scenes/Game/Towers/bomber.tscn")
+@export var sniper_scene: PackedScene = preload("res://Scenes/Game/Towers/sniper.tscn")
 
 var tower_manager:Node
 var coin_manager:Node
@@ -82,8 +82,8 @@ func _on_gunner_button_pressed():
 
 func _on_bomber_button_pressed():
 	pass
-	#tower_manager.select_tower(bomber_scene, 60)
+	tower_manager.select_tower(bomber_scene, 70)
 
 func _on_sniper_button_pressed():
 	pass
-	#tower_manager.select_tower(sniper_scene, 60)
+	tower_manager.select_tower(sniper_scene, 80)

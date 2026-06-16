@@ -8,7 +8,8 @@ func _ready():
 	damage = 30.0
 	range = 27.0
 	fire_rate = .75
-	cost = 120
+	cost = 70
+	bullet_scene = preload("res://Scenes/Game/Bullets/bomber_bullet.tscn")
 	bullet_speed = 90.0
 	splash_radius = 50.0
 	super._ready()

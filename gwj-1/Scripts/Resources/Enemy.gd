@@ -56,11 +56,19 @@ func set_path(points: PackedVector2Array):
 	path_points = points
 	path_index = 0
 
-func take_damage(amount:float,pierce:float = 0.0):
+func take_damage(amount:float,pierce:float = 0.0,stamina_drain: float = 0.0):
 	if is_dead:
 		return
 	
 	var final_damage = amount
+	
+	if current_stamina > 0.0:
+		if stamina_drain > 0.0:
+			drain_stamina(stamina_drain)
+		else:
+			drain_stamina(amount * 0.1)
+		on_hit()
+		return
 	
 	if current_armor > 0.0:
 		var effective_reduction = armor_reduction * (1.0-pierce)
