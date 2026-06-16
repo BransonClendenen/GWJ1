@@ -56,6 +56,11 @@ func set_path(points: PackedVector2Array):
 	path_points = points
 	path_index = 0
 
+func set_path_from_index(points: PackedVector2Array, from_index: int) -> void:
+	path_points = points
+	path_index = from_index
+
+
 func take_damage(amount:float,pierce:float = 0.0,stamina_drain: float = 0.0):
 	if is_dead:
 		return

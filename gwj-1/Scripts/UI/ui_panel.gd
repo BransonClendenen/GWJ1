@@ -68,8 +68,8 @@ func _on_minigame_completed(type:String,success:bool):
 		return
 	match type:
 		"maze":  coin_manager.add_coins(10)
-		#"pipes": coin_manager.add_coins(40)
-		#"tiles": coin_manager.add_coins(40)
+		"pipes": coin_manager.add_coins(40)
+		"tiles": coin_manager.add_coins(40)
 
 func _on_result_button_pressed():
 	result_panel.visible = false
