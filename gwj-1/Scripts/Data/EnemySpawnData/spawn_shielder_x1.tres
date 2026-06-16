@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://bnyb3hm1mwfkw"]
+
+[ext_resource type="PackedScene" uid="uid://yfmpbrawbdph" path="res://Scenes/Game/Enemies/shielder.tscn" id="1_y1h06"]
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="2_exlv6"]
+
+[resource]
+script = ExtResource("2_exlv6")
+enemy_scene = ExtResource("1_y1h06")
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"

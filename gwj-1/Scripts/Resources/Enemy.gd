@@ -76,13 +76,16 @@ func take_damage(amount:float,pierce:float = 0.0,stamina_drain: float = 0.0):
 		return
 	
 	if current_armor > 0.0:
-		var effective_reduction = armor_reduction * (1.0-pierce)
-		final_damage = amount * (1.0 - effective_reduction)
-		current_armor = clamp(current_armor - amount, 0.0, max_armor)
+		var safe_pierce = clamp(pierce, 0.0, 1.0)
+		var armor_damage = amount * (1 + safe_pierce)
+		current_armor = clamp(current_armor - armor_damage, 0.0, max_armor)
 		update_armor_bar()
 		on_armor_changed(current_armor)
 		if current_armor <= 0.0:
 			on_armor_broken()
+		VfxManager.flash(self)
+		on_hit()
+		return
 	
 	current_hp -= final_damage
 	update_hp_bar()
