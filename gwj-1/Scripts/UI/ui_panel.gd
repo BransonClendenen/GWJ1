@@ -46,12 +46,10 @@ func _on_maze_button_pressed() -> void:
 	MinigameManager.start_minigame("maze")
 
 func _on_pipes_button_pressed() -> void:
-	pass
-	#MinigameManager.start_minigame("pipes")
+	MinigameManager.start_minigame("pipes")
 
 func _on_tiles_button_pressed() -> void:
-	pass
-	#MinigameManager.start_minigame("tiles")
+	MinigameManager.start_minigame("tiles")
 
 func _on_minigame_completed(type:String,success:bool):
 	var text:String

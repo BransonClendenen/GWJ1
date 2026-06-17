@@ -16,8 +16,8 @@ func start_minigame(type:String):
 	var path = ""
 	match type:
 		"maze":path = "res://Scenes/Overlay/minigame_maze.tscn"
-		#"pipes":path = ""
-		#"tiles":path = ""
+		"pipes": path = "res://Scenes/Overlay/minigame_pipes.tscn"
+		"tiles": path = "res://Scenes/Overlay/minigame_tiles.tscn"
 	
 	if path == "":
 		push_error("Unknown minigame id: " + type)
