@@ -1,7 +1,57 @@
 [gd_scene format=3 uid="uid://6scgrvkucdcq"]
 
 [ext_resource type="Script" uid="uid://bt2b55xsvv615" path="res://Scripts/Game/Enemies/dodger.gd" id="1_vrr8c"]
-[ext_resource type="Texture2D" uid="uid://bsvhpehiutn50" path="res://Sprites/TempStuff/maze_player.png" id="2_tk5d4"]
+[ext_resource type="Texture2D" uid="uid://dhfvp8e6qy51f" path="res://Sprites/Game/Enemies/DodgerShooting.png" id="2_tk5d4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6yxp"]
+atlas = ExtResource("2_tk5d4")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v784v"]
+atlas = ExtResource("2_tk5d4")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3axx"]
+atlas = ExtResource("2_tk5d4")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wurft"]
+atlas = ExtResource("2_tk5d4")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omfr4"]
+atlas = ExtResource("2_tk5d4")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skt0u"]
+atlas = ExtResource("2_tk5d4")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kffgr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6yxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v784v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3axx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wurft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omfr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skt0u")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tk5d4"]
 
@@ -10,8 +60,11 @@ light_mask = 3
 visibility_layer = 3
 script = ExtResource("1_vrr8c")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=541083982]
-texture = ExtResource("2_tk5d4")
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1326784190]
+sprite_frames = SubResource("SpriteFrames_kffgr")
+animation = &"walking"
+autoplay = "walking"
+flip_h = true
 
 [node name="hpbar" type="Node2D" parent="." unique_id=675044665]
 

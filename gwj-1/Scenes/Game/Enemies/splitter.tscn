@@ -1,22 +1,71 @@
 [gd_scene format=3 uid="uid://bxt45md22mp12"]
 
 [ext_resource type="Script" uid="uid://dksngmblbsk2v" path="res://Scripts/Game/Enemies/splitter.gd" id="1_6mplu"]
-[ext_resource type="Texture2D" uid="uid://bwkebp5kdkxg0" path="res://Sprites/TempStuff/maze_exit.png" id="1_ldpjs"]
+[ext_resource type="Texture2D" uid="uid://dhfvp8e6qy51f" path="res://Sprites/Game/Enemies/DodgerShooting.png" id="2_6mplu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6yxp"]
+atlas = ExtResource("2_6mplu")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v784v"]
+atlas = ExtResource("2_6mplu")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3axx"]
+atlas = ExtResource("2_6mplu")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wurft"]
+atlas = ExtResource("2_6mplu")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omfr4"]
+atlas = ExtResource("2_6mplu")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skt0u"]
+atlas = ExtResource("2_6mplu")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gdfmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6yxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v784v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3axx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wurft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omfr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skt0u")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mplu"]
 
 [node name="Splitter" type="Node2D" unique_id=19323957]
 script = ExtResource("1_6mplu")
-enemy_name = null
-max_hp = null
-max_stamina = null
-max_armor = null
-speed = null
-coin_reward = null
-damage_to_base = null
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=174760308]
-texture = ExtResource("1_ldpjs")
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=921062780]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_gdfmc")
+animation = &"walking"
+autoplay = "walking"
+frame = 5
+frame_progress = 0.49550045
+flip_h = true
 
 [node name="hpbar" type="Node2D" parent="." unique_id=2056539109]
 

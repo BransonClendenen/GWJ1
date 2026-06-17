@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://b1ul4iro0oo22"]
 
 [ext_resource type="Script" uid="uid://begqb50bqfsns" path="res://Scripts/Game/Enemies/turtler.gd" id="1_cbtvk"]
-[ext_resource type="Texture2D" uid="uid://ciru3ckjjiuvk" path="res://Sprites/TempStuff/maze_wall.png" id="1_v8yym"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbtvk"]
 
 [node name="turtler" type="Node2D" unique_id=125996876]
 script = ExtResource("1_cbtvk")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=662713279]
-texture = ExtResource("1_v8yym")
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=575895850]
 
 [node name="hpbar" type="Node2D" parent="." unique_id=1327187620]
 

@@ -19,7 +19,7 @@ var wave_manager: Node
 var path_points: PackedVector2Array = []
 var path_index: int = 0
 
-@onready var sprite: Sprite2D = $sprite
+@onready var sprite: AnimatedSprite2D = $sprite
 @onready var bgbar: ColorRect = $hpbar/bgbar
 @onready var fillbar: ColorRect = $hpbar/fillbar
 @onready var staminabar: ColorRect = $hpbar/staminabar

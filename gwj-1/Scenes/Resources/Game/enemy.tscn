@@ -7,7 +7,7 @@
 [node name="enemy" type="Node2D" unique_id=534050274]
 script = ExtResource("1_2sby1")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=626726583]
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1693322711]
 
 [node name="hpbar" type="Node2D" parent="." unique_id=868696193]
 
