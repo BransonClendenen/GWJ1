@@ -49,10 +49,16 @@ func spawn_sequence(spawn_list: Array[PackedScene], interval: float):
 
 func spawn_enemy(enemy_scene: PackedScene):
 	var enemy = enemy_scene.instantiate()
+	enemy.wave_manager = self
 	enemy_container.add_child(enemy)
 	enemy.set_path(baked_points)
 	enemy.died.connect(_on_enemy_died)
 	enemy.reached_base.connect(_on_enemy_reached_base)
+
+func register_enemy(enemy:Enemy):
+	enemy.died.connect(_on_enemy_died)
+	enemy.reached_base.connect(_on_enemy_reached_base)
+	enemies_alive += 1
 
 func _on_enemy_died(reward: int):
 	coin_manager.add_coins(reward)

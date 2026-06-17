@@ -30,3 +30,4 @@ func on_death():
 		mini.global_position = global_position + offset
 		
 		mini.set_path_from_index(path_points, path_index)
+		wave_manager.register_enemy(mini)

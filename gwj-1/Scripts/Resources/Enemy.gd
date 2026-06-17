@@ -14,6 +14,7 @@ var current_stamina: float
 var current_armor: float
 var armor_reduction: float
 var is_dead: bool = false
+var wave_manager: Node
 
 var path_points: PackedVector2Array = []
 var path_index: int = 0
