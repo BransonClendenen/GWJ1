@@ -49,6 +49,7 @@ func on_slot_clicked(index:int):
 	if data:
 		upgrade_button.text = "Cost-" + str(data.cost)
 		upgrade_button.visible = true
+	refresh_slots()
 
 func on_upgrade_button_pressed():
 	if not current_tower:
@@ -63,11 +64,29 @@ func refresh_slots():
 	var slots = [slot_1, slot_2a, slot_2b, slot_3a, slot_3b]
 	for i in range(slots.size()):
 		if current_tower.purchased_slots[i]:
+			print("slot ", i, " purchased")
 			slots[i].modulate = Color(0.2, 0.8, 0.2)
+		elif i == current_tower.selected_upgrade_index:
+			print("slot ", i, " selected")
+			slots[i].modulate = Color(0.9, 0.9, 0.2)
+		elif _is_branch_locked(i):
+			print("slot ", i, " branch locked")
+			slots[i].modulate = Color(0.5, 0.2, 0.2)
 		elif not current_tower.is_slot_available(i):
+			print("slot ", i, " future locked")
 			slots[i].modulate = Color(0.4, 0.4, 0.4)
 		else:
-			slots[i].modulate = Color.WHITE
+			print("slot ", i, " available")
+			slots[i].modulate = Color(0.3,0.5,0.9)
+
+func _is_branch_locked(index: int) -> bool:
+	if current_tower.chosen_branch == 0:
+		return false
+	if current_tower.chosen_branch == 1:
+		return index == 2 or index == 4
+	if current_tower.chosen_branch == 2:
+		return index == 1 or index == 3
+	return false
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:

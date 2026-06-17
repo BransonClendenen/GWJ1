@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://do5o4e0emha3g" path="res://Scripts/Overlay/upgrade_panel.gd" id="1_8hmso"]
 [ext_resource type="FontFile" uid="uid://cirp8byv4ai62" path="res://Sprites/Fonts/Kenney Pixel.ttf" id="2_sjgx1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjgx1"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hmso"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjgx1"]
@@ -12,6 +14,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp17q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7s1fn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u7gg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u01lu"]
 
@@ -23,6 +27,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8x5bo"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp17q"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ao0jr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_03s53"]
@@ -33,6 +39,10 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_isjxb"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7s1fn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u01lu"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hntvr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqilp"]
@@ -42,6 +52,16 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kksl6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_onxs3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dolx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiehl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynmjc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x5bo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ao0jr"]
 
 [node name="upgrade_panel" type="Control" unique_id=352570185]
 layout_mode = 3
@@ -72,6 +92,7 @@ alignment = 1
 [node name="Slot3b" type="Panel" parent="HBoxContainer" unique_id=1924251710]
 custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sjgx1")
 
 [node name="Button3b" type="Button" parent="HBoxContainer/Slot3b" unique_id=1393988113]
 custom_minimum_size = Vector2(8, 8)
@@ -88,6 +109,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_7s1fn")
 [node name="Slot3a" type="Panel" parent="HBoxContainer" unique_id=210519972]
 custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6u7gg")
 
 [node name="Button3a" type="Button" parent="HBoxContainer/Slot3a" unique_id=1212725091]
 custom_minimum_size = Vector2(5, 5)
@@ -110,6 +132,7 @@ alignment = 1
 [node name="Slot2b" type="Panel" parent="HBoxContainer2" unique_id=80216216]
 custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cp17q")
 
 [node name="Button2b" type="Button" parent="HBoxContainer2/Slot2b" unique_id=1714842911]
 custom_minimum_size = Vector2(8, 8)
@@ -126,6 +149,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_isjxb")
 [node name="Slot2a" type="Panel" parent="HBoxContainer2" unique_id=1362433904]
 custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7s1fn")
 
 [node name="Button2a" type="Button" parent="HBoxContainer2/Slot2a" unique_id=763377153]
 custom_minimum_size = Vector2(5, 5)
@@ -146,6 +170,7 @@ offset_left = 10.0
 offset_top = 25.0
 offset_right = 30.0
 offset_bottom = 33.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u01lu")
 
 [node name="Button1" type="Button" parent="Slot1" unique_id=476446742]
 custom_minimum_size = Vector2(20, 8)
@@ -168,4 +193,8 @@ offset_right = 39.0
 offset_bottom = 49.0
 theme_override_fonts/font = ExtResource("2_sjgx1")
 theme_override_font_sizes/font_size = 8
-text = "Cost-150"
+theme_override_styles/normal = SubResource("StyleBoxFlat_1dolx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fiehl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ynmjc")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8x5bo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ao0jr")

@@ -4,6 +4,8 @@ var selected_tower_scene: PackedScene = null
 var selected_tower_cost: int = 0
 var placement_slots: Array = []
 
+var ghost_sprite: Sprite2D = null
+
 @onready var projectile_container: Node2D = $"../ProjectileContainer"
 @onready var slots_container = $"../PlacementSlots"
 @onready var enemy_container: Node2D = $"../EnemyContainer"
@@ -17,13 +19,33 @@ func _ready() -> void:
 		slot.enemy_container = enemy_container
 		slot.coin_manager = coin_manager
 
-func select_tower(tower_scene: PackedScene, cost: int):
+func _process(delta: float) -> void:
+	if ghost_sprite:
+		ghost_sprite.global_position = ghost_sprite.get_global_mouse_position()
+
+func select_tower(tower_scene: PackedScene, cost: int,preview_texture: Texture2D):
 	selected_tower_scene = tower_scene
 	selected_tower_cost = cost
+	show_ghost(preview_texture)
 
 func deselect_tower():
 	selected_tower_scene = null
 	selected_tower_cost = 0
+	hide_ghost()
+
+func show_ghost(texture: Texture2D):
+	if ghost_sprite:
+		ghost_sprite.queue_free()
+	ghost_sprite = Sprite2D.new()
+	ghost_sprite.texture = texture
+	ghost_sprite.modulate = Color(1, 1, 1, 0.5)
+	ghost_sprite.scale = Vector2(0.39, 0.39)
+	get_tree().current_scene.get_node("GameLayer/TDMap").add_child(ghost_sprite)
+
+func hide_ghost():
+	if ghost_sprite:
+		ghost_sprite.queue_free()
+		ghost_sprite = null
 
 func _input(event: InputEvent):
 	if not event is InputEventMouseButton:

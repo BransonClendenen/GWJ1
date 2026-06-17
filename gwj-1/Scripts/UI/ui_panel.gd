@@ -20,6 +20,8 @@ extends Panel
 @export var bomber_scene: PackedScene = preload("res://Scenes/Game/Towers/bomber.tscn")
 @export var sniper_scene: PackedScene = preload("res://Scenes/Game/Towers/sniper.tscn")
 
+@export var gunner_preview_texture = preload("res://Sprites/gunner_sprite.png")
+
 var tower_manager:Node
 var coin_manager:Node
 
@@ -76,7 +78,7 @@ func _on_coin_changed(new_amount):
 	coins_label.text = str(new_amount)
 
 func _on_gunner_button_pressed():
-	tower_manager.select_tower(gunner_scene, 60)
+	tower_manager.select_tower(gunner_scene, 60, gunner_preview_texture)
 
 func _on_bomber_button_pressed():
 	pass
