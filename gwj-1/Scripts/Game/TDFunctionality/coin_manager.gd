@@ -1,4 +1,5 @@
 extends Node
+class_name CoinManager
 
 signal coin_changed(new_amount: int)
 

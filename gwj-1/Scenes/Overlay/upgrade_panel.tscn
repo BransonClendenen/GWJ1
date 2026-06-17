@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://b366k5kpshdoj"]
+
+[ext_resource type="Script" uid="uid://do5o4e0emha3g" path="res://Scripts/Overlay/upgrade_panel.gd" id="1_8hmso"]
+[ext_resource type="FontFile" uid="uid://cirp8byv4ai62" path="res://Sprites/Fonts/Kenney Pixel.ttf" id="2_sjgx1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hmso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjgx1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6u7gg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp17q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7s1fn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u01lu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dolx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fiehl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynmjc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8x5bo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ao0jr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_03s53"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t60hp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lydt3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_isjxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hntvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqilp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8q8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kksl6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_onxs3"]
+
+[node name="upgrade_panel" type="Control" unique_id=352570185]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 173.0
+offset_top = 130.0
+offset_right = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8hmso")
+
+[node name="background" type="ColorRect" parent="." unique_id=547400853]
+custom_minimum_size = Vector2(20, 50)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 30.0
+color = Color(0.6924545, 0.41274062, 0.8848171, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1500117079]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 40.0
+offset_bottom = 10.0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Slot3b" type="Panel" parent="HBoxContainer" unique_id=1924251710]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="Button3b" type="Button" parent="HBoxContainer/Slot3b" unique_id=1393988113]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 0
+offset_right = 5.0
+offset_bottom = 5.0
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8hmso")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sjgx1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6u7gg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cp17q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7s1fn")
+
+[node name="Slot3a" type="Panel" parent="HBoxContainer" unique_id=210519972]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="Button3a" type="Button" parent="HBoxContainer/Slot3a" unique_id=1212725091]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 0
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u01lu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1dolx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fiehl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ynmjc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8x5bo")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=850880341]
+layout_mode = 0
+offset_top = 15.0
+offset_right = 40.0
+offset_bottom = 20.0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Slot2b" type="Panel" parent="HBoxContainer2" unique_id=80216216]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="Button2b" type="Button" parent="HBoxContainer2/Slot2b" unique_id=1714842911]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 0
+offset_right = 5.0
+offset_bottom = 5.0
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ao0jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_03s53")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t60hp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lydt3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_isjxb")
+
+[node name="Slot2a" type="Panel" parent="HBoxContainer2" unique_id=1362433904]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+
+[node name="Button2a" type="Button" parent="HBoxContainer2/Slot2a" unique_id=763377153]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 0
+offset_right = 5.0
+offset_bottom = 5.0
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ao0jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_03s53")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t60hp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lydt3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_isjxb")
+
+[node name="Slot1" type="Panel" parent="." unique_id=491189541]
+custom_minimum_size = Vector2(20, 8)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 30.0
+offset_bottom = 33.0
+
+[node name="Button1" type="Button" parent="Slot1" unique_id=476446742]
+custom_minimum_size = Vector2(20, 8)
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hntvr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uqilp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_c8q8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kksl6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_onxs3")
+
+[node name="upgrade_button" type="Button" parent="." unique_id=1492548799]
+custom_minimum_size = Vector2(20, 8)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 35.0
+offset_right = 39.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("2_sjgx1")
+theme_override_font_sizes/font_size = 8
+text = "Cost-150"

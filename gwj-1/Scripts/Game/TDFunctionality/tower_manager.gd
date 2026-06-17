@@ -7,7 +7,7 @@ var placement_slots: Array = []
 @onready var projectile_container: Node2D = $"../ProjectileContainer"
 @onready var slots_container = $"../PlacementSlots"
 @onready var enemy_container: Node2D = $"../EnemyContainer"
-var coin_manager:Node
+@onready var coin_manager: Node = $"../CoinManager"
 
 func _ready() -> void:
 	placement_slots = slots_container.get_children()
@@ -15,6 +15,7 @@ func _ready() -> void:
 		slot.tower_container = slots_container
 		slot.bullet_container = projectile_container
 		slot.enemy_container = enemy_container
+		slot.coin_manager = coin_manager
 
 func select_tower(tower_scene: PackedScene, cost: int):
 	selected_tower_scene = tower_scene
@@ -32,6 +33,7 @@ func _input(event: InputEvent):
 	if event.button_index == MOUSE_BUTTON_LEFT:
 		if selected_tower_scene:
 			try_place_tower(get_viewport().get_mouse_position())
+			get_viewport().set_input_as_handled()
 	if event.button_index == MOUSE_BUTTON_RIGHT:
 		deselect_tower()
 

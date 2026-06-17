@@ -6,13 +6,6 @@
 
 [node name="Tower" type="Node2D" unique_id=916097099]
 script = ExtResource("1_6fa7h")
-tower_name = null
-damage = null
-range = null
-fire_rate = null
-cost = null
-bullet_speed = null
-splash_radius = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1695809964]
 

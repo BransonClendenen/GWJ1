@@ -20,6 +20,7 @@ var main_menu#: #MainMenu
 var game_over_menu#: #GameOverMenu
 var td_scene:Node2D
 var ui_panel:Control
+var upgrade_panel:Control
 
 var game_result: Result = Result.NONE
 var waves_survived:int = 0
@@ -54,11 +55,13 @@ func find_new_state(state):
 				#SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
 				td_scene = SceneManager.load_scene("res://Scenes/Game/td.tscn")
 				ui_panel = SceneManager.load_ui("res://Scenes/UI/ui_panel.tscn")
+				upgrade_panel = SceneManager.load_overlay("res://Scenes/Overlay/upgrade_panel.tscn")
 				main_menu.queue_free()
 		State.GAME_OVER:
 			game_over_menu = SceneManager.load_ui("res://Scenes/UI/game_over_menu.tscn")
 			td_scene.queue_free()
 			ui_panel.queue_free()
+			upgrade_panel.queue_free()
 
 func collect_coin_manager():
 	return td_scene.get_coin_manager()
