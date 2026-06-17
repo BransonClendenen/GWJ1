@@ -16,6 +16,7 @@ var coin_manager:Node
 var base_manager:Node
 
 func setup(p_waves: Array[WaveData]):
+	GameState.waves_survived = 0
 	waves = p_waves
 	baked_points = enemy_path.curve.get_baked_points()
 
@@ -74,3 +75,4 @@ func on_enemy_removed():
 		emit_signal("wave_complete", current_wave_index + 1)
 		print("wave done")
 		current_wave_index += 1
+		GameState.waves_survived += 1

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://gxu72n0prox8"]
 
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="1_7hu81"]
 [ext_resource type="Script" uid="uid://bb2ab64ms2k31" path="res://Scripts/UI/game_over_menu.gd" id="1_xqyep"]
 
 [node name="game_over_menu" type="Control" unique_id=1211651403]
@@ -9,9 +10,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_7hu81")
 script = ExtResource("1_xqyep")
 
-[node name="Label" type="Label" parent="." unique_id=1713327271]
+[node name="victory" type="Label" parent="." unique_id=1713327271]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,12 +21,31 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -46.0
-offset_top = -20.0
+offset_top = -35.0
 offset_right = 46.0
-offset_bottom = 3.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game Over!"
+text = "Result"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="waves" type="Label" parent="." unique_id=2033084632]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -15.0
+offset_right = 46.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Waves"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="return" type="Button" parent="." unique_id=197512035]
 layout_mode = 1

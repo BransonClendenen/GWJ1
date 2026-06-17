@@ -7,6 +7,12 @@ GAME,
 GAME_OVER
 }
 
+enum Result {
+	NONE,
+	WIN,
+	LOSS
+}
+
 var current_state: State
 var previous_state: State
 
@@ -14,6 +20,9 @@ var main_menu#: #MainMenu
 var game_over_menu#: #GameOverMenu
 var td_scene:Node2D
 var ui_panel:Control
+
+var game_result: Result = Result.NONE
+var waves_survived:int = 0
 
 #signal state_changed(new_state)
 

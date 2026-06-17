@@ -45,9 +45,11 @@ func _on_wave_complete(wave_number: int):
 	wave_manager.start_next_wave()    
 
 func _on_all_waves_complete():
+	GameState.game_result = GameState.Result.WIN
 	GameState.change_state(GameState.State.GAME_OVER)
 
 func _on_base_destroyed():
+	GameState.game_result = GameState.Result.LOSS
 	GameState.change_state(GameState.State.GAME_OVER)
 
 func _on_coin_changed(new_amount: int):
