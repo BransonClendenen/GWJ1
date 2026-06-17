@@ -30,7 +30,7 @@ func create_tile_buttons() -> void:
 		child.queue_free()
 	for i in range(tile_values.size()):
 		var btn = Button.new()
-		btn.custom_minimum_size = Vector2(10, 10)
+		btn.custom_minimum_size = Vector2(15, 15)
 		btn.text = "?"
 		btn.pressed.connect(_on_tile_pressed.bind(i, btn))
 		grid_container.add_child(btn)
@@ -45,13 +45,17 @@ func _on_tile_pressed(index: int, btn: Button) -> void:
 		status_label.text = "Moves: " + str(moves_remaining)
 		get_tree().create_timer(0.6).timeout.connect(check_match)
 
+var matched_indices: Array = []  # add this at the top with your other vars
+
 func check_match() -> void:
 	var t1 = flipped_tiles[0]
 	var t2 = flipped_tiles[1]
 	if tile_values[t1.index] == tile_values[t2.index]:
 		matched_pairs += 1
-		t1.button.disabled = true
-		t2.button.disabled = true
+		matched_indices.append(t1.index)
+		matched_indices.append(t2.index)
+		t1.button.text = "✓"
+		t2.button.text = "✓"
 	else:
 		t1.button.text = "?"
 		t2.button.text = "?"
