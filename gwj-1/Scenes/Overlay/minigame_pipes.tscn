@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://c016ro5gdib80"]
 
 [ext_resource type="Script" uid="uid://bog6sspnx1p7s" path="res://Scripts/Overlay/minigame_pipes.gd" id="1_54c14"]
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="2_1rlr2"]
+[ext_resource type="Texture2D" uid="uid://d2a56356er6qo" path="res://Sprites/UI_Overlay/Minigames/Pipes/pipe_straight_texture.tres" id="2_meqx7"]
+[ext_resource type="Texture2D" uid="uid://dlqw488vqujp4" path="res://Sprites/UI_Overlay/Minigames/Pipes/pipe_corner_texture.tres" id="3_ft2ey"]
+[ext_resource type="Texture2D" uid="uid://ckoqjit0dy3ka" path="res://Sprites/UI_Overlay/Minigames/Pipes/pipe_t_texture.tres" id="4_04yin"]
 
 [node name="Control" type="Control" unique_id=1276262600]
 layout_mode = 3
@@ -8,6 +12,9 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_54c14")
+straight_texture = ExtResource("2_meqx7")
+elbow_texture = ExtResource("3_ft2ey")
+t_junction_texture = ExtResource("4_04yin")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=362499695]
 layout_mode = 1
@@ -22,4 +29,5 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_1rlr2")
 columns = 4

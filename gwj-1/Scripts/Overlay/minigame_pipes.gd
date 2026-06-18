@@ -7,6 +7,10 @@ const TILE_SIZE = 10
 
 enum Dir {NORTH = 1, EAST = 2, SOUTH = 4, WEST = 8}
 
+@export var straight_texture: Texture2D
+@export var elbow_texture: Texture2D
+@export var t_junction_texture: Texture2D
+
 const PIPE_TYPES = {
 	"straight": [Dir.NORTH | Dir.SOUTH, Dir.EAST | Dir.WEST],
 	"elbow": [Dir.NORTH | Dir.EAST, Dir.EAST | Dir.SOUTH, Dir.SOUTH | Dir.WEST, Dir.WEST | Dir.NORTH],
@@ -43,33 +47,39 @@ func draw_grid() -> void:
 			var btn = Button.new()
 			btn.custom_minimum_size = Vector2(TILE_SIZE, TILE_SIZE)
 			btn.position = Vector2(x * TILE_SIZE, y * TILE_SIZE)
+			btn.position = Vector2(x * TILE_SIZE, y * TILE_SIZE)
+			
+			var pipe_visual = TextureRect.new()
+			pipe_visual.size = Vector2(TILE_SIZE, TILE_SIZE)
+			pipe_visual.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			pipe_visual.stretch_mode = TextureRect.STRETCH_SCALE
+			pipe_visual.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			pipe_visual.pivot_offset = Vector2(TILE_SIZE / 2.0, TILE_SIZE / 2.0)
+			btn.add_child(pipe_visual)
+			
 			update_button_visual(btn, x, y)
 			btn.pressed.connect(_on_tile_pressed.bind(x, y, btn))
 			grid_container.add_child(btn)
 			
-			# Mark start and end cells
 			if Vector2i(x, y) == start_cell:
-				btn.tooltip_text = "START"
-				btn.modulate = Color(0.4, 1.0, 0.4)  # green tint
+				btn.modulate = Color(0.4, 1.0, 0.4)
 			elif Vector2i(x, y) == end_cell:
-				btn.tooltip_text = "END"
-				btn.modulate = Color(1.0, 0.4, 0.4)  # red tint
+				btn.modulate = Color(1.0, 0.4, 0.4)
 
 func update_button_visual(btn: Button, x: int, y: int) -> void:
 	var cell = grid[y][x]
-	btn.text = get_pipe_symbol(cell.type, cell.rot)
-
-func get_pipe_symbol(type: String, rot: int) -> String:
-	match type:
+	var pipe_visual: TextureRect = btn.get_child(0)
+	
+	match cell.type:
 		"straight":
-			return "|" if rot == 0 else "-"
-		"elbow" :
-			var symbols = ["└", "┌", "┐", "┘"]
-			return symbols[rot % symbols.size()]
+			pipe_visual.texture = straight_texture
+			pipe_visual.rotation_degrees = 90.0 if cell.rot == 1 else 0.0
+		"elbow":
+			pipe_visual.texture = elbow_texture
+			pipe_visual.rotation_degrees = (cell.rot * 90.0) + 180.0
 		"t_junction":
-			var symbols = ["┴", "├", "┬", "┤"]
-			return symbols[rot % symbols.size()]
-	return "?"
+			pipe_visual.texture = t_junction_texture
+			pipe_visual.rotation_degrees = (cell.rot * 90.0) + 180.0
 
 func _on_tile_pressed(x: int, y: int, btn: Button) -> void:
 	var cell = grid[y][x]

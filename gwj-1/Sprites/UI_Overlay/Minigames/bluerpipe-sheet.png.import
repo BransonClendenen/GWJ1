@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hl4qwo7kfvt8"
-path="res://.godot/imported/temp_sprites.png-1afc4b1f62f64d40e8137fb0e6ec9a3a.ctex"
+uid="uid://cchlvydfemd80"
+path="res://.godot/imported/bluerpipe-sheet.png-5a16bd99004b8acefb8e18145799230b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TempStuff/temp_sprites.png"
-dest_files=["res://.godot/imported/temp_sprites.png-1afc4b1f62f64d40e8137fb0e6ec9a3a.ctex"]
+source_file="res://Sprites/UI_Overlay/Minigames/bluerpipe-sheet.png"
+dest_files=["res://.godot/imported/bluerpipe-sheet.png-5a16bd99004b8acefb8e18145799230b.ctex"]
 
 [params]
 

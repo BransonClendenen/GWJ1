@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ouuishqvs37q"
-path="res://.godot/imported/temp_packed.png-05c1491a2433f21b2ddb73c317549561.ctex"
+uid="uid://hl4qwo7kfvt8"
+path="res://.godot/imported/temp_sprites.png-ae0e61c04f159c3b38f19a3511a8c941.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TempStuff/temp_packed.png"
-dest_files=["res://.godot/imported/temp_packed.png-05c1491a2433f21b2ddb73c317549561.ctex"]
+source_file="res://Sprites/UI_Overlay/Minigames/temp_sprites.png"
+dest_files=["res://.godot/imported/temp_sprites.png-ae0e61c04f159c3b38f19a3511a8c941.ctex"]
 
 [params]
 
