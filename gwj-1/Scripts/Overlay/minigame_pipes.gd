@@ -3,7 +3,7 @@ extends Control
 signal completed(succss: bool)
 
 const GRID_SIZE = 4
-const TILE_SIZE = 10
+const TILE_SIZE = 16
 
 enum Dir {NORTH = 1, EAST = 2, SOUTH = 4, WEST = 8}
 
@@ -47,7 +47,7 @@ func draw_grid() -> void:
 			var btn = Button.new()
 			btn.custom_minimum_size = Vector2(TILE_SIZE, TILE_SIZE)
 			btn.position = Vector2(x * TILE_SIZE, y * TILE_SIZE)
-			btn.position = Vector2(x * TILE_SIZE, y * TILE_SIZE)
+			btn.flat = true
 			
 			var pipe_visual = TextureRect.new()
 			pipe_visual.size = Vector2(TILE_SIZE, TILE_SIZE)
@@ -62,9 +62,11 @@ func draw_grid() -> void:
 			grid_container.add_child(btn)
 			
 			if Vector2i(x, y) == start_cell:
+				btn.flat = false
 				btn.modulate = Color(0.4, 1.0, 0.4)
 			elif Vector2i(x, y) == end_cell:
-				btn.modulate = Color(1.0, 0.4, 0.4)
+				btn.flat = false
+				btn.modulate = Color(0.4, 1.0, 0.4)
 
 func update_button_visual(btn: Button, x: int, y: int) -> void:
 	var cell = grid[y][x]

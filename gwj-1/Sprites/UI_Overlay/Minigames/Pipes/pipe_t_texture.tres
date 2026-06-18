@@ -1,7 +1,7 @@
 [gd_resource type="AtlasTexture" format=3 uid="uid://ckoqjit0dy3ka"]
 
-[ext_resource type="Texture2D" uid="uid://cchlvydfemd80" path="res://Sprites/UI_Overlay/Minigames/bluerpipe-sheet.png" id="1_4ictk"]
+[ext_resource type="Texture2D" uid="uid://cchlvydfemd80" path="res://Sprites/UI_Overlay/Minigames/bluerpipe-sheet.png" id="1_5he8b"]
 
 [resource]
-atlas = ExtResource("1_4ictk")
-region = Rect2(64, 128, 64, 64)
+atlas = ExtResource("1_5he8b")
+region = Rect2(64, 128.2, 64, 64)

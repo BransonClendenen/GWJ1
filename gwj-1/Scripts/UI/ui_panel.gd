@@ -67,8 +67,8 @@ func _on_minigame_completed(type:String,success:bool):
 	
 	var base_reward: int
 	match type:
-		"maze":  base_reward = 10
-		"pipes": base_reward = 30
+		"maze":  base_reward = 15
+		"pipes": base_reward = 20
 		"tiles": base_reward = 50
 		_:       base_reward = 0
 	
