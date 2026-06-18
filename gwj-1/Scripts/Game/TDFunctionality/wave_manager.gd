@@ -44,7 +44,7 @@ func build_spawn_list(wave_data: WaveData) -> Array[PackedScene]:
 
 func spawn_sequence(spawn_list: Array[PackedScene], interval: float):
 	for i in range(spawn_list.size()):
-		await get_tree().create_timer(interval * i).timeout
+		await get_tree().create_timer(interval).timeout
 		spawn_enemy(spawn_list[i])
 	is_spawning = false
 

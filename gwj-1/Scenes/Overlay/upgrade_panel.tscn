@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b366k5kpshdoj"]
 
 [ext_resource type="Script" uid="uid://do5o4e0emha3g" path="res://Scripts/Overlay/upgrade_panel.gd" id="1_8hmso"]
+[ext_resource type="FontFile" uid="uid://dxeu2f50jm0dq" path="res://Sprites/Fonts/Kenney Mini Square.ttf" id="2_6u7gg"]
 [ext_resource type="FontFile" uid="uid://cirp8byv4ai62" path="res://Sprites/Fonts/Kenney Pixel.ttf" id="2_sjgx1"]
+[ext_resource type="FontFile" uid="uid://bg8ouhmaiix24" path="res://Sprites/Fonts/Kenney Mini.ttf" id="4_cp17q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjgx1"]
 
@@ -63,23 +65,37 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ao0jr"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03s53"]
+bg_color = Color(0.41960785, 0.39607844, 0.41568628, 1)
+
 [node name="upgrade_panel" type="Control" unique_id=352570185]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 173.0
-offset_top = 130.0
-offset_right = -107.0
+offset_left = 171.0
+offset_top = 128.0
+offset_right = -109.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8hmso")
+
+[node name="Title" type="Label" parent="." unique_id=1115068900]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 40.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("2_6u7gg")
+theme_override_font_sizes/font_size = 8
+text = "Upgrades"
 
 [node name="background" type="ColorRect" parent="." unique_id=547400853]
 custom_minimum_size = Vector2(20, 50)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 30.0
-color = Color(0.6924545, 0.41274062, 0.8848171, 1)
+color = Color(0.4180406, 0.397121, 0.417626, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1500117079]
 layout_mode = 0
@@ -198,3 +214,25 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fiehl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ynmjc")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_8x5bo")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ao0jr")
+
+[node name="DescPanel" type="Panel" parent="." unique_id=1557001150]
+layout_mode = 0
+offset_left = -72.0
+offset_top = 10.0
+offset_right = -2.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03s53")
+
+[node name="DescLabel" type="Label" parent="DescPanel" unique_id=659188290]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_cp17q")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2

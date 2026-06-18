@@ -108,8 +108,8 @@ func _on_gunner_button_pressed():
 
 func _on_bomber_button_pressed():
 	pass
-	tower_manager.select_tower(bomber_scene, 70)
+	tower_manager.select_tower(bomber_scene, 70, gunner_preview_texture)
 
 func _on_sniper_button_pressed():
 	pass
-	tower_manager.select_tower(sniper_scene, 80)
+	tower_manager.select_tower(sniper_scene, 80, gunner_preview_texture)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vgapsihb06dp"]
 
 [ext_resource type="Script" uid="uid://delo87hb60ed1" path="res://Scripts/Game/Towers/sniper.gd" id="1_qolu7"]
-[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="2_q6djt"]
+[ext_resource type="Texture2D" uid="uid://bjmdnantnckib" path="res://Sprites/gunner_sprite.png" id="2_qolu7"]
 
 [node name="Sniper" type="Node2D" unique_id=861892265]
 script = ExtResource("1_qolu7")
@@ -9,7 +9,7 @@ script = ExtResource("1_qolu7")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=727352139]
 position = Vector2(0, -3.8146973e-06)
 scale = Vector2(0.390625, 0.3984375)
-texture = ExtResource("2_q6djt")
+texture = ExtResource("2_qolu7")
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=764056923]
 collision_layer = 0

@@ -14,9 +14,11 @@ var current_tower: Node = null
 @onready var button_3b: Button = $HBoxContainer/Slot3b/Button3b
 @onready var upgrade_button: Button = $upgrade_button
 @onready var background: ColorRect = $background
+@onready var desc_panel: Panel = $DescPanel
+@onready var desc_label: Label = $DescPanel/DescLabel
 
 func _ready() -> void:
-	#visible = false
+	desc_panel.visible = false
 	
 	button_1.pressed.connect(on_slot_clicked.bind(0))
 	button_2a.pressed.connect(on_slot_clicked.bind(1))
@@ -41,14 +43,18 @@ func on_slot_clicked(index:int):
 	if not current_tower:
 		return
 	if current_tower.purchased_slots[index]:
+		desc_panel.visible = false
 		return
 	if not current_tower.is_slot_available(index):
+		desc_panel.visible = false
 		return
 	current_tower.selected_upgrade_index = index
 	var data = current_tower.get_upgrade_data(index)
 	if data:
 		upgrade_button.text = "Cost-" + str(data.cost)
 		upgrade_button.visible = true
+		desc_label.text = data.upgrade_name + "\n" + data.description
+		desc_panel.visible = true
 	refresh_slots()
 
 func on_upgrade_button_pressed():
@@ -57,6 +63,7 @@ func on_upgrade_button_pressed():
 	current_tower.on_upgrade_button_pressed()
 	refresh_slots()
 	upgrade_button.visible = false
+	desc_panel.visible = false
 
 func refresh_slots():
 	if not current_tower:
