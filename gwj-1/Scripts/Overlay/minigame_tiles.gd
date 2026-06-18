@@ -32,6 +32,50 @@ func create_tile_buttons() -> void:
 		var btn = Button.new()
 		btn.custom_minimum_size = Vector2(15, 15)
 		btn.text = "?"
+		
+		var normal = StyleBoxFlat.new()
+		normal.bg_color = Color("#0a0a0a")
+		normal.border_width_left = 1
+		normal.border_width_right = 1
+		normal.border_width_top = 1
+		normal.border_width_bottom = 1
+		normal.border_color = Color("#9b30ff")
+		normal.corner_radius_top_left = 2
+		normal.corner_radius_top_right = 2
+		normal.corner_radius_bottom_left = 2
+		normal.corner_radius_bottom_right = 2
+		btn.add_theme_stylebox_override("normal", normal)
+		
+		var hover = StyleBoxFlat.new()
+		hover.bg_color = Color("#1a0a2e")
+		hover.border_width_left = 1
+		hover.border_width_right = 1
+		hover.border_width_top = 1
+		hover.border_width_bottom = 1
+		hover.border_color = Color("#bf5fff")
+		hover.corner_radius_top_left = 2
+		hover.corner_radius_top_right = 2
+		hover.corner_radius_bottom_left = 2
+		hover.corner_radius_bottom_right = 2
+		btn.add_theme_stylebox_override("hover", hover)
+		
+		var pressed = StyleBoxFlat.new()
+		pressed.bg_color = Color("#2d0a5e")
+		pressed.border_width_left = 1
+		pressed.border_width_right = 1
+		pressed.border_width_top = 1
+		pressed.border_width_bottom = 1
+		pressed.border_color = Color("#ffffff")
+		pressed.corner_radius_top_left = 2
+		pressed.corner_radius_top_right = 2
+		pressed.corner_radius_bottom_left = 2
+		pressed.corner_radius_bottom_right = 2
+		
+		btn.add_theme_stylebox_override("pressed", pressed)
+		btn.add_theme_color_override("font_color", Color("#9b30ff"))
+		btn.add_theme_color_override("font_hover_color", Color("#bf5fff"))
+		btn.add_theme_color_override("font_pressed_color", Color("#ffffff"))
+		
 		btn.pressed.connect(_on_tile_pressed.bind(i, btn))
 		grid_container.add_child(btn)
 
