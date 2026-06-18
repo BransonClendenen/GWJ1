@@ -43,6 +43,8 @@ func _ready() -> void:
 	gunner_button.pressed.connect(_on_gunner_button_pressed)
 	bomber_button.pressed.connect(_on_bomber_button_pressed)
 	sniper_button.pressed.connect(_on_sniper_button_pressed)
+	
+	refresh_minigame_button_colors()
 
 func _on_maze_button_pressed() -> void:
 	MinigameManager.start_minigame("maze")
@@ -54,40 +56,46 @@ func _on_tiles_button_pressed() -> void:
 	MinigameManager.start_minigame("tiles")
 
 func _on_minigame_completed(type:String,success:bool):
-	var text:String
-	if success == true:
-		text = "Won!"
-	else:
-		text = "Lost..."
-	
 	if not success:
-		result_label.text = type + " " + text
+		result_label.text = type + " - Lost"
 		result_panel.visible = true
+		refresh_minigame_button_colors()
 		return
 	
 	# Get multiplier BEFORE updating streak so first play is always full reward
 	var multiplier = MinigameManager.get_reward_multiplier(type)
-	MinigameManager.update_streak(type)
 	
 	var base_reward: int
 	match type:
 		"maze":  base_reward = 10
-		"pipes": base_reward = 40
-		"tiles": base_reward = 40
+		"pipes": base_reward = 30
+		"tiles": base_reward = 50
 		_:       base_reward = 0
 	
 	var final_reward = int(base_reward * multiplier)
 	coin_manager.add_coins(final_reward)
 	
+	MinigameManager.update_streak(type)
+	
 	# Show the player what they earned and whether it was reduced
-	if multiplier < 1.0:
-		var percent = int(multiplier * 100)
-		result_label.text = type + " " + text + "\n+" + str(final_reward) + " coins (" + str(percent) + "% — stale reward)"
-	else:
-		result_label.text = type + " " + text + "\n+" + str(final_reward) + " coins"
+	result_label.text = type + " — Won\n+" + str(final_reward) + " coins"
 	
 	result_panel.visible = true
+	refresh_minigame_button_colors()
 
+func refresh_minigame_button_colors():
+	set_button_color(maze_button, "maze")
+	set_button_color(pipes_button, "pipes")
+	set_button_color(tiles_button, "tiles")
+
+func set_button_color(button: Button, type: String):
+	var multiplier = MinigameManager.get_reward_multiplier(type)
+	if multiplier < 1.0:
+		button.modulate = Color(0.9, 0.3, 0.3)
+	elif multiplier > 1.0:
+		button.modulate = Color(0.3, 0.9, 0.3)
+	else:
+		button.modulate = Color(0.7, 0.7, 0.7)
 
 func _on_result_button_pressed():
 	result_panel.visible = false

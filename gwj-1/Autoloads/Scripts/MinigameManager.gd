@@ -4,11 +4,14 @@ var active_minigame: Node = null
 var minigame_container: Control = null
 
 # Stale reward tracking
-var last_played_type: String = ""
-var current_streak: int = 0
+var play_streaks: Dictionary = {"maze": 0, "pipes": 0, "tiles": 0}
+var neglect_counts: Dictionary = {"maze": 0, "pipes": 0, "tiles": 0}
 
-# Multipliers per consecutive play: 1st = full, 2nd = 60%, 3rd+ = 30%
-const STREAK_MULTIPLIERS = [1.0, 0.6, 0.3]
+const PENALTY_THRESHOLD = 2
+const PENALTY_MULTIPLIER = 0.5
+
+const BONUS_THRESHOLD = 2
+const BONUS_MULTIPLIER = 2.0
 
 signal minigame_completed(type:String,success:bool)
 
@@ -45,14 +48,17 @@ func is_running() -> bool:
 	return active_minigame != null
 
 func get_reward_multiplier(type: String) -> float:
-	if type == last_played_type:
-		var index = min(current_streak, STREAK_MULTIPLIERS.size() - 1)
-		return STREAK_MULTIPLIERS[index]
-	return STREAK_MULTIPLIERS[0]
+	if play_streaks[type] >= PENALTY_THRESHOLD:
+		return PENALTY_MULTIPLIER
+	if neglect_counts[type] >= BONUS_THRESHOLD:
+		return BONUS_MULTIPLIER
+	return 1.0
 
-func update_streak(type: String) -> void:
-	if type == last_played_type:
-		current_streak += 1
-	else:
-		current_streak = 1
-		last_played_type = type
+func update_streak(played_type: String) -> void:
+	for type in play_streaks.keys():
+		if type == played_type:
+			play_streaks[type] += 1
+			neglect_counts[type] = 0
+		else:
+			play_streaks[type] = 0
+			neglect_counts[type] += 1
