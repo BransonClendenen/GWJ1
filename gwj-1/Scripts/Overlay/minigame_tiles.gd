@@ -6,7 +6,7 @@ const GRID_SIZE = 4 #4x4 = 16 tiles = 8 pairs
 var tile_values: Array = []
 var flipped_tiles: Array = []
 var matched_pairs: int = 0
-var moves_remaining: int = 20
+var moves_remaining: int = 32
 
 @onready var grid_container: GridContainer = $GridContainer
 @onready var status_label: Label = $StatusLabel

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cb0llben6sj36"]
 
 [ext_resource type="Script" uid="uid://dhbia6ufvecxv" path="res://Scripts/Overlay/minigame_tiles.gd" id="1_tbnl8"]
+[ext_resource type="FontFile" uid="uid://bg8ouhmaiix24" path="res://Sprites/Fonts/Kenney Mini.ttf" id="2_v1hgi"]
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="3_7dmhj"]
 
 [node name="Control" type="Control" unique_id=1463307597]
 layout_mode = 3
@@ -14,6 +16,7 @@ layout_mode = 0
 offset_left = 2.0
 offset_right = 3.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_v1hgi")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=766726440]
 layout_mode = 1
@@ -28,4 +31,5 @@ offset_right = 20.0
 offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_7dmhj")
 columns = 4
