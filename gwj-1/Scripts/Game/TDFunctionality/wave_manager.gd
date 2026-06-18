@@ -5,6 +5,7 @@ signal wave_complete(wave_number: int)
 signal all_waves_complete
 
 var waves: Array[WaveData] = []
+var wave_delay: float = 10.0
 var current_wave_index: int = 0
 var enemies_alive: int = 0
 var is_spawning: bool = false
@@ -24,6 +25,8 @@ func start_next_wave():
 	if current_wave_index >= waves.size():
 		emit_signal("all_waves_complete")
 		return
+	
+	await get_tree().create_timer(wave_delay).timeout
 	
 	var wave_data = waves[current_wave_index]
 	emit_signal("wave_started", current_wave_index + 1, waves.size())
@@ -72,7 +75,8 @@ func _on_enemy_reached_base(damage: int) -> void:
 func on_enemy_removed():
 	enemies_alive -= 1
 	if enemies_alive <= 0 and not is_spawning:
+		enemies_alive = 0
 		emit_signal("wave_complete", current_wave_index + 1)
-		print("wave done")
 		current_wave_index += 1
 		GameState.waves_survived += 1
+		start_next_wave()

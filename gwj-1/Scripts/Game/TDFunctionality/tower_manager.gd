@@ -10,14 +10,22 @@ var ghost_sprite: Sprite2D = null
 @onready var slots_container = $"../PlacementSlots"
 @onready var enemy_container: Node2D = $"../EnemyContainer"
 @onready var coin_manager: Node = $"../CoinManager"
+@onready var tower_container: Node2D = $"../TowerContainer"
 
 func _ready() -> void:
-	placement_slots = slots_container.get_children()
-	for slot in placement_slots:
-		slot.tower_container = slots_container
-		slot.bullet_container = projectile_container
-		slot.enemy_container = enemy_container
-		slot.coin_manager = coin_manager
+	pass
+
+func refresh_slots():
+	placement_slots.clear()
+	var wrappers = slots_container.get_children()
+	for wrapper in wrappers:
+		for slot in wrapper.get_children():
+			if slot is PlacementSlot:
+				placement_slots.append(slot)
+				slot.tower_container = tower_container
+				slot.bullet_container = projectile_container
+				slot.enemy_container = enemy_container
+				slot.coin_manager = coin_manager
 
 func _process(delta: float) -> void:
 	if ghost_sprite:
@@ -74,6 +82,7 @@ func try_place_tower(mouse_pos: Vector2):
 
 func get_slot_at(pos:Vector2) -> PlacementSlot:
 	for slot in placement_slots:
+		print("checking slot at ", slot.global_position, " occupied: ", slot.is_occupied)
 		if slot is PlacementSlot and not slot.is_occupied:
 			if slot.global_position.distance_to(pos) < 10.0:
 				return slot

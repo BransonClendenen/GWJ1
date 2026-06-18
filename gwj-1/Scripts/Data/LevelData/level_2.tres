@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://ckf5n1wfn81tb"]
+
+[ext_resource type="Curve2D" uid="uid://b27risjaorr8w" path="res://Scenes/Resources/Paths/path_level_2.tres" id="1_ribfp"]
+[ext_resource type="Script" uid="uid://v38uqpv7ur63" path="res://Scripts/Resources/LevelData.gd" id="2_335ah"]
+[ext_resource type="PackedScene" uid="uid://c8fmw5vdunadd" path="res://Scenes/Resources/PlacementSlots/placement_slots_level_2.tscn" id="2_uxhte"]
+[ext_resource type="PackedScene" uid="uid://runhm8cqmcke" path="res://Scenes/Resources/Maps/map_level_2.tscn" id="3_335ah"]
+[ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="3_uxhte"]
+[ext_resource type="Resource" uid="uid://dwmcf2qrhbekh" path="res://Scripts/Data/WaveData/Level1/wave_1.tres" id="4_6puym"]
+[ext_resource type="Resource" uid="uid://c54o8qo80g0do" path="res://Scripts/Data/WaveData/Level1/wave_2.tres" id="5_ryrux"]
+
+[resource]
+script = ExtResource("2_335ah")
+level_name = "Level 2"
+path_curve = ExtResource("1_ribfp")
+tilemap_scene = ExtResource("3_335ah")
+placement_slots_scene = ExtResource("2_uxhte")
+waves = Array[ExtResource("3_uxhte")]([ExtResource("4_6puym"), ExtResource("5_ryrux")])
+starting_coins = 150
+metadata/_custom_type_script = "uid://v38uqpv7ur63"
