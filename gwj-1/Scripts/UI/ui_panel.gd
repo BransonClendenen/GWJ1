@@ -59,17 +59,35 @@ func _on_minigame_completed(type:String,success:bool):
 		text = "Won!"
 	else:
 		text = "Lost..."
-	result_label.text = type + " " + text
-	#add money here later
-	
-	result_panel.visible = true
 	
 	if not success:
+		result_label.text = type + " " + text
+		result_panel.visible = true
 		return
+	
+	# Get multiplier BEFORE updating streak so first play is always full reward
+	var multiplier = MinigameManager.get_reward_multiplier(type)
+	MinigameManager.update_streak(type)
+	
+	var base_reward: int
 	match type:
-		"maze":  coin_manager.add_coins(10)
-		"pipes": coin_manager.add_coins(40)
-		"tiles": coin_manager.add_coins(40)
+		"maze":  base_reward = 10
+		"pipes": base_reward = 40
+		"tiles": base_reward = 40
+		_:       base_reward = 0
+	
+	var final_reward = int(base_reward * multiplier)
+	coin_manager.add_coins(final_reward)
+	
+	# Show the player what they earned and whether it was reduced
+	if multiplier < 1.0:
+		var percent = int(multiplier * 100)
+		result_label.text = type + " " + text + "\n+" + str(final_reward) + " coins (" + str(percent) + "% — stale reward)"
+	else:
+		result_label.text = type + " " + text + "\n+" + str(final_reward) + " coins"
+	
+	result_panel.visible = true
+
 
 func _on_result_button_pressed():
 	result_panel.visible = false

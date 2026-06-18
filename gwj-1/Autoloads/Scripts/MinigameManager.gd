@@ -3,6 +3,13 @@ extends Node
 var active_minigame: Node = null
 var minigame_container: Control = null
 
+# Stale reward tracking
+var last_played_type: String = ""
+var current_streak: int = 0
+
+# Multipliers per consecutive play: 1st = full, 2nd = 60%, 3rd+ = 30%
+const STREAK_MULTIPLIERS = [1.0, 0.6, 0.3]
+
 signal minigame_completed(type:String,success:bool)
 
 func init(container:Control) -> void:
@@ -36,3 +43,16 @@ func _on_minigame_completed(success:bool,type:String,):
 
 func is_running() -> bool:
 	return active_minigame != null
+
+func get_reward_multiplier(type: String) -> float:
+	if type == last_played_type:
+		var index = min(current_streak, STREAK_MULTIPLIERS.size() - 1)
+		return STREAK_MULTIPLIERS[index]
+	return STREAK_MULTIPLIERS[0]
+
+func update_streak(type: String) -> void:
+	if type == last_played_type:
+		current_streak += 1
+	else:
+		current_streak = 1
+		last_played_type = type
