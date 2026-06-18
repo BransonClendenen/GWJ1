@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsvhpehiutn50"
-path="res://.godot/imported/maze_player.png-a3ac015d6788d771ec0dd427ec560e3c.ctex"
+uid="uid://bwkebp5kdkxg0"
+path="res://.godot/imported/maze_exit.png-ac01546c0bb5e65f5b19794074bcc843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TempStuff/maze_player.png"
-dest_files=["res://.godot/imported/maze_player.png-a3ac015d6788d771ec0dd427ec560e3c.ctex"]
+source_file="res://Sprites/UI_Overlay/Minigames/Maze/maze_exit.png"
+dest_files=["res://.godot/imported/maze_exit.png-ac01546c0bb5e65f5b19794074bcc843.ctex"]
 
 [params]
 

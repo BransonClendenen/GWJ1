@@ -17,6 +17,7 @@ func build(grid: Array, tile_size: int) -> void:
 			sprite.texture = wall_texture if grid[row][col] == 1 else floor_texture
 			sprite.position = Vector2(col * tile_size, row * tile_size)
 			sprite.centered = false
+			sprite.scale = Vector2(2.0, 2.0)
 			
 			if row == 0 or row == grid.size()-1 or col == 0 or col == grid[row].size()-1:
 				sprite.visible = false

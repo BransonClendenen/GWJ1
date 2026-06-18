@@ -15,9 +15,10 @@ func _ready() -> void:
 	
 	grid.scale = Vector2(GRID_SCALE,GRID_SCALE)
 	
+	var grid_pixel_size = 8 * TILE_SIZE * GRID_SCALE
 	grid.position = Vector2(
-		(103 - 84) / 2.0,
-		(90  - 84) / 2.0
+		(103 - grid_pixel_size) / 2.0,
+		(90  - grid_pixel_size) / 2.0
 	)
 	
 	grid.build(preset.grid,TILE_SIZE)
