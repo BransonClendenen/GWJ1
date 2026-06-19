@@ -20,27 +20,27 @@ func setup_upgrade_data():
 	upgrade_1 = UpgradeData.new()
 	upgrade_1.upgrade_name = "Damage I"
 	upgrade_1.description = "Increase Damage"
-	upgrade_1.cost = 80
+	upgrade_1.cost = 95
 	
 	upgrade_2a = UpgradeData.new()
 	upgrade_2a.upgrade_name = "Damage II"
 	upgrade_2a.description = "Increase Damage"
-	upgrade_2a.cost = 110
+	upgrade_2a.cost = 125
 	
 	upgrade_2b = UpgradeData.new()
 	upgrade_2b.upgrade_name = "Range"
 	upgrade_2b.description = "Increase Range"
-	upgrade_2b.cost = 100
+	upgrade_2b.cost = 115
 	
 	upgrade_3a = UpgradeData.new()
 	upgrade_3a.upgrade_name = "Armor Pen I"
 	upgrade_3a.description = "Increase Armor Pen"
-	upgrade_3a.cost = 200
+	upgrade_3a.cost = 215
 	
 	upgrade_3b = UpgradeData.new()
 	upgrade_3b.upgrade_name = "Explosive Rounds"
 	upgrade_3b.description = "Adds Splash Damage, Decrease Fire Rate"
-	upgrade_3b.cost = 150
+	upgrade_3b.cost = 165
 
 #add upgrade functions here later
 func apply_upgrade(index: int) -> void:

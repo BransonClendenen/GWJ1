@@ -4,7 +4,7 @@ class_name ShielderEnemy
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enemy_name = "Shielder"
-	max_hp = 100
+	max_hp = 200
 	max_stamina = 0
 	max_armor = 200
 	armor_reduction = 0.5
@@ -14,7 +14,7 @@ func _ready():
 	super._ready()
 
 func on_armor_broken():
-	speed = 20
+	speed = 30
 	damage_to_base = 2
 	#when we get sprites
 	#sprite.texture = load("res://Assets/Sprites/enemy_shielder_phase2.png")
