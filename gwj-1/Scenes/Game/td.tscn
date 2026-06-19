@@ -47,6 +47,7 @@ offset_right = 213.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme = ExtResource("9_imfa6")
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ch2dg")
 script = ExtResource("10_ch2dg")
@@ -59,6 +60,7 @@ anchor_right = 1.0
 offset_left = -1.0
 offset_bottom = 50.0
 grow_horizontal = 0
+mouse_filter = 2
 
 [node name="base_health" type="Label" parent="Hud/VBoxContainer" unique_id=2000948537]
 layout_mode = 2
