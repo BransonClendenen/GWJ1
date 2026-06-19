@@ -47,12 +47,18 @@ func _ready() -> void:
 	refresh_minigame_button_colors()
 
 func _on_maze_button_pressed() -> void:
+	if result_panel.visible:
+		return
 	MinigameManager.start_minigame("maze")
 
 func _on_pipes_button_pressed() -> void:
+	if result_panel.visible:
+		return
 	MinigameManager.start_minigame("pipes")
 
 func _on_tiles_button_pressed() -> void:
+	if result_panel.visible:
+		return
 	MinigameManager.start_minigame("tiles")
 
 func _on_minigame_completed(type:String,success:bool):
@@ -107,9 +113,7 @@ func _on_gunner_button_pressed():
 	tower_manager.select_tower(gunner_scene, 60, gunner_preview_texture)
 
 func _on_bomber_button_pressed():
-	pass
 	tower_manager.select_tower(bomber_scene, 70, gunner_preview_texture)
 
 func _on_sniper_button_pressed():
-	pass
 	tower_manager.select_tower(sniper_scene, 80, gunner_preview_texture)
