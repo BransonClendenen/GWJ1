@@ -4,10 +4,10 @@ class_name ShielderEnemy
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enemy_name = "Shielder"
-	max_hp = 200
+	max_hp = 125
 	max_stamina = 0
 	max_armor = 200
-	armor_reduction = 0.5
+	armor_reduction = 0.75
 	speed = 8
 	coin_reward = 1
 	damage_to_base = 10

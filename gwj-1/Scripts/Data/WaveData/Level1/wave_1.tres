@@ -1,10 +1,15 @@
 [gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://dwmcf2qrhbekh"]
 
 [ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_ajcls"]
-[ext_resource type="Resource" uid="uid://dab7dlw1ynmo7" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x1.tres" id="2_anafv"]
+[ext_resource type="PackedScene" uid="uid://6scgrvkucdcq" path="res://Scenes/Game/Enemies/dodger.tscn" id="2_anafv"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_j1gbk"]
+
+[sub_resource type="Resource" id="Resource_uyftq"]
+script = ExtResource("1_ajcls")
+enemy_scene = ExtResource("2_anafv")
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"
 
 [resource]
 script = ExtResource("2_j1gbk")
-enemies = Array[ExtResource("1_ajcls")]([ExtResource("2_anafv")])
+enemies = Array[ExtResource("1_ajcls")]([SubResource("Resource_uyftq")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"

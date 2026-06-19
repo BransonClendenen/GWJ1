@@ -15,6 +15,16 @@
 [ext_resource type="Resource" uid="uid://5hs4i1b6ife0" path="res://Scripts/Data/WaveData/Level1/wave_8.tres" id="13_1lby0"]
 [ext_resource type="Resource" uid="uid://dh7ohpol6mhwr" path="res://Scripts/Data/WaveData/Level1/wave_9.tres" id="14_rrn31"]
 [ext_resource type="Resource" uid="uid://c7kp5wlbykt0k" path="res://Scripts/Data/WaveData/Level1/wave_10.tres" id="15_vdk28"]
+[ext_resource type="Resource" uid="uid://8ona5dkolfkc" path="res://Scripts/Data/WaveData/Level1/wave_11.tres" id="16_vxd6c"]
+[ext_resource type="Resource" uid="uid://jrhs852tslgw" path="res://Scripts/Data/WaveData/Level1/wave_12.tres" id="17_qftly"]
+[ext_resource type="Resource" uid="uid://db2aek0il0f5x" path="res://Scripts/Data/WaveData/Level1/wave_13.tres" id="18_lf888"]
+[ext_resource type="Resource" uid="uid://cxfgbw0oinlnc" path="res://Scripts/Data/WaveData/Level1/wave_14.tres" id="19_kwai1"]
+[ext_resource type="Resource" uid="uid://cn8d3tntkiw2t" path="res://Scripts/Data/WaveData/Level1/wave_15.tres" id="20_gdpu4"]
+[ext_resource type="Resource" uid="uid://vmd301yjoeeg" path="res://Scripts/Data/WaveData/Level1/wave_16.tres" id="21_uk33s"]
+[ext_resource type="Resource" uid="uid://b8v6l7pr87bd3" path="res://Scripts/Data/WaveData/Level1/wave_17.tres" id="22_kmwdo"]
+[ext_resource type="Resource" uid="uid://drjtx6vw2db2a" path="res://Scripts/Data/WaveData/Level1/wave_18.tres" id="23_jco8f"]
+[ext_resource type="Resource" uid="uid://b113nog0qlcci" path="res://Scripts/Data/WaveData/Level1/wave_19.tres" id="24_mhuxv"]
+[ext_resource type="Resource" uid="uid://bxjofjh1rehi2" path="res://Scripts/Data/WaveData/Level1/wave_20.tres" id="25_xknbs"]
 
 [resource]
 script = ExtResource("1_ryrim")
@@ -22,6 +32,6 @@ level_name = "Level 1"
 path_curve = ExtResource("1_0xo5f")
 tilemap_scene = ExtResource("3_g7xxf")
 placement_slots_scene = ExtResource("2_2jvmi")
-waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3"), ExtResource("5_hbdda"), ExtResource("8_k5vvk"), ExtResource("9_qiiyw"), ExtResource("10_txr7t"), ExtResource("11_txr7t"), ExtResource("12_6ts4g"), ExtResource("13_1lby0"), ExtResource("14_rrn31"), ExtResource("15_vdk28")])
+waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3"), ExtResource("5_hbdda"), ExtResource("8_k5vvk"), ExtResource("9_qiiyw"), ExtResource("10_txr7t"), ExtResource("11_txr7t"), ExtResource("12_6ts4g"), ExtResource("13_1lby0"), ExtResource("14_rrn31"), ExtResource("15_vdk28"), ExtResource("16_vxd6c"), ExtResource("17_qftly"), ExtResource("18_lf888"), ExtResource("19_kwai1"), ExtResource("20_gdpu4"), ExtResource("21_uk33s"), ExtResource("22_kmwdo"), ExtResource("23_jco8f"), ExtResource("24_mhuxv"), ExtResource("25_xknbs")])
 starting_coins = 150
 metadata/_custom_type_script = "uid://v38uqpv7ur63"
