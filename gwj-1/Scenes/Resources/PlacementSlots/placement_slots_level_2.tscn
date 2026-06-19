@@ -8,13 +8,16 @@
 position = Vector2(32, 64)
 
 [node name="placement_slot2" parent="." unique_id=1858093012 instance=ExtResource("1_480gu")]
-position = Vector2(96, 48)
+position = Vector2(96, 64)
 
 [node name="placement_slot3" parent="." unique_id=1463231326 instance=ExtResource("1_480gu")]
 position = Vector2(80, 112)
 
 [node name="placement_slot4" parent="." unique_id=307596426 instance=ExtResource("1_480gu")]
-position = Vector2(144, 112)
+position = Vector2(128, 128)
 
 [node name="placement_slot5" parent="." unique_id=220767954 instance=ExtResource("1_480gu")]
 position = Vector2(176, 32)
+
+[node name="placement_slot6" parent="." unique_id=1101678483 instance=ExtResource("1_480gu")]
+position = Vector2(144, 80)
