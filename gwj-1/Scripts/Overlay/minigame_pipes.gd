@@ -11,6 +11,8 @@ enum Dir {NORTH = 1, EAST = 2, SOUTH = 4, WEST = 8}
 @export var elbow_texture: Texture2D
 @export var t_junction_texture: Texture2D
 
+@onready var quit_button: Button = $quit_button
+
 const PIPE_TYPES = {
 	"straight": [Dir.NORTH | Dir.SOUTH, Dir.EAST | Dir.WEST],
 	"elbow": [Dir.NORTH | Dir.EAST, Dir.EAST | Dir.SOUTH, Dir.SOUTH | Dir.WEST, Dir.WEST | Dir.NORTH],
@@ -28,6 +30,7 @@ func _ready() -> void:
 	randomize()
 	setup_grid()
 	draw_grid()
+	quit_button.pressed.connect(_on_quit_pressed)
 
 func setup_grid() -> void:
 	grid.clear()
@@ -126,3 +129,6 @@ func check_connection() -> bool:
 
 func _on_win() -> void:
 	emit_signal("completed", true)
+
+func _on_quit_pressed() -> void:
+	emit_signal("completed", false)

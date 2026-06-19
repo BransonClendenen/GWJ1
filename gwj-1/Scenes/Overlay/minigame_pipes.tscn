@@ -6,6 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://dlqw488vqujp4" path="res://Sprites/UI_Overlay/Minigames/Pipes/pipe_corner_texture.tres" id="3_ft2ey"]
 [ext_resource type="Texture2D" uid="uid://ckoqjit0dy3ka" path="res://Sprites/UI_Overlay/Minigames/Pipes/pipe_t_texture.tres" id="4_04yin"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meqx7"]
+content_margin_left = 1.0
+bg_color = Color(0, 0.42745098, 0.53333336, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft2ey"]
+content_margin_left = 1.0
+bg_color = Color(0, 0.5176471, 0.53333336, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04yin"]
+content_margin_left = 1.0
+bg_color = Color(0, 0.5176471, 0.53333336, 1)
+
 [node name="Control" type="Control" unique_id=1276262600]
 layout_mode = 3
 anchors_preset = 0
@@ -31,3 +43,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_1rlr2")
 columns = 4
+
+[node name="quit_button" type="Button" parent="." unique_id=792585331]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -17.0
+offset_bottom = 10.0
+grow_horizontal = 0
+theme = ExtResource("2_1rlr2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_meqx7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ft2ey")
+theme_override_styles/hover = SubResource("StyleBoxFlat_04yin")
+text = "Exit"
