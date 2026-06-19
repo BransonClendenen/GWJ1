@@ -6,10 +6,10 @@ func _ready():
 	enemy_name = "Shielder"
 	max_hp = 100
 	max_stamina = 0
-	max_armor = 100
+	max_armor = 200
 	armor_reduction = 0.5
 	speed = 8
-	coin_reward = 5
+	coin_reward = 1
 	damage_to_base = 10
 	super._ready()
 
