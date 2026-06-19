@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://p36xmtwxqv1f"]
+
+[ext_resource type="PackedScene" uid="uid://bxt45md22mp12" path="res://Scenes/Game/Enemies/splitter.tscn" id="1_qi2b8"]
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="2_4f8hc"]
+
+[resource]
+script = ExtResource("2_4f8hc")
+enemy_scene = ExtResource("1_qi2b8")
+count = 12
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"

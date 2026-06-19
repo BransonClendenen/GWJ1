@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://dqn3k4r6ufyuk"]
+
+[ext_resource type="PackedScene" uid="uid://6scgrvkucdcq" path="res://Scenes/Game/Enemies/dodger.tscn" id="1_vs4ei"]
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="2_1ttua"]
+
+[resource]
+script = ExtResource("2_1ttua")
+enemy_scene = ExtResource("1_vs4ei")
+count = 15
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"

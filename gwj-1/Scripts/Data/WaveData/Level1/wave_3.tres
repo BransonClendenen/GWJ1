@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://c36fjl2gftytg"]
+
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_cc6r5"]
+[ext_resource type="Resource" uid="uid://d0jjtw2u8kj0d" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x5.tres" id="2_6gdfk"]
+[ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="3_q7snl"]
+
+[resource]
+script = ExtResource("3_q7snl")
+enemies = Array[ExtResource("1_cc6r5")]([ExtResource("2_6gdfk"), ExtResource("2_6gdfk")])
+spawn_interval = 5.0
+metadata/_custom_type_script = "uid://o1322v7xx51l"

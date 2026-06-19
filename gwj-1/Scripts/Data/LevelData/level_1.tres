@@ -7,6 +7,14 @@
 [ext_resource type="Resource" uid="uid://dwmcf2qrhbekh" path="res://Scripts/Data/WaveData/Level1/wave_1.tres" id="3_5vvg3"]
 [ext_resource type="PackedScene" uid="uid://dfkro0gc4h1l" path="res://Scenes/Resources/Maps/map_level_1.tscn" id="3_g7xxf"]
 [ext_resource type="Resource" uid="uid://c54o8qo80g0do" path="res://Scripts/Data/WaveData/Level1/wave_2.tres" id="5_hbdda"]
+[ext_resource type="Resource" uid="uid://c36fjl2gftytg" path="res://Scripts/Data/WaveData/Level1/wave_3.tres" id="8_k5vvk"]
+[ext_resource type="Resource" uid="uid://bot6alvsore7y" path="res://Scripts/Data/WaveData/Level1/wave_4.tres" id="9_qiiyw"]
+[ext_resource type="Resource" uid="uid://buvigvwss2n3c" path="res://Scripts/Data/WaveData/Level1/wave_5.tres" id="10_txr7t"]
+[ext_resource type="Resource" uid="uid://b2s3362k2qoou" path="res://Scripts/Data/WaveData/Level1/wave_6.tres" id="11_txr7t"]
+[ext_resource type="Resource" uid="uid://delm46xewfmxv" path="res://Scripts/Data/WaveData/Level1/wave_7.tres" id="12_6ts4g"]
+[ext_resource type="Resource" uid="uid://5hs4i1b6ife0" path="res://Scripts/Data/WaveData/Level1/wave_8.tres" id="13_1lby0"]
+[ext_resource type="Resource" uid="uid://dh7ohpol6mhwr" path="res://Scripts/Data/WaveData/Level1/wave_9.tres" id="14_rrn31"]
+[ext_resource type="Resource" uid="uid://c7kp5wlbykt0k" path="res://Scripts/Data/WaveData/Level1/wave_10.tres" id="15_vdk28"]
 
 [resource]
 script = ExtResource("1_ryrim")
@@ -14,6 +22,6 @@ level_name = "Level 1"
 path_curve = ExtResource("1_0xo5f")
 tilemap_scene = ExtResource("3_g7xxf")
 placement_slots_scene = ExtResource("2_2jvmi")
-waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3"), ExtResource("5_hbdda")])
+waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3"), ExtResource("5_hbdda"), ExtResource("8_k5vvk"), ExtResource("9_qiiyw"), ExtResource("10_txr7t"), ExtResource("11_txr7t"), ExtResource("12_6ts4g"), ExtResource("13_1lby0"), ExtResource("14_rrn31"), ExtResource("15_vdk28")])
 starting_coins = 150
 metadata/_custom_type_script = "uid://v38uqpv7ur63"
