@@ -15,7 +15,6 @@ extends Panel
 @onready var bomber_button: Button = $shop_panel/bomber_card/button
 @onready var sniper_button: Button = $shop_panel/sniper_card/button
 
-
 @export var gunner_scene: PackedScene = preload("res://Scenes/Game/Towers/gunner.tscn")
 @export var bomber_scene: PackedScene = preload("res://Scenes/Game/Towers/bomber.tscn")
 @export var sniper_scene: PackedScene = preload("res://Scenes/Game/Towers/sniper.tscn")
@@ -28,6 +27,7 @@ var coin_manager:Node
 func _ready() -> void:
 	MinigameManager.init(minigame_panel)
 	MinigameManager.minigame_completed.connect(_on_minigame_completed)
+	MinigameManager.reset_streaks()
 	result_button.pressed.connect(_on_result_button_pressed)
 	
 	maze_button.pressed.connect(_on_maze_button_pressed)

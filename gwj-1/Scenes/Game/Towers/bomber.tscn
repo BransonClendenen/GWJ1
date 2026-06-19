@@ -6,15 +6,21 @@
 [node name="Bomber" type="Node2D" unique_id=499067164]
 script = ExtResource("1_ep1wo")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=124404052]
-position = Vector2(0, -3.8146973e-06)
-scale = Vector2(0.390625, 0.3984375)
+[node name="base_sprite" type="Sprite2D" parent="." unique_id=1910621579]
+position = Vector2(0, -5.3346157e-06)
+scale = Vector2(0.3046875, 0.31078124)
 texture = ExtResource("2_ep1wo")
+
+[node name="barrel_sprite" type="Sprite2D" parent="." unique_id=1889766978]
+position = Vector2(0, -5.3346157e-06)
+scale = Vector2(0.3046875, 0.31078124)
+texture = ExtResource("2_ep1wo")
+
+[node name="ShootPoint" type="Marker2D" parent="barrel_sprite" unique_id=678775996]
+position = Vector2(20, -15)
+scale = Vector2(1.2820513, 1.2820513)
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=118120022]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1954276766]
-
-[node name="ShootPoint" type="Marker2D" parent="." unique_id=758421673]
-position = Vector2(0, -29)

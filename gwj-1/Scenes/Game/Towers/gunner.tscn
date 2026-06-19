@@ -6,15 +6,21 @@
 [node name="Gunner" type="Node2D" unique_id=1270180778]
 script = ExtResource("1_irm32")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=633556257]
+[node name="base_sprite" type="Sprite2D" parent="." unique_id=633556257]
 position = Vector2(0, -3.8146973e-06)
 scale = Vector2(0.78, 0.78)
 texture = ExtResource("2_irm32")
+
+[node name="barrel_sprite" type="Sprite2D" parent="." unique_id=1659221169]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("2_irm32")
+
+[node name="ShootPoint" type="Marker2D" parent="barrel_sprite" unique_id=1640260161]
+position = Vector2(20, -15)
+scale = Vector2(1.2820513, 1.2820513)
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=2101527963]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1131459235]
-
-[node name="ShootPoint" type="Marker2D" parent="." unique_id=1640260161]
-position = Vector2(0, -29)

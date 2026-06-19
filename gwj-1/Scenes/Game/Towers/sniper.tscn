@@ -6,15 +6,21 @@
 [node name="Sniper" type="Node2D" unique_id=861892265]
 script = ExtResource("1_qolu7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=727352139]
+[node name="base_sprite" type="Sprite2D" parent="." unique_id=93357215]
 position = Vector2(0, -3.8146973e-06)
-scale = Vector2(0.390625, 0.3984375)
+scale = Vector2(0.78, 0.78)
 texture = ExtResource("2_qolu7")
+
+[node name="barrel_sprite" type="Sprite2D" parent="." unique_id=1491419831]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("2_qolu7")
+
+[node name="ShootPoint" type="Marker2D" parent="barrel_sprite" unique_id=369984042]
+position = Vector2(20, -15)
+scale = Vector2(1.2820513, 1.2820513)
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=764056923]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=539866642]
-
-[node name="ShootPoint" type="Marker2D" parent="." unique_id=750054895]
-position = Vector2(0, -29)

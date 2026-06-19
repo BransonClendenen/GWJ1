@@ -10,7 +10,7 @@ var neglect_counts: Dictionary = {"maze": 0, "pipes": 0, "tiles": 0}
 const PENALTY_THRESHOLD = 2
 const PENALTY_MULTIPLIER = 0.5
 
-const BONUS_THRESHOLD = 2
+const BONUS_THRESHOLD = 3
 const BONUS_MULTIPLIER = 2.0
 
 signal minigame_completed(type:String,success:bool)
@@ -62,3 +62,7 @@ func update_streak(played_type: String) -> void:
 		else:
 			play_streaks[type] = 0
 			neglect_counts[type] += 1
+
+func reset_streaks():
+	play_streaks = {"maze": 0, "pipes": 0, "tiles": 0}
+	neglect_counts = {"maze": 0, "pipes": 0, "tiles": 0}

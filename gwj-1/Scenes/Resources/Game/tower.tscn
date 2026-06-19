@@ -7,11 +7,13 @@
 [node name="Tower" type="Node2D" unique_id=916097099]
 script = ExtResource("1_6fa7h")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1695809964]
+[node name="base_sprite" type="Sprite2D" parent="." unique_id=1695809964]
+
+[node name="barrel_sprite" type="Sprite2D" parent="." unique_id=1115235838]
+
+[node name="ShootPoint" type="Marker2D" parent="barrel_sprite" unique_id=13858364]
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=557431154]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=1737308177]
 shape = SubResource("RectangleShape2D_458rg")
-
-[node name="ShootPoint" type="Marker2D" parent="." unique_id=13858364]

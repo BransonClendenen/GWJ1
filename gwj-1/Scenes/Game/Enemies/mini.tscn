@@ -63,6 +63,7 @@ scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_8gmn8")
 animation = &"walking"
 autoplay = "walking"
+offset = Vector2(-10, 0)
 flip_h = true
 
 [node name="hpbar" type="Node2D" parent="." unique_id=1767453929]

@@ -33,8 +33,9 @@ var selected_upgrade_index: int = -1
 
 @onready var range_area: Area2D = $RangeArea
 @onready var range_shape: CollisionShape2D = $RangeArea/CollisionShape2D
-@onready var sprite: Sprite2D = $Sprite2D
-@onready var shoot_point: Marker2D = $ShootPoint
+@onready var base_sprite: Sprite2D = $base_sprite
+@onready var barrel_sprite: Sprite2D = $barrel_sprite
+@onready var shoot_point: Marker2D = $barrel_sprite/ShootPoint
 
 func _ready():
 	setup_range()
@@ -44,13 +45,29 @@ func _ready():
 func _process(delta: float) -> void:
 	fire_timer += delta
 	update_target()
+	rotate_barrel(delta)
 	if current_target and fire_timer >= 1.0 / fire_rate:
 		fire_timer = 0.0
 		shoot()
 
+func rotate_barrel(delta:float):
+	if not current_target:
+		return
+	var direction = (current_target.global_position - barrel_sprite.global_position).normalized()
+	var target_angle = direction.angle()
+	barrel_sprite.rotation = lerp_angle(barrel_sprite.rotation, target_angle, delta * 10.0)
+
 func update_target():
 	enemies_in_range = enemies_in_range.filter(func(e): return is_instance_valid(e))
-	current_target = enemies_in_range[0] if not enemies_in_range.is_empty() else null
+	if enemies_in_range.is_empty():
+		current_target = null
+		return
+	
+	var best = enemies_in_range[0]
+	for e in enemies_in_range:
+		if e.path_index > best.path_index:
+			best = e
+	current_target = best
 
 func _on_area_entered(body:Node2D):
 	if body.get_parent() is Enemy:
