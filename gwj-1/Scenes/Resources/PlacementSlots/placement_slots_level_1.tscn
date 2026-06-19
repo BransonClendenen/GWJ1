@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c2sgk0demmxu8"]
+
+[ext_resource type="PackedScene" uid="uid://622h6whal51q" path="res://Scenes/Resources/Game/placement_slot.tscn" id="1_o0j6x"]
+
+[node name="PlacementSlotsLevel1" type="Node2D" unique_id=1610547534]
+
+[node name="placement_slot" parent="." unique_id=250459157 instance=ExtResource("1_o0j6x")]
+position = Vector2(32, 112)
+
+[node name="placement_slot2" parent="." unique_id=760902391 instance=ExtResource("1_o0j6x")]
+position = Vector2(160, 112)
+
+[node name="placement_slot3" parent="." unique_id=736218762 instance=ExtResource("1_o0j6x")]
+position = Vector2(112, 96)
+
+[node name="placement_slot4" parent="." unique_id=888286232 instance=ExtResource("1_o0j6x")]
+position = Vector2(112, 48)
+
+[node name="placement_slot5" parent="." unique_id=1354108978 instance=ExtResource("1_o0j6x")]
+position = Vector2(192, 32)

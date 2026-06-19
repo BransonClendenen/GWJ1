@@ -2,14 +2,18 @@
 
 [ext_resource type="Curve2D" uid="uid://dwsbnunyhc17a" path="res://Scenes/Resources/Paths/path_level_1.tres" id="1_0xo5f"]
 [ext_resource type="Script" uid="uid://v38uqpv7ur63" path="res://Scripts/Resources/LevelData.gd" id="1_ryrim"]
+[ext_resource type="PackedScene" uid="uid://c2sgk0demmxu8" path="res://Scenes/Resources/PlacementSlots/placement_slots_level_1.tscn" id="2_2jvmi"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_5vvg3"]
 [ext_resource type="Resource" uid="uid://dwmcf2qrhbekh" path="res://Scripts/Data/WaveData/Level1/wave_1.tres" id="3_5vvg3"]
+[ext_resource type="PackedScene" uid="uid://dfkro0gc4h1l" path="res://Scenes/Resources/Maps/map_level_1.tscn" id="3_g7xxf"]
 [ext_resource type="Resource" uid="uid://c54o8qo80g0do" path="res://Scripts/Data/WaveData/Level1/wave_2.tres" id="5_hbdda"]
 
 [resource]
 script = ExtResource("1_ryrim")
 level_name = "Level 1"
 path_curve = ExtResource("1_0xo5f")
+tilemap_scene = ExtResource("3_g7xxf")
+placement_slots_scene = ExtResource("2_2jvmi")
 waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3"), ExtResource("5_hbdda")])
 starting_coins = 150
 metadata/_custom_type_script = "uid://v38uqpv7ur63"
