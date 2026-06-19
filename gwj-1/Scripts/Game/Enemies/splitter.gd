@@ -8,7 +8,7 @@ const SPAWN_SPREAD = 4.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enemy_name = "Splitter"
-	max_hp = 20
+	max_hp = 45
 	max_stamina = 0
 	max_armor = 0
 	speed = 35

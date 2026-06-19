@@ -78,7 +78,7 @@ func take_damage(amount:float,pierce:float = 0.0,stamina_drain: float = 0.0):
 	
 	if current_armor > 0.0:
 		var safe_pierce = clamp(pierce, 0.0, 1.0)
-		var armor_damage = amount * (1 + safe_pierce)
+		var armor_damage = amount * (1 + safe_pierce - armor_reduction)
 		current_armor = clamp(current_armor - armor_damage, 0.0, max_armor)
 		update_armor_bar()
 		on_armor_changed(current_armor)

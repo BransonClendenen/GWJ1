@@ -5,8 +5,9 @@
 [ext_resource type="Resource" uid="uid://crjtrcrn7v83o" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x3.tres" id="4_7p67c"]
 [ext_resource type="Resource" uid="uid://d0jjtw2u8kj0d" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x5.tres" id="4_o2qxo"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="5_bj4sh"]
+[ext_resource type="Resource" uid="uid://ig1rtssmoogu" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x6.tres" id="5_o2qxo"]
 
 [resource]
 script = ExtResource("5_bj4sh")
-enemies = Array[ExtResource("1_v1pfk")]([ExtResource("2_v1pfk"), ExtResource("4_7p67c"), ExtResource("4_o2qxo")])
+enemies = Array[ExtResource("1_v1pfk")]([ExtResource("2_v1pfk"), ExtResource("4_7p67c"), ExtResource("4_o2qxo"), ExtResource("2_v1pfk"), ExtResource("5_o2qxo"), ExtResource("4_o2qxo"), ExtResource("5_o2qxo")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"

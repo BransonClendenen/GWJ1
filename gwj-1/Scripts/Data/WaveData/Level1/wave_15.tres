@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_l5wea"]
 [ext_resource type="Resource" uid="uid://d170lmc03mik1" path="res://Scripts/Data/EnemySpawnData/spawn_shielder_x2.tres" id="2_hk6ke"]
-[ext_resource type="Resource" uid="uid://dab7dlw1ynmo7" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x1.tres" id="2_l5wea"]
 [ext_resource type="Resource" uid="uid://bydylck7ijjtt" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x3.tres" id="4_hk6ke"]
+[ext_resource type="Resource" uid="uid://d0jjtw2u8kj0d" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x5.tres" id="4_t6rye"]
+[ext_resource type="Resource" uid="uid://up5q7nbh2w06" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x10.tres" id="5_00eay"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="5_ire6r"]
+[ext_resource type="Resource" uid="uid://p36xmtwxqv1f" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x12.tres" id="6_t6rye"]
 
 [resource]
 script = ExtResource("5_ire6r")
-enemies = Array[ExtResource("1_l5wea")]([ExtResource("2_l5wea"), ExtResource("2_hk6ke"), ExtResource("4_hk6ke"), ExtResource("2_hk6ke")])
+enemies = Array[ExtResource("1_l5wea")]([ExtResource("4_t6rye"), ExtResource("2_hk6ke"), ExtResource("4_hk6ke"), ExtResource("2_hk6ke"), ExtResource("5_00eay"), ExtResource("6_t6rye")])
 spawn_interval = 2.0
 metadata/_custom_type_script = "uid://o1322v7xx51l"

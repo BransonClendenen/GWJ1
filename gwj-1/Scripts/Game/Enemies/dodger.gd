@@ -7,8 +7,8 @@ var stamina_depleted: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enemy_name = "Dodger"
-	max_hp = 20
-	max_stamina = 60
+	max_hp = 40
+	max_stamina = 150
 	max_armor = 0
 	speed = 15
 	coin_reward = 1

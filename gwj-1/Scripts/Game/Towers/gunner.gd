@@ -9,7 +9,7 @@ func _ready():
 	cost = 60
 	bullet_scene = preload("res://Scenes/Game/Bullets/gunner_bullet.tscn")
 	bullet_speed = 140.0
-	stamina_drain = 10
+	stamina_drain = 20
 	setup_upgrade_data()
 	super._ready()
 

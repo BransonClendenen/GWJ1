@@ -7,5 +7,5 @@
 
 [resource]
 script = ExtResource("3_ld2tv")
-enemies = Array[ExtResource("1_mhd6b")]([ExtResource("2_jo0fs"), ExtResource("3_g3nmb")])
+enemies = Array[ExtResource("1_mhd6b")]([ExtResource("2_jo0fs"), ExtResource("3_g3nmb"), ExtResource("2_jo0fs")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"

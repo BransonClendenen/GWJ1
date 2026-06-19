@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_cdmuj"]
 [ext_resource type="Resource" uid="uid://d0jjtw2u8kj0d" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x5.tres" id="2_cdmuj"]
+[ext_resource type="Resource" uid="uid://up5q7nbh2w06" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x10.tres" id="2_klai8"]
 [ext_resource type="Resource" uid="uid://crjtrcrn7v83o" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x3.tres" id="4_nnp40"]
 [ext_resource type="Resource" uid="uid://ig1rtssmoogu" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x6.tres" id="5_klai8"]
 [ext_resource type="Resource" uid="uid://ehpxriwn5buo" path="res://Scripts/Data/EnemySpawnData/spawn_shielder_x4.tres" id="5_tqunl"]
@@ -9,6 +10,5 @@
 
 [resource]
 script = ExtResource("6_w0jwi")
-enemies = Array[ExtResource("1_cdmuj")]([ExtResource("2_cdmuj"), ExtResource("4_nnp40"), ExtResource("2_cdmuj"), ExtResource("5_tqunl"), ExtResource("5_klai8")])
-spawn_interval = 3.0
+enemies = Array[ExtResource("1_cdmuj")]([ExtResource("2_klai8"), ExtResource("4_nnp40"), ExtResource("2_klai8"), ExtResource("5_tqunl"), ExtResource("2_cdmuj"), ExtResource("5_klai8"), ExtResource("2_klai8"), ExtResource("5_klai8")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"

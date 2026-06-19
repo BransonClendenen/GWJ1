@@ -9,5 +9,5 @@
 [resource]
 script = ExtResource("4_dxtuk")
 enemies = Array[ExtResource("1_4sh4y")]([ExtResource("2_ul2dl"), ExtResource("2_80h3a"), ExtResource("3_ul2dl")])
-spawn_interval = 3.0
+spawn_interval = 1.5
 metadata/_custom_type_script = "uid://o1322v7xx51l"

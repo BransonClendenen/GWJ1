@@ -2,14 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_klq8t"]
 [ext_resource type="Resource" uid="uid://g70pghxwx2br" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x20.tres" id="2_0lyrw"]
+[ext_resource type="Resource" uid="uid://u155fhgc5kmm" path="res://Scripts/Data/EnemySpawnData/spawn_shielder_x6.tres" id="2_1h6uk"]
 [ext_resource type="Resource" uid="uid://d0jjtw2u8kj0d" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x5.tres" id="2_6v3wd"]
 [ext_resource type="Resource" uid="uid://bmul0s8o06aag" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x9.tres" id="5_1h6uk"]
 [ext_resource type="Resource" uid="uid://ig1rtssmoogu" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x6.tres" id="5_b5wov"]
 [ext_resource type="Resource" uid="uid://cq76xeic72fud" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x1.tres" id="6_b5wov"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="6_htn5l"]
+[ext_resource type="Resource" uid="uid://up5q7nbh2w06" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x10.tres" id="8_1h6uk"]
 
 [resource]
 script = ExtResource("6_htn5l")
-enemies = Array[ExtResource("1_klq8t")]([ExtResource("2_0lyrw"), ExtResource("5_b5wov"), ExtResource("2_6v3wd"), ExtResource("5_1h6uk"), ExtResource("6_b5wov")])
-spawn_interval = 2.0
+enemies = Array[ExtResource("1_klq8t")]([ExtResource("2_1h6uk"), ExtResource("2_0lyrw"), ExtResource("5_b5wov"), ExtResource("2_6v3wd"), ExtResource("5_1h6uk"), ExtResource("6_b5wov"), ExtResource("8_1h6uk"), ExtResource("5_b5wov")])
 metadata/_custom_type_script = "uid://o1322v7xx51l"
