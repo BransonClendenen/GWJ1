@@ -145,6 +145,11 @@ func die():
 	is_dead = true
 	on_death()
 	emit_signal("died",coin_reward)
+	SfxManager.play_sfx_random([
+		"res://Audio/SFX/Game/enemy_death1.wav",
+		"res://Audio/SFX/Game/enemy_death_2.wav",
+		"res://Audio/SFX/Game/enemy_death_3.wav"
+	])
 	VfxManager.burst(get_parent(), global_position, Color.GREEN)
 	queue_free()
 

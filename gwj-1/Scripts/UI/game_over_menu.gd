@@ -9,7 +9,8 @@ func _ready() -> void:
 	if GameState.game_result == GameState.Result.WIN:
 		victory.text = "You Win!"
 	else:
-		victory.text = "Fucking Loser"
+		victory.text = "Git Gud Scrub"
 
 func _on_return_pressed() -> void:
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	GameState.change_state(GameState.State.MAIN_MENU)

@@ -72,13 +72,14 @@ func try_place_tower(mouse_pos: Vector2):
 	if slot == null:
 		return
 	if not coin_manager.can_afford(selected_tower_cost):
+		SfxManager.play_sfx("res://Audio/SFX/UI/sfx_cant_afford.ogg")
 		return
 	
 	var placed = slot.place_tower(selected_tower_scene)
 	if placed:
 		coin_manager.spend_coins(selected_tower_cost)
 		deselect_tower()
-		#SfxManager.play_sfx("some nonsense")
+		SfxManager.play_sfx("res://Audio/SFX/UI/sfx_place_tower.ogg")
 
 func get_slot_at(pos:Vector2) -> PlacementSlot:
 	for slot in placement_slots:

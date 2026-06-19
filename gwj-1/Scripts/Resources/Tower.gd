@@ -83,6 +83,7 @@ func shoot():
 	projectile_container.add_child(bullet)
 	bullet.global_position = shoot_point.global_position
 	bullet.setup(damage,bullet_speed,splash_radius,stamina_drain,armor_pierce,current_target,enemies_container)
+	SfxManager.play_sfx_pitched("res://Audio/SFX/Game/sfx_tower_fire.wav")
 
 func setup_range():
 	var shape = CircleShape2D.new()
@@ -132,7 +133,7 @@ func on_upgrade_button_pressed():
 	if not data:
 		return
 	if not coin_manager.can_afford(data.cost):
-		#upgrade_button.visible = false
+		SfxManager.play_sfx("res://Audio/SFX/UI/sfx_cant_afford.ogg")
 		return
 	
 	coin_manager.spend_coins(data.cost)
@@ -143,8 +144,7 @@ func on_upgrade_button_pressed():
 		2: chosen_branch = 2
 	
 	apply_upgrade(selected_upgrade_index)
-	#refresh_slots()
-	#upgrade_button.visible = false
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_upgrade_bought.ogg")
 	selected_upgrade_index = -1
 
 func apply_upgrade(index: int) -> void:

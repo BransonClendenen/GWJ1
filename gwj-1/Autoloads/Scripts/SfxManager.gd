@@ -8,6 +8,7 @@ var _pool_index: int = 0
 var _sfx_cache: Dictionary = {}
 
 func _ready() -> void:
+	randomize()
 	_music_player = $MusicPlayer
 	_build_pool()
 
@@ -26,7 +27,16 @@ func play_music(path: String, volume_db: float = 0.0, loop: bool = true) -> void
 		return
 	_music_player.stream = stream
 	_music_player.volume_db = volume_db
+	
+	if stream is AudioStreamOggVorbis:
+		stream.loop = loop
+	elif stream is AudioStreamMP3:
+		stream.loop = loop
+	elif stream is AudioStreamWAV:
+		stream.loop_mode = AudioStreamWAV.LOOP_FORWARD if loop else AudioStreamWAV.LOOP_DISABLED
+	
 	_music_player.play()
+	print("play() called, playing: ", _music_player.playing, " path: ",path)
 
 func stop_music() -> void:
 	_music_player.stop()
@@ -46,6 +56,13 @@ func play_sfx(path: String, volume_db: float = 0.0, pitch: float = 1.0) -> void:
 	player.volume_db = volume_db
 	player.pitch_scale = pitch
 	player.play()
+
+func play_sfx_random(paths: Array, volume_db: float = 0.0) -> void:
+	if paths.is_empty():
+		return
+	var chosen_path = paths[randi() % paths.size()]
+	print("playing: ", chosen_path)
+	play_sfx(chosen_path, volume_db)
 
 func play_sfx_pitched(path:String,pitch_variance:float=0.1) -> void:
 	var pitch = 1.0 + randf_range(-pitch_variance, pitch_variance)

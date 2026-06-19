@@ -50,22 +50,26 @@ func _on_maze_button_pressed() -> void:
 	if result_panel.visible:
 		return
 	MinigameManager.start_minigame("maze")
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_minigame_start.ogg")
 
 func _on_pipes_button_pressed() -> void:
 	if result_panel.visible:
 		return
 	MinigameManager.start_minigame("pipes")
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_minigame_start.ogg")
 
 func _on_tiles_button_pressed() -> void:
 	if result_panel.visible:
 		return
 	MinigameManager.start_minigame("tiles")
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_minigame_start.ogg")
 
 func _on_minigame_completed(type:String,success:bool):
 	if not success:
 		result_label.text = type + " - Lost"
 		result_panel.visible = true
 		refresh_minigame_button_colors()
+		SfxManager.play_sfx("res://Audio/SFX/UI/sfx_minigame_fail.wav")
 		return
 	
 	# Get multiplier BEFORE updating streak so first play is always full reward
@@ -86,6 +90,7 @@ func _on_minigame_completed(type:String,success:bool):
 	# Show the player what they earned and whether it was reduced
 	result_label.text = type + " — Won\n+" + str(final_reward) + " coins"
 	
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_minigame_win.wav")
 	result_panel.visible = true
 	refresh_minigame_button_colors()
 
@@ -110,10 +115,13 @@ func _on_coin_changed(new_amount):
 	coins_label.text = str(new_amount)
 
 func _on_gunner_button_pressed():
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	tower_manager.select_tower(gunner_scene, 60, gunner_preview_texture)
 
 func _on_bomber_button_pressed():
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	tower_manager.select_tower(bomber_scene, 70, gunner_preview_texture)
 
 func _on_sniper_button_pressed():
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	tower_manager.select_tower(sniper_scene, 80, gunner_preview_texture)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxy6pgxlwiuok"
+path="res://.godot/imported/Zander Noriega - The Reach Of Hunger.wav-9a75f4d9a0848c0582e2c20127677319.sample"
+
+[deps]
+
+source_file="res://Audio/Music/Zander Noriega - The Reach Of Hunger/Zander Noriega - The Reach Of Hunger.wav"
+dest_files=["res://.godot/imported/Zander Noriega - The Reach Of Hunger.wav-9a75f4d9a0848c0582e2c20127677319.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

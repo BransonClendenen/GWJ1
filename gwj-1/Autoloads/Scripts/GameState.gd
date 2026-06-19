@@ -48,6 +48,7 @@ func set_level_data(level_data:LevelData):
 func find_new_state(state):
 	match state:
 		State.MAIN_MENU:
+			SfxManager.play_music("res://Audio/Music/TremLoadingloopl.ogg",0.0,true)
 			if previous_state == State.NONE:
 				#first load
 				main_menu = SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
@@ -55,6 +56,7 @@ func find_new_state(state):
 				#second and after load
 				main_menu = SceneManager.load_ui("res://Scenes/UI/main_menu.tscn")
 		State.GAME:
+			SfxManager.play_music("res://Audio/Music/Zander Noriega - The Reach Of Hunger/Zander Noriega - The Reach Of Hunger.mp3",-10.0,true)
 			if previous_state == State.MAIN_MENU:
 				#await(SceneManager.load_ui("res://Scenes/UI/td_ui_container.tscn"))
 				#SceneManager.load_ui("res://Scenes/UI/td_map.tscn")
@@ -63,6 +65,7 @@ func find_new_state(state):
 				upgrade_panel = SceneManager.load_overlay("res://Scenes/Overlay/upgrade_panel.tscn")
 				main_menu.queue_free()
 		State.GAME_OVER:
+			SfxManager.play_music("res://Audio/Music/Zander Noriega - Ironbound/Zander Noriega - Ironbound.mp3",0.0,true)
 			game_over_menu = SceneManager.load_ui("res://Scenes/UI/game_over_menu.tscn")
 			td_scene.queue_free()
 			ui_panel.queue_free()

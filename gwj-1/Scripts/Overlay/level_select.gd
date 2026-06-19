@@ -18,9 +18,11 @@ func close() -> void:
 	visible = false
 
 func _on_level_1_pressed() -> void:
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	GameState.set_level_data(level_1_data)
 	GameState.change_state(GameState.State.GAME)
 
 func _on_level_2_pressed() -> void:
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	GameState.set_level_data(level_2_data)
 	GameState.change_state(GameState.State.GAME)

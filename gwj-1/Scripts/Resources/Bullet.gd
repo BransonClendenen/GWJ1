@@ -40,6 +40,10 @@ func on_impact():
 		if is_instance_valid(target) and target is Enemy:
 			target.take_damage(damage,armor_pierce,stamina_drain)
 	
+	SfxManager.play_sfx_random([
+		"res://Audio/SFX/Game/bullet_1.wav",
+		"res://Audio/SFX/Game/bullet_2.wav",
+		"res://Audio/SFX/Game/bullet_3.wav"])
 	VfxManager.burst(get_parent(), global_position, Color.ORANGE, 6, 0.2)
 	on_impact_effect()
 	queue_free()

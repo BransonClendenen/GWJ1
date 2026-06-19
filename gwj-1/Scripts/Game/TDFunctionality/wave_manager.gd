@@ -58,6 +58,10 @@ func spawn_enemy(enemy_scene: PackedScene):
 	enemy.set_path(baked_points)
 	enemy.died.connect(_on_enemy_died)
 	enemy.reached_base.connect(_on_enemy_reached_base)
+	
+	if enemy is TurtlerEnemy:
+		SfxManager.play_music("res://Audio/Music/3HR.MT_.3.mp3",true)
+		enemy.died.connect(_on_boss_died)
 
 func register_enemy(enemy:Enemy):
 	enemy.died.connect(_on_enemy_died)
@@ -76,7 +80,12 @@ func on_enemy_removed():
 	enemies_alive -= 1
 	if enemies_alive <= 0 and not is_spawning:
 		enemies_alive = 0
+		SfxManager.play_sfx("res://Audio/SFX/UI/sfx_wave_complete.ogg",10.0,1.2)
 		emit_signal("wave_complete", current_wave_index + 1)
 		current_wave_index += 1
 		GameState.waves_survived += 1
 		start_next_wave()
+
+func _on_boss_died(reward):
+	SfxManager.play_sfx("res://Audio/SFX/Game/sfx_boss_death2.mp3")
+	SfxManager.play_sfx("res://Audio/SFX/Game/sfx_boss_death.mp3")
