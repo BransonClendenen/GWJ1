@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://ci1shc571oehk"]
+
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="1_ipoyb"]
+[ext_resource type="Script" uid="uid://cm4q816ccish4" path="res://Scripts/Overlay/level_select.gd" id="2_6utup"]
+[ext_resource type="Resource" uid="uid://bd6vyq8s1ukgl" path="res://Scripts/Data/LevelData/level_1.tres" id="3_1em2i"]
+[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="3_ua7qw"]
+[ext_resource type="Resource" uid="uid://ckf5n1wfn81tb" path="res://Scripts/Data/LevelData/level_2.tres" id="4_lh3qs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1em2i"]
+bg_color = Color(0.08235294, 0.08235294, 0.12156863, 1)
+
+[node name="level_select" type="Control" unique_id=1923598823]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ipoyb")
+script = ExtResource("2_6utup")
+level_1_data = ExtResource("3_1em2i")
+level_2_data = ExtResource("4_lh3qs")
+
+[node name="title" type="Label" parent="." unique_id=1064124620]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Select Level"
+
+[node name="menu" type="Panel" parent="." unique_id=1362284350]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -37.5
+offset_right = -30.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1em2i")
+
+[node name="Button" type="Button" parent="menu" unique_id=407872732]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="menu" unique_id=1066652812]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -35.0
+offset_right = 20.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ua7qw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="menu" unique_id=68275957]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.60784316, 0.1882353, 1, 1)
+text = "Sector 1"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="menu" unique_id=2020763406]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 30.0
+offset_right = 20.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="menu2" type="Panel" parent="." unique_id=2134274920]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -37.5
+offset_right = 110.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1em2i")
+
+[node name="Button" type="Button" parent="menu2" unique_id=1658071144]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="menu2" unique_id=1047014645]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -35.0
+offset_right = 20.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ua7qw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="menu2" unique_id=1927485891]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.60784316, 0.1882353, 1, 1)
+text = "Sector 2"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="menu2" unique_id=1364657607]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 30.0
+offset_right = 20.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Hard"
+horizontal_alignment = 1

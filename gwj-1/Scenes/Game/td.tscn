@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dkcceqow3ad6u" path="res://Scripts/Game/TDFunctionality/td.gd" id="1_6tnh0"]
 [ext_resource type="Script" uid="uid://bnkj8cimmgr52" path="res://Scripts/Game/TDFunctionality/coin_manager.gd" id="2_8cs4j"]
 [ext_resource type="Script" uid="uid://dsm0km0rdcyvq" path="res://Scripts/Game/TDFunctionality/wave_manager.gd" id="2_a3nvy"]
-[ext_resource type="Resource" uid="uid://ckf5n1wfn81tb" path="res://Scripts/Data/LevelData/level_2.tres" id="2_imfa6"]
 [ext_resource type="Script" uid="uid://cwbub40k501yn" path="res://Scripts/Game/TDFunctionality/tower_manager.gd" id="3_3gsr6"]
 [ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/TDFunctionality/base_manager.gd" id="3_u5l3d"]
 [ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="9_imfa6"]
@@ -13,7 +12,6 @@
 
 [node name="TDMap" type="Node2D" unique_id=393999577]
 script = ExtResource("1_6tnh0")
-level_data = ExtResource("2_imfa6")
 
 [node name="TilemapContainer" type="Node2D" parent="." unique_id=636801117]
 

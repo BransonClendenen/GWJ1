@@ -13,6 +13,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	if GameState.selected_level_data:
+		level_data = GameState.selected_level_data
 	setup_level()
 	connect_signals()
 	wave_manager.start_next_wave()

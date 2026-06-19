@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cvngkpn2gulmk"]
 
 [ext_resource type="Script" uid="uid://qfw2k8hpp58s" path="res://Scripts/UI/main_menu.gd" id="1_6rmd8"]
+[ext_resource type="PackedScene" uid="uid://ci1shc571oehk" path="res://Scenes/Overlay/level_select.tscn" id="2_i2xx2"]
 
 [node name="MainMenu" type="Control" unique_id=1698461520]
 layout_mode = 3
@@ -27,5 +28,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
 icon_alignment = 1
+
+[node name="level_select" parent="." unique_id=1923598823 instance=ExtResource("2_i2xx2")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -22,6 +22,8 @@ var td_scene:Node2D
 var ui_panel:Control
 var upgrade_panel:Control
 
+var selected_level_data:LevelData = null
+
 var game_result: Result = Result.NONE
 var waves_survived:int = 0
 
@@ -39,6 +41,9 @@ func set_state(new_state: State):
 
 func change_state(new_state:State):
 	set_state(new_state)
+
+func set_level_data(level_data:LevelData):
+	selected_level_data = level_data
 
 func find_new_state(state):
 	match state:

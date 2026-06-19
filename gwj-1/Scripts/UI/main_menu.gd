@@ -1,7 +1,6 @@
 extends Control
 
-func _ready() -> void:
-	pass
+@onready var level_select: Control = $level_select
 
 func _on_button_pressed() -> void:
-	GameState.change_state(GameState.State.GAME)
+	level_select.open()
