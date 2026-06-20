@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://bq6sqkyohuvxm"]
+
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_1obic"]
+[ext_resource type="Resource" uid="uid://c2vdlctyfkigq" path="res://Scripts/Data/EnemySpawnData/spawn_boss.tres" id="2_fywd5"]
+[ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_yfk41"]
+
+[resource]
+script = ExtResource("2_yfk41")
+enemies = Array[ExtResource("1_1obic")]([ExtResource("2_fywd5")])
+metadata/_custom_type_script = "uid://o1322v7xx51l"

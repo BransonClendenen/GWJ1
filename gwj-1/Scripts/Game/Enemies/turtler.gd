@@ -17,7 +17,7 @@ func _ready():
 	super._ready()
 
 func on_armor_broken():
-	max_stamina = max_hp/2.0
+	max_stamina = max_hp#/2.0
 	current_stamina = max_stamina
 	speed = 20
 	update_stamina_bar()

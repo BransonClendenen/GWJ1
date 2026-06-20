@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" format=3 uid="uid://c2vdlctyfkigq"]
+
+[ext_resource type="PackedScene" uid="uid://b1ul4iro0oo22" path="res://Scenes/Game/Enemies/turtler.tscn" id="1_xrd0e"]
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="2_75esw"]
+
+[resource]
+script = ExtResource("2_75esw")
+enemy_scene = ExtResource("1_xrd0e")
+metadata/_custom_type_script = "uid://dyrdryyhwua8l"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://y77pbj8vg1we"]
+
+[ext_resource type="Script" uid="uid://dyrdryyhwua8l" path="res://Scripts/Resources/EnemySpawnData.gd" id="1_uc27h"]
+[ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="2_30ylv"]
+[ext_resource type="Resource" uid="uid://u155fhgc5kmm" path="res://Scripts/Data/EnemySpawnData/spawn_shielder_x6.tres" id="2_t016r"]
+[ext_resource type="Resource" uid="uid://d0jjtw2u8kj0d" path="res://Scripts/Data/EnemySpawnData/spawn_dodger_x5.tres" id="3_ir7cd"]
+[ext_resource type="Resource" uid="uid://ig1rtssmoogu" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x6.tres" id="4_g1yki"]
+[ext_resource type="Resource" uid="uid://bmul0s8o06aag" path="res://Scripts/Data/EnemySpawnData/spawn_splitter_x9.tres" id="5_20tg6"]
+
+[resource]
+script = ExtResource("2_30ylv")
+enemies = Array[ExtResource("1_uc27h")]([ExtResource("2_t016r"), ExtResource("2_t016r"), ExtResource("2_t016r"), ExtResource("3_ir7cd"), ExtResource("4_g1yki"), ExtResource("5_20tg6")])
+metadata/_custom_type_script = "uid://o1322v7xx51l"

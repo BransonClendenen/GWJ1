@@ -1,6 +1,57 @@
 [gd_scene format=3 uid="uid://b1ul4iro0oo22"]
 
 [ext_resource type="Script" uid="uid://begqb50bqfsns" path="res://Scripts/Game/Enemies/turtler.gd" id="1_cbtvk"]
+[ext_resource type="Texture2D" uid="uid://mkbd4eexv38h" path="res://Sprites/Game/Enemies/DodgerWalking.png" id="2_cbtvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acade"]
+atlas = ExtResource("2_cbtvk")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hfba"]
+atlas = ExtResource("2_cbtvk")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwaqu"]
+atlas = ExtResource("2_cbtvk")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgr2b"]
+atlas = ExtResource("2_cbtvk")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isfmp"]
+atlas = ExtResource("2_cbtvk")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js443"]
+atlas = ExtResource("2_cbtvk")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ai7ur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acade")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hfba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwaqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgr2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isfmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js443")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbtvk"]
 
@@ -8,37 +59,41 @@
 script = ExtResource("1_cbtvk")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=575895850]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ai7ur")
+flip_h = true
 
 [node name="hpbar" type="Node2D" parent="." unique_id=1327187620]
+position = Vector2(0, -10)
 
 [node name="bgbar" type="ColorRect" parent="hpbar" unique_id=1666925818]
-offset_left = -10.0
+offset_left = -30.0
 offset_top = -20.0
-offset_right = 10.0
+offset_right = 30.0
 offset_bottom = -15.0
 color = Color(0.23031491, 0.23031494, 0.23031494, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="fillbar" type="ColorRect" parent="hpbar" unique_id=1958697309]
-offset_left = -10.0
+offset_left = -30.0
 offset_top = -20.0
-offset_right = 10.0
+offset_right = 30.0
 offset_bottom = -15.0
 color = Color(0.2924954, 0.8342276, 0.36060718, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="armorbar" type="ColorRect" parent="hpbar" unique_id=1407943741]
-offset_left = -10.0
+offset_left = -30.0
 offset_top = -20.0
-offset_right = 10.0
+offset_right = 30.0
 offset_bottom = -15.0
 color = Color(0.9787845, 0.9034187, 1.540184e-06, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="staminabar" type="ColorRect" parent="hpbar" unique_id=552931659]
-offset_left = -10.0
+offset_left = -30.0
 offset_top = -20.0
-offset_right = 10.0
+offset_right = 30.0
 offset_bottom = -15.0
 color = Color(6.160736e-06, 0, 0.9915611, 1)
 metadata/_edit_use_anchors_ = true

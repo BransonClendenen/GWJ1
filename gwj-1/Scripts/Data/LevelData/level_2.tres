@@ -5,7 +5,22 @@
 [ext_resource type="PackedScene" uid="uid://c8fmw5vdunadd" path="res://Scenes/Resources/PlacementSlots/placement_slots_level_2.tscn" id="2_uxhte"]
 [ext_resource type="PackedScene" uid="uid://runhm8cqmcke" path="res://Scenes/Resources/Maps/map_level_2.tscn" id="3_335ah"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="3_uxhte"]
-[ext_resource type="Resource" uid="uid://cu3vsa2e6w0uk" path="res://Scripts/Data/WaveData/Level2/testwave.tres" id="6_335ah"]
+[ext_resource type="Resource" uid="uid://bmgccro7w0d8" path="res://Scripts/Data/WaveData/Level2/2wave_1.tres" id="6_ih0dv"]
+[ext_resource type="Resource" uid="uid://dn53ujbinywap" path="res://Scripts/Data/WaveData/Level2/2wave_2.tres" id="7_c788y"]
+[ext_resource type="Resource" uid="uid://bror1mx5b5p4q" path="res://Scripts/Data/WaveData/Level2/2wave_3.tres" id="8_vitih"]
+[ext_resource type="Resource" uid="uid://d18otlvjtfuga" path="res://Scripts/Data/WaveData/Level2/2wave_4.tres" id="9_unx0s"]
+[ext_resource type="Resource" uid="uid://cnvvrj0ogv3bj" path="res://Scripts/Data/WaveData/Level2/2wave_5.tres" id="10_ran70"]
+[ext_resource type="Resource" uid="uid://3577gb56x142" path="res://Scripts/Data/WaveData/Level2/2wave_6.tres" id="11_kb7xo"]
+[ext_resource type="Resource" uid="uid://cqru1m2a7xmdn" path="res://Scripts/Data/WaveData/Level2/2wave_7.tres" id="12_3iam5"]
+[ext_resource type="Resource" uid="uid://ckld0n2wynupx" path="res://Scripts/Data/WaveData/Level2/2wave_8.tres" id="13_yl5ui"]
+[ext_resource type="Resource" uid="uid://durrre1fj2j8n" path="res://Scripts/Data/WaveData/Level2/2wave_9.tres" id="14_d4p3j"]
+[ext_resource type="Resource" uid="uid://fw5v3y5eecu2" path="res://Scripts/Data/WaveData/Level2/2wave_10.tres" id="15_hvb5q"]
+[ext_resource type="Resource" uid="uid://ca1sqbea1dylu" path="res://Scripts/Data/WaveData/Level2/2wave_11.tres" id="16_43d1b"]
+[ext_resource type="Resource" uid="uid://y77pbj8vg1we" path="res://Scripts/Data/WaveData/Level2/2wave_12.tres" id="17_p0vtn"]
+[ext_resource type="Resource" uid="uid://lnqowebcejwt" path="res://Scripts/Data/WaveData/Level2/2wave_13.tres" id="18_bspqm"]
+[ext_resource type="Resource" uid="uid://df1vvuti77v3g" path="res://Scripts/Data/WaveData/Level2/2wave_14.tres" id="19_v5n5s"]
+[ext_resource type="Resource" uid="uid://chnxb7134jfq0" path="res://Scripts/Data/WaveData/Level2/2wave_15.tres" id="20_w13xw"]
+[ext_resource type="Resource" uid="uid://bq6sqkyohuvxm" path="res://Scripts/Data/WaveData/Level2/2wave_21.tres" id="26_7t012"]
 
 [resource]
 script = ExtResource("2_335ah")
@@ -13,7 +28,7 @@ level_name = "Level 2"
 path_curve = ExtResource("1_ribfp")
 tilemap_scene = ExtResource("3_335ah")
 placement_slots_scene = ExtResource("2_uxhte")
-waves = Array[ExtResource("3_uxhte")]([ExtResource("6_335ah")])
+waves = Array[ExtResource("3_uxhte")]([ExtResource("6_ih0dv"), ExtResource("7_c788y"), ExtResource("8_vitih"), ExtResource("9_unx0s"), ExtResource("10_ran70"), ExtResource("11_kb7xo"), ExtResource("12_3iam5"), ExtResource("13_yl5ui"), ExtResource("14_d4p3j"), ExtResource("15_hvb5q"), ExtResource("16_43d1b"), ExtResource("17_p0vtn"), ExtResource("18_bspqm"), ExtResource("19_v5n5s"), ExtResource("20_w13xw"), ExtResource("26_7t012")])
 starting_coins = 0
-wave_delay = 5.0
+wave_delay = 2.0
 metadata/_custom_type_script = "uid://v38uqpv7ur63"
