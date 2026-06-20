@@ -61,6 +61,7 @@ script = ExtResource("1_cbtvk")
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=575895850]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ai7ur")
+autoplay = "default"
 flip_h = true
 
 [node name="hpbar" type="Node2D" parent="." unique_id=1327187620]

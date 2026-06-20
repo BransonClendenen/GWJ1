@@ -9,7 +9,7 @@ func _ready():
 	enemy_name = "Turtler"
 	max_hp = 400
 	max_stamina = 0
-	max_armor = 1000
+	max_armor = 700
 	armor_reduction = 0.99
 	speed = 10
 	coin_reward = 100
@@ -20,6 +20,7 @@ func on_armor_broken():
 	max_stamina = max_hp#/2.0
 	current_stamina = max_stamina
 	speed = 20
+	staminabar.visible = true
 	update_stamina_bar()
 	VfxManager.burst(get_parent(), global_position, Color.ORANGE, 24, 0.6)
 	VfxManager.flash(self, Color.ORANGE)
@@ -37,5 +38,6 @@ func on_death():
 		var offset = Vector2(cos(angle), sin(angle)) * SPAWN_SPREAD
 		splitter.global_position = global_position + offset
 		
+		splitter.wave_manager = wave_manager
 		splitter.set_path_from_index(path_points, path_index)
 		wave_manager.register_enemy(splitter)
