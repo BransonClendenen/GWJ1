@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3r87lvb1ten7"
-path="res://.godot/imported/sniper_full.png-ca09e832860a064672f523c4ff54ee0c.ctex"
+path="res://.godot/imported/sniper_full.png-a4c56b921c85cd3c5c80d954ec4ac0bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/sniper_full.png"
-dest_files=["res://.godot/imported/sniper_full.png-ca09e832860a064672f523c4ff54ee0c.ctex"]
+source_file="res://Sprites/Game/Towers/sniper_full.png"
+dest_files=["res://.godot/imported/sniper_full.png-a4c56b921c85cd3c5c80d954ec4ac0bd.ctex"]
 
 [params]
 

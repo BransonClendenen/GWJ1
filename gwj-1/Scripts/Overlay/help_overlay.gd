@@ -17,8 +17,8 @@ func _ready() -> void:
 		"bigma sooned"
 	]
 	pictures = [
-		preload("res://Sprites/gunner_sprite.png"),
-		preload("res://Sprites/icon.svg")
+		preload("res://Sprites/Game/Towers/bomber_full.png"),
+		preload("res://Sprites/Game/Towers/sniper_bullet.png")
 	]
 	visible = false
 	next_button.pressed.connect(on_next_pressed)

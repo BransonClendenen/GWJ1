@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy7kowlcn5uh5"
-path="res://.godot/imported/bomber_bullet.png-06c004753f900384e452d990d0b35eb8.ctex"
+uid="uid://hujfp4bemffs"
+path="res://.godot/imported/gunner_full.png-6d2dd90278cb7ac3fc27008107a1ec18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/bomber_bullet.png"
-dest_files=["res://.godot/imported/bomber_bullet.png-06c004753f900384e452d990d0b35eb8.ctex"]
+source_file="res://Sprites/Game/Towers/gunner_full.png"
+dest_files=["res://.godot/imported/gunner_full.png-6d2dd90278cb7ac3fc27008107a1ec18.ctex"]
 
 [params]
 

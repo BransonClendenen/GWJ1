@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dchkutbp54mkr" path="res://Scripts/Game/Towers/bomber.gd" id="1_ep1wo"]
 [ext_resource type="PackedScene" uid="uid://b2dedc121t0br" path="res://Scenes/Game/Bullets/bomber_bullet.tscn" id="2_sueqj"]
-[ext_resource type="Texture2D" uid="uid://bulsqke55r4ry" path="res://Sprites/bomber_body.png" id="3_1c03e"]
-[ext_resource type="Texture2D" uid="uid://c7ft7yr6527wv" path="res://Sprites/bomber_barrel.png" id="4_lfrkf"]
+[ext_resource type="Texture2D" uid="uid://bulsqke55r4ry" path="res://Sprites/Game/Towers/bomber_body.png" id="3_1c03e"]
+[ext_resource type="Texture2D" uid="uid://c7ft7yr6527wv" path="res://Sprites/Game/Towers/bomber_barrel.png" id="4_lfrkf"]
 
 [node name="Bomber" type="Node2D" unique_id=499067164]
 script = ExtResource("1_ep1wo")

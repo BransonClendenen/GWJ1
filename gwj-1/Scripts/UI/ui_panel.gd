@@ -19,7 +19,10 @@ extends Panel
 @export var bomber_scene: PackedScene = preload("res://Scenes/Game/Towers/bomber.tscn")
 @export var sniper_scene: PackedScene = preload("res://Scenes/Game/Towers/sniper.tscn")
 
-@export var gunner_preview_texture = preload("res://Sprites/gunner_sprite.png")
+@export var gunner_preview_texture = preload("res://Sprites/Game/Towers/gunner_full.png")
+@export var bomber_preview_texture = preload("res://Sprites/Game/Towers/bomber_full.png")
+@export var sniper_preview_texture = preload("res://Sprites/Game/Towers/sniper_full.png")
+
 
 var tower_manager:Node
 var coin_manager:Node
@@ -120,8 +123,8 @@ func _on_gunner_button_pressed():
 
 func _on_bomber_button_pressed():
 	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
-	tower_manager.select_tower(bomber_scene, 70, gunner_preview_texture)
+	tower_manager.select_tower(bomber_scene, 70, bomber_preview_texture)
 
 func _on_sniper_button_pressed():
 	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
-	tower_manager.select_tower(sniper_scene, 80, gunner_preview_texture)
+	tower_manager.select_tower(sniper_scene, 80, sniper_preview_texture)

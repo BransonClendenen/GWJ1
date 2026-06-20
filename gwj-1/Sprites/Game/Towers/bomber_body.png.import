@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2f7ephfkibe8"
-path="res://.godot/imported/bomber_full.png-30607bb291011a46f5b8ab599ea98bb0.ctex"
+uid="uid://bulsqke55r4ry"
+path="res://.godot/imported/bomber_body.png-4a28fe97c07f087fd8f1a91087f159b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/bomber_full.png"
-dest_files=["res://.godot/imported/bomber_full.png-30607bb291011a46f5b8ab599ea98bb0.ctex"]
+source_file="res://Sprites/Game/Towers/bomber_body.png"
+dest_files=["res://.godot/imported/bomber_body.png-4a28fe97c07f087fd8f1a91087f159b3.ctex"]
 
 [params]
 
