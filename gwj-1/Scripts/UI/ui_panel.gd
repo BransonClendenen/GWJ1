@@ -41,7 +41,7 @@ func _ready() -> void:
 	tower_manager = GameState.collect_tower_manager()
 	
 	coin_manager.coin_changed.connect(_on_coin_changed)
-	coins_label.text = str(coin_manager.coins)
+	coins_label.text = "Coins: " + str(coin_manager.coins)
 	
 	gunner_button.pressed.connect(_on_gunner_button_pressed)
 	bomber_button.pressed.connect(_on_bomber_button_pressed)
@@ -115,7 +115,7 @@ func _on_result_button_pressed():
 	result_panel.visible = false
 
 func _on_coin_changed(new_amount):
-	coins_label.text = str(new_amount)
+	coins_label.text = "Coins: " + str(new_amount)
 
 func _on_gunner_button_pressed():
 	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")

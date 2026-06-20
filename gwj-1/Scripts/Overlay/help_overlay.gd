@@ -13,15 +13,15 @@ var current_page: int = 0
 
 func _ready() -> void:
 	pages = [
-		"Welcome to Mutated Genesis!\nDefend you base against an onslaught of military attacks as an alien presence. Place towers along the path to stop enemies and continue your conquest of the lands!",
-		"Minigames\nInstead of waiting passively for money, in Mutated Genesis all your cash is earned in minigames!",
-		"Game Types\nThere are three minigames, maze, pipes, and tiles, use wasd for the maze and your mouse for pipes and tiles.",
-		"Returns\nPlaying the same minigame for too long will reduce money earned. Ignoring a minigame may increase income. Strategize to maximize returns!",
-		"Towers\nGunner - Fast, reliable, drains stamina\nBomber - Hits multiple targets\nSniper - High damage, armor piercing",
-		"Shop\nBuy your towers here! To place a tower, left click on the shop and again on the desired of the placement slots. Right click to exit placement mode.",
-		"Mutations\nImprove tower performance with mutations! Click the tower you want to upgrade then go down to the mutations menu, then click and purchase the desired upgrade.",
-		"Enemies\nThis is the Military is trying to eradicate the alien presence:\nDodger - Uses stamina to dodge attacks\nSplitter - Splits into minis on death\nShielder high health and armor",
-		"Tips\nMaximize tower coverage with smart placements\nPlay minigames often\nBe ready for anything\nHave fun!"
+		"Welcome to Mutated Genesis!\nDefend your base against an onslaught of military attacks as an alien presence. Place towers along the path to stop enemies and continue your conquest of the lands!",
+		"Minigames\nInstead of waiting passively for money, in Mutated Genesis all your [color=#facc15]coins[/color] is earned in minigames!",
+		"Game Types\nThere are three minigames, maze, pipes, and tiles, use [color=#3b82f6]wasd[/color] for the maze and your [color=#4ade80]mouse[/color] for pipes and tiles.",
+		"Returns\nPlaying the same minigame for too long will [color=#f87171]reduce[/color] its payout, while others can [color=#4ade80]recover[/color] over time. Strategize to maximize returns!",
+		"Towers\n[color=#4ade80]Gunner[/color] - Fast, reliable, drains stamina\n[color=#facc15]Bomber[/color] - Hits multiple targets\n[color=#3b82f6]Sniper[/color] - High damage, armor piercing",
+		"Shop\n[color=#facc15]Buy[/color] your towers here! To place a tower, left click on the shop and again on the desired of the placement slots. Right click to exit placement mode.",
+		"Mutations\nImprove tower performance with mutations! Click the tower you want to [color=#facc15]upgrade[/color] then go down to the mutations menu, then click and purchase the desired upgrade.",
+		"Enemies\n[color=#3b82f6]Dodger[/color] - Uses stamina to dodge attacks\n[color=#4ade80]Splitter[/color] - Splits into minis on death\n[color=#f97316]Shielder[/color] - high health and armor",
+		"Tips\nMaximize tower coverage with smart placements\nPlay minigames often\nHave fun!"
 	]
 	pictures = [
 		preload("res://Sprites/Game/Towers/bomber_full.png"),

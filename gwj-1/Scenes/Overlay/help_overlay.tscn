@@ -177,5 +177,6 @@ offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_fqsy2")
+bbcode_enabled = true
 text = "sigma"
 horizontal_alignment = 1
