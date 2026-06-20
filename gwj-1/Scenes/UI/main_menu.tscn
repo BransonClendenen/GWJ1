@@ -1,7 +1,50 @@
 [gd_scene format=3 uid="uid://cvngkpn2gulmk"]
 
 [ext_resource type="Script" uid="uid://qfw2k8hpp58s" path="res://Scripts/UI/main_menu.gd" id="1_6rmd8"]
+[ext_resource type="Texture2D" uid="uid://b50q848ajxpwo" path="res://Sprites/Branding/bright_title.png" id="2_4pqbp"]
 [ext_resource type="PackedScene" uid="uid://ci1shc571oehk" path="res://Scenes/Overlay/level_select.tscn" id="2_i2xx2"]
+[ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="3_o14dv"]
+[ext_resource type="PackedScene" uid="uid://cky23kadxngx2" path="res://Scenes/Overlay/credits_overlay.tscn" id="4_mrfpk"]
+[ext_resource type="PackedScene" uid="uid://bsjysf1ofy1bq" path="res://Scenes/Overlay/help_overlay.tscn" id="5_4pqbp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gih0s"]
+bg_color = Color(0.08235294, 0.08235294, 0.12156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7lva"]
+content_margin_left = 3.0
+content_margin_top = 1.0
+content_margin_right = 3.0
+content_margin_bottom = 1.0
+bg_color = Color(0.08235294, 0.08235294, 0.12156863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrfpk"]
+content_margin_left = 3.0
+content_margin_top = 1.0
+content_margin_right = 3.0
+content_margin_bottom = 1.0
+bg_color = Color(0.08235294, 0.09803922, 0.2509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pqbp"]
+content_margin_left = 3.0
+content_margin_top = 1.0
+content_margin_right = 3.0
+content_margin_bottom = 1.0
+bg_color = Color(0.08235294, 0.09803922, 0.2509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.22745098, 1)
 
 [node name="MainMenu" type="Control" unique_id=1698461520]
 layout_mode = 3
@@ -13,24 +56,98 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_6rmd8")
 
-[node name="Button" type="Button" parent="." unique_id=344671954]
+[node name="Panel" type="Panel" parent="." unique_id=1613214642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gih0s")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1356179842]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -15.5
-offset_right = 23.0
-offset_bottom = 15.5
+offset_left = -64.0
+offset_top = -80.0
+offset_right = 64.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_4pqbp")
+
+[node name="game_button" type="Button" parent="." unique_id=381298405]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.5
+offset_top = -10.0
+offset_right = 14.5
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_o14dv")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_u7lva")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrfpk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4pqbp")
 text = "Start"
-icon_alignment = 1
+
+[node name="help_button" type="Button" parent="." unique_id=1649892359]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = 30.0
+offset_right = -32.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_o14dv")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_u7lva")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrfpk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4pqbp")
+text = "Help"
+
+[node name="credits_button" type="Button" parent="." unique_id=659604926]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 30.0
+offset_right = 69.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_o14dv")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_u7lva")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mrfpk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4pqbp")
+text = "Credits"
 
 [node name="level_select" parent="." unique_id=1923598823 instance=ExtResource("2_i2xx2")]
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="credits_overlay" parent="." unique_id=393615956 instance=ExtResource("4_mrfpk")]
+visible = false
+layout_mode = 1
+
+[node name="help_overlay" parent="." unique_id=1057337456 instance=ExtResource("5_4pqbp")]
+visible = false
+layout_mode = 1
