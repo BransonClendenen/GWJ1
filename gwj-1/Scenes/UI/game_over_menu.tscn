@@ -3,6 +3,45 @@
 [ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="1_7hu81"]
 [ext_resource type="Script" uid="uid://bb2ab64ms2k31" path="res://Scripts/UI/game_over_menu.gd" id="1_xqyep"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hu81"]
+bg_color = Color(0.08235294, 0.08235294, 0.12156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4xgp"]
+content_margin_left = 3.0
+content_margin_top = 1.0
+content_margin_right = 3.0
+content_margin_bottom = 1.0
+bg_color = Color(0.08235294, 0.08235294, 0.12156863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knywt"]
+content_margin_left = 3.0
+content_margin_top = 1.0
+content_margin_right = 3.0
+content_margin_bottom = 1.0
+bg_color = Color(0.08235294, 0.09803922, 0.2509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.22745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inpvy"]
+content_margin_left = 3.0
+content_margin_top = 1.0
+content_margin_right = 3.0
+content_margin_bottom = 1.0
+bg_color = Color(0.08235294, 0.09803922, 0.2509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.22745098, 1)
+
 [node name="game_over_menu" type="Control" unique_id=1211651403]
 layout_mode = 3
 anchors_preset = 15
@@ -12,6 +51,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_7hu81")
 script = ExtResource("1_xqyep")
+
+[node name="Panel" type="Panel" parent="." unique_id=1702169592]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7hu81")
 
 [node name="victory" type="Label" parent="." unique_id=1713327271]
 layout_mode = 1
@@ -47,19 +95,22 @@ text = "Waves"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="return" type="Button" parent="." unique_id=197512035]
+[node name="back_button" type="Button" parent="." unique_id=239048403]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
+offset_left = -86.0
 offset_top = 10.0
-offset_right = 88.0
-offset_bottom = 41.0
+offset_right = 86.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_7hu81")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_j4xgp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_knywt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_inpvy")
 text = "Return To Main Menu"
-
-[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bjmdnantnckib" path="res://Sprites/gunner_sprite.png" id="3_tyxbe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvcvx"]
-bg_color = Color(5.053729e-07, 0.58280236, 0.20636934, 1)
+bg_color = Color(0.05882353, 0.13333334, 0.09411765, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0uv4"]
-bg_color = Color(0.44305512, 0.5668747, 1, 1)
+bg_color = Color(0.2901961, 0.87058824, 0.5019608, 1)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ulob1"]
 
@@ -133,18 +133,20 @@ offset_bottom = 124.0
 
 [node name="coins_icon" type="Label" parent="coins_panel" unique_id=425310953]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.8, 0.08235294, 1)
 text = "*"
 
 [node name="coins_label" type="Label" parent="coins_panel" unique_id=2018988394]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.8, 0.08235294, 1)
 text = "Coins"
 
 [node name="shop_panel" type="HBoxContainer" parent="." unique_id=1180740556]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 124.0
+offset_top = 126.0
 offset_right = 105.0
-offset_bottom = 160.0
+offset_bottom = 162.0
 theme_override_constants/separation = 6
 alignment = 1
 
@@ -174,6 +176,7 @@ layout_mode = 0
 offset_top = 26.0
 offset_right = 30.0
 offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.98039216, 0.8, 0.08235294, 1)
 text = "60"
 
 [node name="button" type="Button" parent="shop_panel/gunner_card" unique_id=1803430974]
@@ -216,6 +219,7 @@ layout_mode = 0
 offset_top = 26.0
 offset_right = 31.0
 offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.98039216, 0.8, 0.08235294, 1)
 text = "70"
 
 [node name="button" type="Button" parent="shop_panel/bomber_card" unique_id=525415737]
@@ -258,6 +262,7 @@ layout_mode = 0
 offset_top = 26.0
 offset_right = 30.0
 offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.98039216, 0.8, 0.08235294, 1)
 text = "80"
 
 [node name="button" type="Button" parent="shop_panel/sniper_card" unique_id=968555211]
@@ -273,12 +278,3 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7bfds")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_kry7q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_skliq")
 flat = true
-
-[node name="HoverDesc" type="RichTextLabel" parent="." unique_id=1391808109]
-custom_minimum_size = Vector2(103, 18)
-layout_mode = 0
-offset_left = 2.0
-offset_top = 158.0
-offset_right = 105.0
-offset_bottom = 176.0
-text = "TempLabel"

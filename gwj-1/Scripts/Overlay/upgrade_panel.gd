@@ -28,7 +28,7 @@ func _ready() -> void:
 	upgrade_button.pressed.connect(on_upgrade_button_pressed)
 
 func enable_panel(enabled:bool):
-	background.color = Color.PURPLE if enabled else Color(0.5, 0.5, 0.5, 0.6)
+	background.color = Color("#9b30ff") if enabled else Color(0.5, 0.5, 0.5, 0.6)
 
 func open_for_tower(tower:Node):
 	current_tower = tower
@@ -75,16 +75,16 @@ func refresh_slots():
 			slots[i].modulate = Color(0.2, 0.8, 0.2)
 		elif i == current_tower.selected_upgrade_index:
 			print("slot ", i, " selected")
-			slots[i].modulate = Color(0.9, 0.9, 0.2)
+			slots[i].modulate = Color(0.3,0.5,0.9)
 		elif _is_branch_locked(i):
 			print("slot ", i, " branch locked")
-			slots[i].modulate = Color(0.5, 0.2, 0.2)
+			slots[i].modulate = Color(0.8, 0.2, 0.2)
 		elif not current_tower.is_slot_available(i):
 			print("slot ", i, " future locked")
 			slots[i].modulate = Color(0.4, 0.4, 0.4)
 		else:
 			print("slot ", i, " available")
-			slots[i].modulate = Color(0.3,0.5,0.9)
+			slots[i].modulate = Color(1,1,1)
 
 func _is_branch_locked(index: int) -> bool:
 	if current_tower.chosen_branch == 0:
