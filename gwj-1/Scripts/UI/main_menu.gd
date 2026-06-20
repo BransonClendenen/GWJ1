@@ -4,6 +4,7 @@ extends Control
 @onready var game_button: Button = $game_button
 @onready var help_button: Button = $help_button
 @onready var credits_button: Button = $credits_button
+@onready var quit_button: Button = $quit_button
 @onready var credits_overlay: Control = $credits_overlay
 @onready var help_overlay: Control = $help_overlay
 
@@ -11,6 +12,7 @@ func _ready() -> void:
 	game_button.pressed.connect(on_game_pressed)
 	help_button.pressed.connect(on_help_pressed)
 	credits_button.pressed.connect(on_credits_pressed)
+	quit_button.pressed.connect(on_quit_pressed)
 
 func on_game_pressed() -> void:
 	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
@@ -23,3 +25,7 @@ func on_help_pressed():
 func on_credits_pressed():
 	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
 	credits_overlay.open()
+
+func on_quit_pressed():
+	SfxManager.play_sfx("res://Audio/SFX/UI/sfx_ui_click.ogg")
+	get_tree().quit()

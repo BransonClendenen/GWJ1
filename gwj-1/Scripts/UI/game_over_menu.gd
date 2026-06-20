@@ -2,7 +2,7 @@ extends Control
 
 @onready var victory: Label = $victory
 @onready var waves: Label = $waves
-@onready var back_button: Button = $game_button
+@onready var back_button: Button = $back_button
 
 func _ready() -> void:
 	back_button.pressed.connect(on_back_pressed)
