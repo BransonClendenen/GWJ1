@@ -9,8 +9,8 @@ func _ready():
 	enemy_name = "Turtler"
 	max_hp = 400
 	max_stamina = 0
-	max_armor = 200
-	armor_reduction = 0.5
+	max_armor = 1000
+	armor_reduction = 0.99
 	speed = 10
 	coin_reward = 100
 	damage_to_base = 100
@@ -19,7 +19,7 @@ func _ready():
 func on_armor_broken():
 	max_stamina = max_hp/2.0
 	current_stamina = max_stamina
-	speed = 15
+	speed = 20
 	update_stamina_bar()
 	VfxManager.burst(get_parent(), global_position, Color.ORANGE, 24, 0.6)
 	VfxManager.flash(self, Color.ORANGE)

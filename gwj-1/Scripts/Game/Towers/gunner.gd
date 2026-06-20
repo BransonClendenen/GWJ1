@@ -45,10 +45,15 @@ func apply_upgrade(index: int) -> void:
 	match index:
 		0: fire_rate *= 1.3
 		1: 
-			fire_rate *= 1.5
+			fire_rate *= 1.8
 			range *= 0.75
-		2: stamina_drain *= 1.5
-		3: damage *= 1.25
+			damage *= 1.2
+			fire_rate *= 1.2
+		2: 
+			stamina_drain *= 2
+			damage *= 1.2
+			fire_rate *= 1.2
+		3: damage *= 1.5
 		4: 
-			damage *= 1.5
+			damage *= 1.8
 			fire_rate *= 0.5

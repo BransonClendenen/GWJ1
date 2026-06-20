@@ -45,9 +45,14 @@ func setup_upgrade_data():
 func apply_upgrade(index: int) -> void:
 	match index:
 		0: damage *= 1.5
-		1: fire_rate *= 1.3
+		1: 
+			fire_rate *= 1.5
+			damage *= 1.2
+			fire_rate *= 1.2
 		2: 
 			range = 40
-			splash_radius *= 1.3
-		3: fire_rate *= 1.5
-		4: stamina_drain = 10
+			splash_radius *= 1.5
+			damage *= 1.2
+			fire_rate *= 1.2
+		3: fire_rate *= 1.8
+		4: stamina_drain = 15

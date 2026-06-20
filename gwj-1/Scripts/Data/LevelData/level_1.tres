@@ -33,5 +33,5 @@ path_curve = ExtResource("1_0xo5f")
 tilemap_scene = ExtResource("3_g7xxf")
 placement_slots_scene = ExtResource("2_2jvmi")
 waves = Array[ExtResource("2_5vvg3")]([ExtResource("3_5vvg3"), ExtResource("5_hbdda"), ExtResource("8_k5vvk"), ExtResource("9_qiiyw"), ExtResource("10_txr7t"), ExtResource("11_txr7t"), ExtResource("12_6ts4g"), ExtResource("13_1lby0"), ExtResource("14_rrn31"), ExtResource("15_vdk28"), ExtResource("16_vxd6c"), ExtResource("17_qftly"), ExtResource("18_lf888"), ExtResource("19_kwai1"), ExtResource("20_gdpu4"), ExtResource("21_uk33s"), ExtResource("22_kmwdo"), ExtResource("23_jco8f"), ExtResource("24_mhuxv"), ExtResource("25_xknbs")])
-starting_coins = 150
+starting_coins = 3000
 metadata/_custom_type_script = "uid://v38uqpv7ur63"

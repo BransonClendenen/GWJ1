@@ -15,5 +15,6 @@ path_curve = ExtResource("1_ribfp")
 tilemap_scene = ExtResource("3_335ah")
 placement_slots_scene = ExtResource("2_uxhte")
 waves = Array[ExtResource("3_uxhte")]([ExtResource("4_6puym"), ExtResource("5_ryrux")])
-starting_coins = 150
+starting_coins = 0
+wave_delay = 5.0
 metadata/_custom_type_script = "uid://v38uqpv7ur63"
