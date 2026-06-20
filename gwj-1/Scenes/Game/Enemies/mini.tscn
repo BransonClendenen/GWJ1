@@ -1,55 +1,55 @@
 [gd_scene format=3 uid="uid://5ikp6sh63lgx"]
 
 [ext_resource type="Script" uid="uid://dbmt1ngyk7fyu" path="res://Scripts/Game/Enemies/mini.gd" id="1_y7i8w"]
-[ext_resource type="Texture2D" uid="uid://dhfvp8e6qy51f" path="res://Sprites/Game/Enemies/DodgerShooting.png" id="2_y7i8w"]
+[ext_resource type="Texture2D" uid="uid://dx0tisrhtadpw" path="res://Sprites/Game/Enemies/SplitterTrooperFiring.png" id="2_y7i8w"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6yxp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_06m4u"]
 atlas = ExtResource("2_y7i8w")
-region = Rect2(0, 0, 24, 24)
+region = Rect2(0, 0, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v784v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4pd3"]
 atlas = ExtResource("2_y7i8w")
-region = Rect2(24, 0, 24, 24)
+region = Rect2(24, 0, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m3axx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vsmb"]
 atlas = ExtResource("2_y7i8w")
-region = Rect2(48, 0, 24, 24)
+region = Rect2(48, 0, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wurft"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ur6o"]
 atlas = ExtResource("2_y7i8w")
-region = Rect2(72, 0, 24, 24)
+region = Rect2(72, 0, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_omfr4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ob3"]
 atlas = ExtResource("2_y7i8w")
-region = Rect2(96, 0, 24, 24)
+region = Rect2(96, 0, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_skt0u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7rt1"]
 atlas = ExtResource("2_y7i8w")
-region = Rect2(120, 0, 24, 24)
+region = Rect2(120, 0, 24, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8gmn8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r6yxp")
+"texture": SubResource("AtlasTexture_06m4u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v784v")
+"texture": SubResource("AtlasTexture_u4pd3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m3axx")
+"texture": SubResource("AtlasTexture_0vsmb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wurft")
+"texture": SubResource("AtlasTexture_1ur6o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_omfr4")
+"texture": SubResource("AtlasTexture_a8ob3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_skt0u")
+"texture": SubResource("AtlasTexture_s7rt1")
 }],
 "loop": true,
-"name": &"walking",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -59,12 +59,10 @@ animations = [{
 script = ExtResource("1_y7i8w")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1810372513]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8gmn8")
-animation = &"walking"
-autoplay = "walking"
-offset = Vector2(-10, 0)
-flip_h = true
+animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="hpbar" type="Node2D" parent="." unique_id=1767453929]
 
