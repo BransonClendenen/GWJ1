@@ -31,7 +31,10 @@ func enable_panel(enabled:bool):
 	background.color = Color("#9b30ff") if enabled else Color(0.5, 0.5, 0.5, 0.6)
 
 func open_for_tower(tower:Node):
+	if current_tower and current_tower != tower:
+		current_tower.set_selected_visual(false)
 	current_tower = tower
+	current_tower.set_selected_visual(true)
 	enable_panel(true)
 	refresh_slots()
 

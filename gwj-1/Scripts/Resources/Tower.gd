@@ -100,7 +100,11 @@ func _input(event: InputEvent):
 			if global_position.distance_to(mouse_pos) <= 32.0:
 				var upgrade_ui = GameState.upgrade_panel
 				upgrade_ui.open_for_tower(self)
+				set_selected_visual(true)
 				get_viewport().set_input_as_handled()
+
+func set_selected_visual(selected: bool) -> void:
+	modulate = Color(1.5, 1.5, 1.5) if selected else Color.WHITE
 
 func is_slot_available(index:int) -> bool:
 	match index:
