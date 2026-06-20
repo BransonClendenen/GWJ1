@@ -13,12 +13,26 @@ var current_page: int = 0
 
 func _ready() -> void:
 	pages = [
-		"sigma gooned",
-		"bigma sooned"
+		"Welcome to Mutated Genesis!\nDefend you base against an onslaught of military attacks as an alien presence. Place towers along the path to stop enemies and continue your conquest of the lands!",
+		"Minigames\nInstead of waiting passively for money, in Mutated Genesis all your cash is earned in minigames!",
+		"Game Types\nThere are three minigames, maze, pipes, and tiles, use wasd for the maze and your mouse for pipes and tiles.",
+		"Returns\nPlaying the same minigame for too long will reduce money earned. Ignoring a minigame may increase income. Strategize to maximize returns!",
+		"Towers\nGunner - Fast, reliable, drains stamina\nBomber - Hits multiple targets\nSniper - High damage, armor piercing",
+		"Shop\nBuy your towers here! To place a tower, left click on the shop and again on the desired of the placement slots. Right click to exit placement mode.",
+		"Mutations\nImprove tower performance with mutations! Click the tower you want to upgrade then go down to the mutations menu, then click and purchase the desired upgrade.",
+		"Enemies\nThis is the Military is trying to eradicate the alien presence:\nDodger - Uses stamina to dodge attacks\nSplitter - Splits into minis on death\nShielder high health and armor",
+		"Tips\nMaximize tower coverage with smart placements\nPlay minigames often\nBe ready for anything\nHave fun!"
 	]
 	pictures = [
 		preload("res://Sprites/Game/Towers/bomber_full.png"),
-		preload("res://Sprites/Game/Towers/sniper_bullet.png")
+		preload("res://Sprites/Branding/Minigames.png"),
+		preload("res://Sprites/Branding/GameTypes.png"),
+		preload("res://Sprites/Branding/Returns.png"),
+		preload("res://Sprites/Branding/Towers.png"),
+		preload("res://Sprites/Branding/Shop.png"),
+		preload("res://Sprites/Branding/Mutations.png"),
+		preload("res://Sprites/Branding/Enemies.png"),
+		preload("res://Sprites/Game/Towers/sniper_full.png"),
 	]
 	visible = false
 	next_button.pressed.connect(on_next_pressed)

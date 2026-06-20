@@ -88,7 +88,7 @@ offset_right = 40.0
 offset_bottom = 13.0
 theme_override_fonts/font = ExtResource("2_6u7gg")
 theme_override_font_sizes/font_size = 8
-text = "Upgrades"
+text = "Mutations"
 
 [node name="background" type="ColorRect" parent="." unique_id=547400853]
 custom_minimum_size = Vector2(20, 50)

@@ -5,8 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c8fmw5vdunadd" path="res://Scenes/Resources/PlacementSlots/placement_slots_level_2.tscn" id="2_uxhte"]
 [ext_resource type="PackedScene" uid="uid://runhm8cqmcke" path="res://Scenes/Resources/Maps/map_level_2.tscn" id="3_335ah"]
 [ext_resource type="Script" uid="uid://o1322v7xx51l" path="res://Scripts/Resources/WaveData.gd" id="3_uxhte"]
-[ext_resource type="Resource" uid="uid://dwmcf2qrhbekh" path="res://Scripts/Data/WaveData/Level1/wave_1.tres" id="4_6puym"]
-[ext_resource type="Resource" uid="uid://c54o8qo80g0do" path="res://Scripts/Data/WaveData/Level1/wave_2.tres" id="5_ryrux"]
+[ext_resource type="Resource" uid="uid://cu3vsa2e6w0uk" path="res://Scripts/Data/WaveData/Level2/testwave.tres" id="6_335ah"]
 
 [resource]
 script = ExtResource("2_335ah")
@@ -14,7 +13,7 @@ level_name = "Level 2"
 path_curve = ExtResource("1_ribfp")
 tilemap_scene = ExtResource("3_335ah")
 placement_slots_scene = ExtResource("2_uxhte")
-waves = Array[ExtResource("3_uxhte")]([ExtResource("4_6puym"), ExtResource("5_ryrux")])
+waves = Array[ExtResource("3_uxhte")]([ExtResource("6_335ah")])
 starting_coins = 0
 wave_delay = 5.0
 metadata/_custom_type_script = "uid://v38uqpv7ur63"
