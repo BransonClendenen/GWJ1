@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://vgapsihb06dp"]
 
 [ext_resource type="Script" uid="uid://delo87hb60ed1" path="res://Scripts/Game/Towers/sniper.gd" id="1_qolu7"]
-[ext_resource type="Texture2D" uid="uid://bjmdnantnckib" path="res://Sprites/gunner_sprite.png" id="2_qolu7"]
+[ext_resource type="PackedScene" uid="uid://ue6tjdo12afi" path="res://Scenes/Game/Bullets/sniper_bullet.tscn" id="2_ifwxo"]
+[ext_resource type="Texture2D" uid="uid://biht8f5kofm5m" path="res://Sprites/sniper_body.png" id="3_gxvyc"]
+[ext_resource type="Texture2D" uid="uid://vyvay8kly6c3" path="res://Sprites/sniper_barrel.png" id="4_5bfq8"]
 
 [node name="Sniper" type="Node2D" unique_id=861892265]
 script = ExtResource("1_qolu7")
+bullet_scene = ExtResource("2_ifwxo")
 
 [node name="base_sprite" type="Sprite2D" parent="." unique_id=93357215]
-position = Vector2(0, -3.8146973e-06)
 scale = Vector2(0.78, 0.78)
-texture = ExtResource("2_qolu7")
+texture = ExtResource("3_gxvyc")
 
 [node name="barrel_sprite" type="Sprite2D" parent="." unique_id=1491419831]
-position = Vector2(0, -3.8146973e-06)
+position = Vector2(0, -20)
 scale = Vector2(0.78, 0.78)
-texture = ExtResource("2_qolu7")
+texture = ExtResource("4_5bfq8")
 
 [node name="ShootPoint" type="Marker2D" parent="barrel_sprite" unique_id=369984042]
-position = Vector2(20, -15)
+position = Vector2(20, 0)
 scale = Vector2(1.2820513, 1.2820513)
 
 [node name="RangeArea" type="Area2D" parent="." unique_id=764056923]

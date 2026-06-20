@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ue6tjdo12afi"]
 
 [ext_resource type="Script" uid="uid://c1d5nq32epmlc" path="res://Scripts/Game/Bullets/gunner_bullet.gd" id="1_sb4xw"]
-[ext_resource type="Texture2D" uid="uid://bwkebp5kdkxg0" path="res://Sprites/UI_Overlay/Minigames/Maze/maze_exit.png" id="2_m5650"]
+[ext_resource type="Texture2D" uid="uid://ci0matypa7fg4" path="res://Sprites/sniper_bullet.png" id="2_sb4xw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4ha1"]
 
@@ -9,7 +9,7 @@
 script = ExtResource("1_sb4xw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=106297398]
-texture = ExtResource("2_m5650")
+texture = ExtResource("2_sb4xw")
 
 [node name="hit_area" type="Area2D" parent="." unique_id=156428711]
 

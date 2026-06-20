@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbwwpick8q35u"]
 
 [ext_resource type="Script" uid="uid://c1d5nq32epmlc" path="res://Scripts/Game/Bullets/gunner_bullet.gd" id="1_hpuxx"]
-[ext_resource type="Texture2D" uid="uid://bwkebp5kdkxg0" path="res://Sprites/UI_Overlay/Minigames/Maze/maze_exit.png" id="2_lrx5j"]
+[ext_resource type="Texture2D" uid="uid://c0n4vsyr4jqga" path="res://Sprites/gunner_bullet.png" id="2_lrx5j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4ha1"]
 
