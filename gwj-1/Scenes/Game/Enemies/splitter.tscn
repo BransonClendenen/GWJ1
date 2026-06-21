@@ -2,6 +2,51 @@
 
 [ext_resource type="Script" uid="uid://dksngmblbsk2v" path="res://Scripts/Game/Enemies/splitter.gd" id="1_6mplu"]
 [ext_resource type="Texture2D" uid="uid://b8crbsidqhqrx" path="res://Sprites/Game/Enemies/SplitterDrive.png" id="2_6mplu"]
+[ext_resource type="Texture2D" uid="uid://dr2npsya30r3f" path="res://Sprites/Game/Enemies/SplitterDeath.png" id="2_gdfmc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kch0s"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(0, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjwrw"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(49, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yaku"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(98, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8o56"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(147, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb6q6"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(196, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aghfo"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(245, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkpro"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(294, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrg2j"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(343, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5hw3"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(392, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac4yk"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(441, 0, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bt1e"]
+atlas = ExtResource("2_gdfmc")
+region = Rect2(490, 0, 49, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gdfmc"]
 atlas = ExtResource("2_6mplu")
@@ -43,6 +88,44 @@ region = Rect2(392, 0, 49, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_kch0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjwrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yaku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8o56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb6q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aghfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkpro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrg2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5hw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac4yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bt1e")
+}],
+"loop": true,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_gdfmc")
 }, {
 "duration": 1.0,
@@ -82,8 +165,10 @@ script = ExtResource("1_6mplu")
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=921062780]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_gdfmc")
-animation = &"new_animation"
+animation = &"death"
 autoplay = "new_animation"
+frame = 3
+frame_progress = 0.9953564
 
 [node name="hpbar" type="Node2D" parent="." unique_id=2056539109]
 

@@ -17,6 +17,7 @@ func _ready():
 	super._ready()
 
 func on_death():
+	sprite.play("death")
 	if not mini_scene:
 		push_error("SplitterEnemy: mini_scene not assigned")
 		return

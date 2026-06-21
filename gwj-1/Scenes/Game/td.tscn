@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dsm0km0rdcyvq" path="res://Scripts/Game/TDFunctionality/wave_manager.gd" id="2_a3nvy"]
 [ext_resource type="Script" uid="uid://cwbub40k501yn" path="res://Scripts/Game/TDFunctionality/tower_manager.gd" id="3_3gsr6"]
 [ext_resource type="Script" uid="uid://muuyein211xt" path="res://Scripts/Game/TDFunctionality/base_manager.gd" id="3_u5l3d"]
+[ext_resource type="Texture2D" uid="uid://bo8mf5w8o4qqj" path="res://Sprites/Game/Maps/alienblob.png" id="8_pnj6t"]
 [ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="9_imfa6"]
 [ext_resource type="Script" uid="uid://c2cyr3vlg26mk" path="res://Scripts/UI/hud.gd" id="10_ch2dg"]
 
@@ -88,3 +89,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 16
 text = "Wave 1 Complete!"
+
+[node name="TextureRect" type="TextureRect" parent="Hud" unique_id=1472023207]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 66.0
+offset_right = 228.0
+offset_bottom = 114.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("8_pnj6t")

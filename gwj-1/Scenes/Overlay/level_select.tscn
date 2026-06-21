@@ -3,8 +3,9 @@
 [ext_resource type="Theme" uid="uid://b5tmxyv6qjxjk" path="res://Scenes/Resources/5pt_font.tres" id="1_ipoyb"]
 [ext_resource type="Script" uid="uid://cm4q816ccish4" path="res://Scripts/Overlay/level_select.gd" id="2_6utup"]
 [ext_resource type="Resource" uid="uid://bd6vyq8s1ukgl" path="res://Scripts/Data/LevelData/level_1.tres" id="3_1em2i"]
-[ext_resource type="Texture2D" uid="uid://c5fce46lcfaxf" path="res://Sprites/icon.svg" id="3_ua7qw"]
 [ext_resource type="Resource" uid="uid://ckf5n1wfn81tb" path="res://Scripts/Data/LevelData/level_2.tres" id="4_lh3qs"]
+[ext_resource type="Texture2D" uid="uid://hujfp4bemffs" path="res://Sprites/Game/Towers/gunner_full.png" id="5_1em2i"]
+[ext_resource type="Texture2D" uid="uid://b3r87lvb1ten7" path="res://Sprites/Game/Towers/sniper_full.png" id="6_lh3qs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1em2i"]
 bg_color = Color(0.08235294, 0.08235294, 0.12156863, 1)
@@ -81,7 +82,7 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_ua7qw")
+texture = ExtResource("5_1em2i")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="menu" unique_id=68275957]
@@ -157,7 +158,7 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_ua7qw")
+texture = ExtResource("6_lh3qs")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="menu2" unique_id=1927485891]
